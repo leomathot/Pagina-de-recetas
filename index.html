@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- estilos -->
+    <link rel="stylesheet" href="./estilos/estilos.css" />
+    <!-- animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/4fbc6e35ac.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- icono de pestaña -->
+    <link rel="icon" type="image/png" href="./iconos/TRANKI-icono.png" />
+    <title>TRANKI</title>
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header id="inicio">
+      <img src="./imagenes/sacando-foto.jpg" alt="persona sacando foto a comida" />
+      <div class="marco-texto">
+        <div class="nombre animate__animated animate__fadeInDown animate__delay-0.5s animate__slower">
+          TRANKI
+        </div>
+        <div class="frase animate__animated animate__fadeInUp animate__delay-0.5s animate__slower">
+          Hoy cocino yo!
+        </div>
+      </div>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+      <div class="nav-enlaces">
+        <a href="#inicio">Inicio</a>
+        <a href="#destacadas">Destacadas</a>
+        <a href="#">Mi foto</a>
+        <a href="#">Contacto</a>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main>
+
+      <!-- Esta seccion tiene dos artículo que son los banners -->
+      <!-- Dentro de las secciones hay uno o mas articulos con distinto color -->
+      <!-- Todos los articulos tienen cierto padding. Elegimos el color agregando la clase fondo-1, fondo-2, fondo-3, etc -->
+      <section>
+
+        <article class="articulo-banner-inicio-1 fondo-negro">
+          <h2>
+            Tenés ganas de comer algo rico?
+          </h2>
+          <p>
+            No llames al delivery ni a tu mamá
+          </p>
+          <p>
+            TRANKI te trae recetas prácticas para que cocines fácil y sabroso
+            para vos, tu familia o tus amigos
+          </p>
+        </article>
+
+        <article class="articulo-banner-inicio-2 fondo-3">
+          <h2>
+            Basta de pensar en qué cocinar
+          </h2>
+          <p>
+            Todas las semanas publicamos nuevas recetas 'Destacadas' para que no
+            tengas que perder tiempo decidiendo qué vas a cocinar
+          </p>
+          <p class="fuente-2">
+            Nosotros nos ocupamos, vos TRANKI...
+          </p>
+        </article>
+
+      </section>
+
+      <!-- Esta es la sección de recetas destacadas de la semana -->
+      <section id="destacadas">
+
+        <!-- En esta seccion hay un solo artículo -->
+        <article class="articulo-destacadas fondo-4">
+          <h2>Recetas destacadas</h2>
+          <p>
+            Esta es nuestra selección semanal. Elegí cualquier receta, buscá los
+            ingredientes, seguí los pasos indicados, y después me contás!
+          </p>
+          <p>
+            Cuando termines de hacer magia podés enviarnos una foto a tu plato en la sección 'Mi foto'. Vamos a publicar las mejores
+            fotos en nuestras redes sociales. No te olvides de seguirnos!
+          </p>
+
+          <!-- Acá estan las cards de las recetas. Hay que poner una foto y un texto corto para cada una. Al hacer click en cada una deberíamos ir a la página de esa receta. -->
+          <div class="destacadas-flex">
+
+            <!-- Card -->
+            <div class="card-receta">
+              <img
+                src="./imagenes/sacando-foto.jpg"
+                alt="describir la foro acá"
+              />
+              <div class="contenedor-texto">
+                <h4>Empanadas</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Quaerat unde a vitae, quas, eaque repellendus quisquam.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card-receta">
+              <img
+                src="./imagenes/sacando-foto.jpg"
+                alt="describir la foro acá"
+              />
+              <div class="contenedor-texto">
+                <h4>Empanadas</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Quaerat unde a vitae, quas, eaque repellendus quisquam.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card-receta">
+              <img
+                src="./imagenes/sacando-foto.jpg"
+                alt="describir la foro acá"
+              />
+              <div class="contenedor-texto">
+                <h4>Empanadas</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Quaerat unde a vitae, quas, eaque repellendus quisquam.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card-receta">
+              <img
+                src="./imagenes/sacando-foto.jpg"
+                alt="describir la foro acá"
+              />
+              <div class="contenedor-texto">
+                <h4>Empanadas</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Quaerat unde a vitae, quas, eaque repellendus quisquam.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card-receta">
+              <img
+                src="./imagenes/sacando-foto.jpg"
+                alt="describir la foro acá"
+              />
+              <div class="contenedor-texto">
+                <h4>Empanadas</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Quaerat unde a vitae, quas, eaque repellendus quisquam.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card-receta">
+              <img
+                src="./imagenes/sacando-foto.jpg"
+                alt="describir la foro acá"
+              />
+              <div class="contenedor-texto">
+                <h4>Empanadas</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Quaerat unde a vitae, quas, eaque repellendus quisquam.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <p class="mensage-del-grupo">( hay que hacer una página para cada receta. son todas iguale pero cambian las fotos y los textos )</p>
+
+        </article>
+      </section>
+
+      <!-- Esta sección tiene dos artículos: 'subir foto' y 'subir receta' -->
+      <section id="articulos-foto-y-receta">
+
+        <!-- Artículo subir foto -->
+        <article class="subir-foto fondo-2">
+          <h2>
+            Subí tu foto
+          </h2>
+          <p>
+            Subí una foto de un plato que hayas cocinado a partir de una receta de TRANKI. Vamos a publicar las mejores fotos en nuestras redes sociales. No te olvides de seguirnos para ver las fotos y más recetas!
+          </p>
+          <button>
+            Mi foto
+          </button>
+
+          <p class="mensage-del-grupo">( podriíamos armar una página con un pequeño formulario para cargar nombre de la persona, nombre del plato y subir foto. el botón nos llevaría a esa página )</p>
+          
+        </article>
+
+        <!-- Artículo subir receta -->
+        <article class="subir-receta fondo-negro">
+          <h2>
+            Compartí tu receta
+          </h2>
+          <p>
+            Envianos tu receta favorita. Llená el siguiente formulario con los ingredientes y preparación de ese plato que tanto te gusta cocinar.
+          </p>
+          <p>
+            Puede ser seleccionada por nuesto equipo y publicada en TRANKI. Si es elegida, tu nombre va a aparecer en la info de la receta cuando la publiquemos.
+          </p>
+          <button>
+            Contacto
+          </button>
+
+          <p CLASS="mensage-del-grupo">( podríamos armar una página con un formulario para cargar nombre de la persona, nombre del plato, ingredientes y pasos a seguir. al presionar el botón iriamos a ese formulario )</p>
+
+        </article>
+      </section>
+
+    </main>
+
+    <footer>
+
+      <!-- Este es el footer de la página -->
+      <!-- (después puse "otro footer" con info del grupo que no existiría en una página verdadera) -->
+      <div class="footer-pagina">
+
+        <!-- Texto de la izquierda -->
+        <div class="footer-texto">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, ab
+            reprehenderit beatae veniam eveniet blanditiis.
+          </p>
+        </div>
+
+        <!-- Enlaces de la derecha -->
+        <div class="footer-enlaces">
+          <a href="https://www.instagram.com" target="_blank" title="Instagram">
+            <i class="fa-brands fa-instagram"></i >
+          </a>
+          <a href="https://www.facebook.com" target="_blank" title="Facebook">
+            <i class="fa-brands fa-facebook"></i >
+          </a>
+          <a href="https://www.twitter.com" target="_blank" title="Twitter">
+            <i class="fa-brands fa-twitter"></i >
+          </a>
+          <a href="https://www.YouTube.com" target="_blank" title="YouTube">
+            <i class="fa-brands fa-youtube"></i >
+          </a>
+        </div>
+      </div>
+
+      <!-- footer extra con la info del grupo -->
+      <div class="footer-grupo-2">
+
+        <div>
+          <p>Codo a Codo</p>
+          <p>FULL STACK PYTHON</p>
+          <p>2023 - 1 cuat.</p>
+        </div>
+
+        <div>
+          <p>Comisión 23037 / Grupo 2</p>
+          <ul>
+            <li>Jesica Moure</li>
+            <li>Malena Sencio</li>
+            <li>Manuel Pérez</li>
+            <li>Leonardo Mathot</li>
+          </ul>
+        </div>
+
+        <div>
+          <p>Repositorio del proyecto</p>
+          <a href="https://github.com/manuelpdbrc/codoacodo" target="_blank" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </footer>
+  </body>
+</html>
