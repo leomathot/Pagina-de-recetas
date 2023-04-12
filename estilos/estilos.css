@@ -89,7 +89,9 @@ header img {
 header .marco-texto {
   z-index: 20;
   background-color: hsla(187, 84%, 24%, 0.8);
-  padding: 10px 25px;
+  padding: 10px 0;
+  width: 100%;
+  max-width: 330px;
   border-radius: 10px;
 }
 
