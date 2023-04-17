@@ -20,7 +20,7 @@
   --color-3: #4c7f8d;
   --color-4: #325e5e;
 
-  --selection-background: #124122;
+  --selection-background: #122e41;
   --selection-color: var(--blanco);
 }
 
@@ -71,7 +71,7 @@ body {
 header {
   position: relative;
   min-height: 50vh;
-  padding: 60px 10px;
+  padding: 60px 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,7 +90,9 @@ header img {
 header .marco-texto {
   z-index: 20;
   background-color: hsla(187, 84%, 24%, 0.8);
-  padding: 10px 25px;
+  padding: 10px 0;
+  width: 100%;
+  max-width: 330px;
   border-radius: 10px;
 }
 
@@ -113,10 +115,11 @@ nav {
   background-color: var(--color-4);
   display: flex;
   justify-content: flex-end;
-  padding: 3px 10px;
+  padding: 5px 10px 0 0;
   font-size: 1rem;
   position: sticky;
   top: -1px;
+  z-index: 100;
 }
 
 a {
@@ -125,6 +128,7 @@ a {
 }
 
 nav .nav-enlaces a {
+  display: inline-block;
   padding: 2px 4px;
 }
 
@@ -144,12 +148,16 @@ article {
   width: 100%;
 }
 
-h2 {
+h1, h2 {
   font-family: var(--font-2), var(--font-1), sans-serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 100; /* los h2 están por defecto en negrita (bold) pero con esta fuente queda mal, con font-weight:100 ya no están en negrita */
   margin: 0 auto 35px auto;
   max-width: 700px;
+}
+
+h2 {
+  font-size: 2.5rem;
 }
 
 p {
@@ -326,7 +334,7 @@ p {
 /* estos son todos los hijos directos ( > * ) de los div que sean hijos directos ( > div ) de .footer-grupo-2, osea, los <p>, la <ul> y el <a> que están el los div que estan en el footer-grupo-2 */
 .footer-grupo-2 > div > * {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .footer-grupo-2 a {
