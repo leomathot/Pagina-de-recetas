@@ -59,33 +59,33 @@
       <!-- Esta seccion tiene dos artículo que son los banners -->
       <!-- Dentro de las secciones hay uno o mas articulos con distinto color -->
       <!-- Todos los articulos tienen cierto padding. Elegimos el color agregando la clase fondo-1, fondo-2, fondo-3, etc -->
-      <section>
+      <div id="banners">
 
-        <article class="articulo-banner-inicio-1 fondo-negro">
+        <div class="articulo-banner-inicio-1 fondo-negro">
           <h2>
             Tenés ganas de comer algo rico?
           </h2>
           <h3>
             No llames al delivery, cociná TRANKI
           </h3>
-        </article>
+        </div>
 
-        <article class="articulo-banner-inicio-2 fondo-3">
+        <div class="articulo-banner-inicio-2 fondo-3">
           <h2>
             Sale juntada?
           </h2>
           <h3>
             Sorprendé a tu familia o amigos
           </h3>
-        </article>
+        </div>
 
-      </section>
+      </div>
 
       <!-- Esta es la sección de recetas destacadas de la semana -->
-      <section id="recetas-destacadas">
+      <section id="recetas-destacadas" class="fondo-4">
 
         <!-- En esta seccion hay un solo artículo -->
-        <article class="articulo-destacadas fondo-4">
+        <article class="articulo-destacadas limite-ancho">
           <h2>Recetas destacadas</h2>
           <p>
             Esta es nuestra selección semanal. Elegí cualquier receta, buscá los
@@ -95,17 +95,15 @@
             Cuando termines de hacer magia podés enviarnos una foto de tu plato en la sección 'Mi foto'. Vamos a publicar las mejores
             fotos en nuestras redes sociales. No te olvides de seguirnos!
           </p>
-
-          <div class="destacadas-flex" id="cardsRecetas"></div>
-
         </article>
+        <div class="destacadas-flex" id="cardsRecetas"></div>
 
       </section>
 
-      <section id="mi-foto">
+      <section id="mi-foto" class="fondo-2">
 
         <!-- Artículo subir foto -->
-        <article class="subir-foto fondo-2">
+        <article class="subir-foto limite-ancho">
           <h2>
             Subí tu foto
           </h2>
@@ -120,10 +118,10 @@
 
       </section>
 
-      <section id="contacto">
+      <section id="contacto" class="fondo-negro">
 
         <!-- Artículo subir receta -->
-        <article class="subir-receta fondo-negro">
+        <article class="subir-receta limite-ancho">
           <h2>
             Compartí tu receta
           </h2>

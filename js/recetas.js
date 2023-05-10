@@ -62,7 +62,7 @@ for (var i = 0; i < recetas.length; i++) {
             <a href=${recetas[i].rutaPagina}>
                 <img
                     src=${recetas[i].rutasFotos[0]}
-                    alt="describir la foro acá"
+                    alt=${recetas[i].nombre}
                 />
                 <div class="contenedor-texto">
                     <h4>${recetas[i].nombre}</h4>
