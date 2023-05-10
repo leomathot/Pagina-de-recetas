@@ -55,7 +55,7 @@ let footer = `<div class="footer-pagina">
 
     <div>
     <p>Repositorio del proyecto</p>
-    <a href="https://github.com/manuelpdbrc/codoacodo" target="_blank" title="GitHub">
+    <a href="" target="_blank" title="GitHub">
         <i class="fa-brands fa-github"></i>
     </a>
     </div>
