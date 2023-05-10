@@ -14,12 +14,12 @@
   --negro: #202020;
   --gris: #505050;
 
-  --color-1: #ffb4da;
-  --color-2: #b6ff85;
-  --color-3: #bb5079;
-  --color-4: #45265a;
+  --color-1: #ffffd0;
+  --color-2: #ffc894;
+  --color-3: #fa9a5a;
+  --color-4: #a33e3e;
 
-  --selection-background: #341241;
+  --selection-background: #831e1e;
   --selection-color: var(--blanco);
 }
 
@@ -88,7 +88,7 @@ header img {
 
 header .marco-texto {
   z-index: 20;
-  background-color: hsla(330, 86%, 39%, 0.8);
+  background-color: rgba(200, 36 , 33, 0.6);
   padding: 10px 0;
   width: 100%;
   max-width: 330px;
@@ -267,7 +267,7 @@ p {
 }
 
 .receta-ingredientes li:nth-child(odd), .receta-pasos li:nth-child(odd) {
-  background-color: rgba(68, 0, 255, 0.1);
+  background-color: rgba(255, 0, 0, 0.1);
 } 
 
 .receta-ingredientes img, .receta-pasos img {
