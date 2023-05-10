@@ -254,16 +254,19 @@ p:last-child {
   display: flex;
   justify-content: space-between;
   gap: 30px;
-  margin: 20px 0 40px 0;
+  margin: 0 0 40px 0;
 }
 
 .flex-pasos {
   display: flex;
   justify-content: space-between;
   gap: 30px;
-  margin-bottom: 40px;
   text-align: right;
-  margin: 20px 0 0 0;
+  margin: 0 0 0 0;
+}
+
+.flex-ingredientes ul, .flex-pasos ul {
+  margin-top: 10px;
 }
 
 .flex-ingredientes li, .flex-pasos li {
