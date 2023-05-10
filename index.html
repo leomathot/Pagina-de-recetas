@@ -47,9 +47,9 @@
     <nav>
       <div class="nav-enlaces">
         <a href="#inicio">Inicio</a>
-        <a href="#destacadas">Destacadas</a>
-        <a href="#">Mi foto</a>
-        <a href="#">Contacto</a>
+        <a href="#recetas-destacadas">Recetas</a>
+        <a href="#mi-foto">Mi foto</a>
+        <a href="#contacto">Contacto</a>
       </div>
     </nav>
 
@@ -65,32 +65,24 @@
           <h2>
             Tenés ganas de comer algo rico?
           </h2>
-          <p>
-            No llames al delivery ni a tu mamá
-          </p>
-          <p>
-            TRANKI te trae recetas prácticas para que cocines fácil y sabroso
-            para vos, tu familia o tus amigos
-          </p>
+          <h3>
+            No llames al delivery, cociná TRANKI
+          </h3>
         </article>
 
         <article class="articulo-banner-inicio-2 fondo-3">
           <h2>
-            Basta de pensar en qué cocinar
+            Sale juntada?
           </h2>
-          <p>
-            Todas las semanas publicamos nuevas recetas 'Destacadas' para que no
-            tengas que perder tiempo decidiendo qué vas a cocinar
-          </p>
-          <p class="fuente-2">
-            Nosotros nos ocupamos, vos TRANKI...
-          </p>
+          <h3>
+            Sorprendé a tu familia o amigos
+          </h3>
         </article>
 
       </section>
 
       <!-- Esta es la sección de recetas destacadas de la semana -->
-      <section id="destacadas">
+      <section id="recetas-destacadas">
 
         <!-- En esta seccion hay un solo artículo -->
         <article class="articulo-destacadas fondo-4">
@@ -104,106 +96,13 @@
             fotos en nuestras redes sociales. No te olvides de seguirnos!
           </p>
 
-          <!-- Acá estan las cards de las recetas. Hay que poner una foto y un texto corto para cada una. Al hacer click en cada una deberíamos ir a la página de esa receta. -->
-          <div class="destacadas-flex">
-
-            <!-- Card -->
-            <div class="card-receta">
-              <img
-                src="./imagenes/sacando-foto.jpg"
-                alt="describir la foro acá"
-              />
-              <div class="contenedor-texto">
-                <h4>Empanadas</h4>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Quaerat unde a vitae, quas, eaque repellendus quisquam.
-                </p>
-              </div>
-            </div>
-
-            <!-- Card -->
-            <div class="card-receta">
-              <img
-                src="./imagenes/sacando-foto.jpg"
-                alt="describir la foro acá"
-              />
-              <div class="contenedor-texto">
-                <h4>Empanadas</h4>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Quaerat unde a vitae, quas, eaque repellendus quisquam.
-                </p>
-              </div>
-            </div>
-
-            <!-- Card -->
-            <div class="card-receta">
-              <img
-                src="./imagenes/sacando-foto.jpg"
-                alt="describir la foro acá"
-              />
-              <div class="contenedor-texto">
-                <h4>Empanadas</h4>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Quaerat unde a vitae, quas, eaque repellendus quisquam.
-                </p>
-              </div>
-            </div>
-
-            <!-- Card -->
-            <div class="card-receta">
-              <img
-                src="./imagenes/sacando-foto.jpg"
-                alt="describir la foro acá"
-              />
-              <div class="contenedor-texto">
-                <h4>Empanadas</h4>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Quaerat unde a vitae, quas, eaque repellendus quisquam.
-                </p>
-              </div>
-            </div>
-
-            <!-- Card -->
-            <div class="card-receta">
-              <img
-                src="./imagenes/sacando-foto.jpg"
-                alt="describir la foro acá"
-              />
-              <div class="contenedor-texto">
-                <h4>Empanadas</h4>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Quaerat unde a vitae, quas, eaque repellendus quisquam.
-                </p>
-              </div>
-            </div>
-
-            <!-- Card -->
-            <div class="card-receta">
-              <img
-                src="./imagenes/sacando-foto.jpg"
-                alt="describir la foro acá"
-              />
-              <div class="contenedor-texto">
-                <h4>Empanadas</h4>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Quaerat unde a vitae, quas, eaque repellendus quisquam.
-                </p>
-              </div>
-            </div>
-
-          </div>
+          <div class="destacadas-flex" id="cardsRecetas"></div>
 
         </article>
+
       </section>
 
-      <!-- Esta sección tiene dos artículos: 'subir foto' y 'subir receta' -->
-      <section id="articulos-foto-y-receta">
+      <section id="mi-foto">
 
         <!-- Artículo subir foto -->
         <article class="subir-foto fondo-2">
@@ -219,6 +118,10 @@
           
         </article>
 
+      </section>
+
+      <section id="contacto">
+
         <!-- Artículo subir receta -->
         <article class="subir-receta fondo-negro">
           <h2>
@@ -228,7 +131,7 @@
             Envianos tu receta favorita. Llená el siguiente formulario con los ingredientes y preparación de ese plato que tanto te gusta cocinar.
           </p>
           <p>
-            Puede ser seleccionada por nuesto equipo y publicada en TRANKI. Si es elegida, tu nombre va a aparecer en la info de la receta cuando la publiquemos.
+            Puede ser seleccionada y publicada en TRANKI. Si es elegida, tu nombre va a aparecer en la info de la receta cuando la publiquemos.
           </p>
           <button>
             Contacto
@@ -242,6 +145,6 @@
     <footer id="footer"></footer>
 
     <script src="./js/index.js"></script>
-
+    <script src="./js/recetas.js"></script>
   </body>
 </html>

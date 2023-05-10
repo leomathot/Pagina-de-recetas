@@ -15,12 +15,12 @@
   --negro: #202020;
   --gris: #505050;
 
-  --color-1: #c3f7e9;
-  --color-2: #99c7b0;
-  --color-3: #609dad;
-  --color-4: #325e53;
+  --color-1: #ffb4da;
+  --color-2: #ff85ff;
+  --color-3: #bb5079;
+  --color-4: #45265a;
 
-  --selection-background: #122e41;
+  --selection-background: #341241;
   --selection-color: var(--blanco);
 }
 
@@ -89,7 +89,7 @@ header img {
 
 header .marco-texto {
   z-index: 20;
-  background-color: hsla(187, 84%, 24%, 0.8);
+  background-color: hsla(330, 86%, 39%, 0.8);
   padding: 10px 0;
   width: 100%;
   max-width: 330px;
@@ -165,6 +165,11 @@ p {
   max-width: 700px;
 }
 
+.cont-lim {
+  margin: 0 auto 0 auto;
+  max-width: 700px;
+}
+
 .fondo-1 {
   background-color: var(--color-1);
   color: var(--negro);
@@ -237,10 +242,49 @@ p {
   color: var(--color-1);
 }
 
+/* Páginas de recetas */
+.receta-ingredientes {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.receta-pasos {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+  text-align: right;
+}
+
+.receta-ingredientes ul, .receta-pasos ul {
+  margin-top: 20px;
+}
+
+.receta-ingredientes li, .receta-pasos li {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.receta-ingredientes li:nth-child(odd), .receta-pasos li:nth-child(odd) {
+  background-color: rgba(68, 0, 255, 0.1);
+} 
+
+.receta-ingredientes img, .receta-pasos img {
+  width: 100%;
+  max-width: 300px;
+  border-bottom: 20px solid var(--color-3);
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* mi foto */
 .subir-foto {
   flex: 300px;
 }
 
+/* Contacto */
 .subir-receta {
   flex: 500px;
 }
@@ -276,15 +320,20 @@ p {
 }
 
 /* Footer de la página de recetas*/
-.footer-pagina {
+
+footer {
   background-color: var(--gris);
   color: var(--blanco);
+  padding: 50px 30px 20px 30px;
+  font-size: 1rem;
+}
+
+.footer-pagina {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 30px;
-  padding: 50px 30px;
-  font-size: 1rem;
+  margin-bottom: 40px;
 }
 
 .footer-pagina .footer-texto {
@@ -313,7 +362,7 @@ p {
   color: var(--color-2);
 }
 
-/* ( Foter extra: info del grupo ) */
+/* info del grupo */
 .footer-grupo-2 {
   background-color: var(--negro);
   color: var(--color-1);
@@ -340,12 +389,22 @@ p {
 .footer-grupo-2 a {
   color: var(--color-1);
   height: fit-content;
-  padding: 4px 8px;
-  border-radius: 50%;
+  padding: 0 4px;
+  border-radius: 5px;
   font-size: 1.2rem;
 }
 
 .footer-grupo-2 a:hover {
   background-color: var(--color-1);
   color: var(--negro);
+}
+
+@media screen and (max-width: 700px) {
+  .receta-ingredientes{
+    flex-direction: column-reverse;
+  }
+  .receta-pasos{
+    flex-direction: column;
+    text-align: left;
+  }
 }
