@@ -253,20 +253,26 @@ p:last-child {
 .flex-ingredientes {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+  gap: 20px;
   margin: 0 0 40px 0;
+  background-color: var(--color-3);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .flex-pasos {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+  gap: 20px;
   text-align: right;
   margin: 0 0 0 0;
+  background-color: var(--color-3);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .flex-ingredientes ul, .flex-pasos ul {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .flex-ingredientes li, .flex-pasos li {
@@ -275,14 +281,14 @@ p:last-child {
 }
 
 .flex-ingredientes li:nth-child(odd), .flex-pasos li:nth-child(odd) {
-  background-color: rgba(0, 0, 255, 0.1);
-} 
+  background-color: var(--color-2);
+}
 
 .flex-ingredientes img, .flex-pasos img {
   width: 100%;
   max-width: 40%;
   max-height: 300px;
-  background-color: var(--color-3);
+  background-color: var(--color-2);
   border-radius: 10px;
   object-fit: cover;
 }
