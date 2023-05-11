@@ -5,18 +5,15 @@ let navNoIndex = `
 
 let navNoIndexTag = document.querySelector("#nav-no-index");
 
-// if (navNoIndexTag != null) {
-//     navNoIndexTag.innerHTML = navNoIndex;
-// }
-
-navNoIndexTag.innerHTML = navNoIndexTag != null ? navNoIndex : "Do not exist here";
+if (navNoIndexTag != null) {
+    navNoIndexTag.innerHTML = navNoIndex;
+}
 
 let footer = `<div class="footer-pagina">
 
     <div class="footer-texto">
     <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, ab
-        reprehenderit beatae veniam eveniet blanditiis.
+        <i class="fa-regular fa-copyright"></i> 2023 TRANKI
     </p>
     </div>
 
