@@ -5,9 +5,11 @@ let navNoIndex = `
 
 let navNoIndexTag = document.querySelector("#nav-no-index");
 
-if (navNoIndexTag != null) {
-    navNoIndexTag.innerHTML = navNoIndex;
-}
+// if (navNoIndexTag != null) {
+//     navNoIndexTag.innerHTML = navNoIndex;
+// }
+
+navNoIndexTag.innerHTML = navNoIndexTag != null ? navNoIndex : "Do not exist here";
 
 let footer = `<div class="footer-pagina">
 
