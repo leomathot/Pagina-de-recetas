@@ -357,13 +357,13 @@ footer {
 
 .footer-pagina .footer-texto p {
   margin: 0;
+  padding: 4px;
 }
 
 .footer-pagina .footer-enlaces {
   flex: 0 1 300px;
   display: flex;
   justify-content: space-evenly;
-  padding-top: 10px;
 }
 
 .footer-pagina .footer-enlaces a {
