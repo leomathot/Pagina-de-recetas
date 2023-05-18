@@ -14,10 +14,10 @@
   --negro: #202020;
   --gris: #505050;
 
-  --color-1: #d0fff1;
+  --color-1: #aeffe7;
   --color-2: #b1ffa2;
-  --color-3: #5abffa;
-  --color-4: #3ea368;
+  --color-3: #2a9adb;
+  --color-4: #2da15e;
 
   --selection-background: #2d633f;
   --selection-color: var(--blanco);
@@ -291,6 +291,60 @@ p:last-child {
   background-color: var(--color-2);
   border-radius: 10px;
   object-fit: cover;
+}
+
+.search {
+  border: 2px solid red;
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 30px;
+}
+
+.results .meals {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.results .meals .meal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  box-shadow: 0 0 5px var(--negro);
+  border-radius: 10px;
+}
+
+.results .meals .meal img {
+  background-color: var(--color-2);
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.results .meals .meal .ingredients {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.results .meals .meal a {
+  background-color: var(--blanco);
+  color: var(--negro);
+  padding: 0 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px var(--negro);
+  text-align: center;
 }
 
 /* mi foto */

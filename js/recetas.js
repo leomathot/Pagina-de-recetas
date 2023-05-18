@@ -1,4 +1,4 @@
-const recetas = [
+const recetasDestacadas = [
     {
         nombre: "Empanadas",
         descripcion: "Un clásico, en versiones omnívora y veggie. Para preparar mil y congelar!",
@@ -54,22 +54,70 @@ const recetas = [
     }
 ]
 
-
 let cards = "";
-for (var i = 0; i < recetas.length; i++) {
+for (var i = 0; i < recetasDestacadas.length; i++) {
     cards += `
         <div class="card-receta">
-            <a href=${recetas[i].rutaPagina}>
+            <a href=${recetasDestacadas[i].rutaPagina}>
                 <img
-                    src=${recetas[i].rutasFotos[0]}
-                    alt=${recetas[i].nombre}
+                    src=${recetasDestacadas[i].rutasFotos[0]}
+                    alt=${recetasDestacadas[i].nombre}
                 />
                 <div class="contenedor-texto">
-                    <h4>${recetas[i].nombre}</h4>
-                    <p>${recetas[i].descripcion}</p>
+                    <h4>${recetasDestacadas[i].nombre}</h4>
+                    <p>${recetasDestacadas[i].descripcion}</p>
                 </div>
             </a>
         </div>`
 }
 
 document.querySelector("#cardsRecetas").innerHTML = cards;
+
+
+// Recipe search
+
+function getRecipes() {
+
+    let ingredient = document.querySelector("#text-input").value
+    if (ingredient == "") {
+        alert("please introduce an iingrdient")
+        return
+    }
+    const appId= "f0066eb3"
+    const appKey = "c0ed70ae7e477a44d37b0033b0aab25c"
+
+    enlaceAPIRecetas = `https://api.edamam.com/api/recipes/v2?type=public&q=${ingredient}&app_id=${appId}&app_key=${appKey}&ingr=4-14&random=false`
+
+    fetch(enlaceAPIRecetas)
+        .then(res => res.json())
+        .then(res => {
+
+            let list = ``;
+
+            for(let i=0; i<5; i++) {
+
+                    const meal = res.hits[i].recipe.label
+                    const imgSrc = res.hits[i].recipe.image
+                    let ingredients = ``
+
+                    res.hits[i].recipe.ingredientLines.map(el => {
+                        ingredients += `<li>${el}</li>`
+                        })
+
+                    list += (`
+                        <div class="meal fondo-3">
+                            <h3>${i + 1} - ${meal}</h3>
+                            <img src="${imgSrc}" alt="${meal}" />
+                            <ul class="ingredients">${ingredients}</ul>
+                            <a href="${res.hits[i].recipe.url}" target="_blank">View recipe at ${res.hits[i].recipe.source}</a>
+                        </div>
+                    `)
+                }
+
+            const imgSrc = res.hits[0].recipe.image
+            document.querySelector("#results").innerHTML = `
+
+                <div class="meals">${list}</div>`
+            
+            })
+}
