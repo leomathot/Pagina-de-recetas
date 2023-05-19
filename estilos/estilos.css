@@ -206,6 +206,10 @@ p:last-child {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.pad-10 {
+  padding: 10px;
+}
+
 .hidden {
   display: none;
 }
@@ -358,18 +362,21 @@ p:last-child {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
+  border-radius: 10px;
 }
 
 .results .meals .meal h3 {
   width: 100%;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 1.1rem;
 }
 
 .results .meals .meal h3:hover {
   background-color: rgba(0, 0, 0, 0.2);
+  color: var(--blanco);
 }
 
 .results .meals .meal .meal-info-cont {
@@ -380,8 +387,7 @@ p:last-child {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  padding: 0 0 20px 0;
+  gap: 10px;
 }
 
 .results .meals .meal .img-ing-flex {
@@ -389,7 +395,7 @@ p:last-child {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
 }
 
 .results .meals .meal img {
@@ -405,7 +411,7 @@ p:last-child {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--color-3);
   padding: 15px;
   border-radius: 10px;
 }

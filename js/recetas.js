@@ -106,7 +106,7 @@ function getRecipes() {
                         })
 
                     list += (`
-                        <div class="meal fondo-3">
+                        <div class="meal" id="meal-${i}">
                             <h3 id="meal-${i}-h3" onclick={showInfo(${i})}>${meal}</h3>
                             <div class="hidden meal-info-cont" id="meal-${i}-info-cont">
                                 <div class="meal-info">
@@ -133,6 +133,8 @@ function getRecipes() {
 }
 
 function showInfo(i) {
-    document.querySelector(`#meal-${i}-info-cont`).classList.toggle("hidden")
+    document.querySelector(`#meal-${i}`).classList.toggle("glass-02")
+    document.querySelector(`#meal-${i}`).classList.toggle("pad-10")
     document.querySelector(`#meal-${i}-h3`).classList.toggle("fondo-1")
+    document.querySelector(`#meal-${i}-info-cont`).classList.toggle("hidden")
 }
