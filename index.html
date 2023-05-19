@@ -46,8 +46,9 @@
     <!-- Barra de navegación -->
     <nav>
       <div class="nav-enlaces">
-        <a href="#inicio">Inicio</a>
+        <a href="#inicio">Home</a>
         <a href="#recetas-destacadas">Recetas</a>
+        <a href="#recipe-search">Search</a>
         <a href="#mi-foto">Mi foto</a>
         <a href="#contacto">Contacto</a>
       </div>
@@ -99,13 +100,24 @@
 
         <!-- Cards inserted with js -->
         <div class="destacadas-flex" id="cardsRecetas"></div>
+      </section>
 
+      <section id="recipe-search" class="fondo-3">
 
-        <div class="search" id="search">
-          <input type="text" id="text-input"></input>
-          <button onclick={getRecipes()}>Search</button>
-          <div class="results" id="results"></div>
-        </div>
+        <article class="limite-ancho">
+
+          <h2>Recipe web search</h2>
+          <div class="search" id="search">
+            <div class="search-controls">
+              <input type="text" id="text-input"></input>
+              <button onclick={getRecipes()}>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+            <div class="results" id="results"></div>
+          </div>
+
+        </article>
 
       </section>
 

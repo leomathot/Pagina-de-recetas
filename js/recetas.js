@@ -79,8 +79,9 @@ document.querySelector("#cardsRecetas").innerHTML = cards;
 function getRecipes() {
 
     let ingredient = document.querySelector("#text-input").value
+
     if (ingredient == "") {
-        alert("please introduce an iingrdient")
+        alert("Please introduce a word")
         return
     }
     const appId= "f0066eb3"
@@ -94,7 +95,7 @@ function getRecipes() {
 
             let list = ``;
 
-            for(let i=0; i<5; i++) {
+            for(let i=0; i<10; i++) {
 
                     const meal = res.hits[i].recipe.label
                     const imgSrc = res.hits[i].recipe.image
@@ -106,10 +107,19 @@ function getRecipes() {
 
                     list += (`
                         <div class="meal fondo-3">
-                            <h3>${i + 1} - ${meal}</h3>
-                            <img src="${imgSrc}" alt="${meal}" />
-                            <ul class="ingredients">${ingredients}</ul>
-                            <a href="${res.hits[i].recipe.url}" target="_blank">View recipe at ${res.hits[i].recipe.source}</a>
+                            <h3 id="meal-${i}-h3" onclick={showInfo(${i})}>${meal}</h3>
+                            <div class="hidden meal-info-cont" id="meal-${i}-info-cont">
+                                <div class="meal-info">
+                                    <div class="img-ing-flex">
+                                        <img src="${imgSrc}" alt="${meal}" />
+                                        <div class="ingredients">
+                                            <h4>Ingredients</h4>
+                                            <ul>${ingredients}</ul>
+                                        </div>
+                                    </div>
+                                    <a href="${res.hits[i].recipe.url}" target="_blank">View recipe at <span class="source-name"><strong>${res.hits[i].recipe.source}</strong></span></a>
+                                </div>
+                            </div>
                         </div>
                     `)
                 }
@@ -120,4 +130,9 @@ function getRecipes() {
                 <div class="meals">${list}</div>`
             
             })
+}
+
+function showInfo(i) {
+    document.querySelector(`#meal-${i}-info-cont`).classList.toggle("hidden")
+    document.querySelector(`#meal-${i}-h3`).classList.toggle("glass-02")
 }

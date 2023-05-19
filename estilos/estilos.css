@@ -196,6 +196,14 @@ p:last-child {
   color: var(--color-1);
 }
 
+.glass-02 {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+  display: none;
+}
+
 /* Estilos específicos */
 
 #banners {
@@ -293,37 +301,92 @@ p:last-child {
   object-fit: cover;
 }
 
+/* Recipe search */
+
 .search {
-  border: 2px solid red;
-  margin-top: 60px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 0 30px;
+}
+
+.search-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.search-controls input {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+.search-controls button {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-1);
+}
+
+.search-controls button:hover {
+  background-color: var(--blanco)
+}
+
+.results {
+  width: 100%;
 }
 
 .results .meals {
   width: 100%;
   display: flex;
+  gap: 5px;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
 }
 
 .results .meals .meal {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 8px;
-  box-shadow: 0 0 5px var(--negro);
-  border-radius: 10px;
+  align-items: center;
+  gap: 15px;
+}
+
+.results .meals .meal h3 {
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.results .meals .meal h3:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.results .meals .meal .meal-info-cont {
+  width: 100%;
+}
+
+.results .meals .meal .meal-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 0 20px 0;
+}
+
+.results .meals .meal .img-ing-flex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .results .meals .meal img {
-  background-color: var(--color-2);
+  background-color: var(--negro);
   width: 150px;
   height: 150px;
   object-fit: cover;
@@ -331,20 +394,34 @@ p:last-child {
 }
 
 .results .meals .meal .ingredients {
+  flex: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   background-color: rgba(0, 0, 0, 0.2);
-  width: 100%;
   padding: 15px;
   border-radius: 10px;
-  font-size: 0.9rem;
+}
+
+.results .meals .meal .ingredients li {
+  font-size: 1rem;
 }
 
 .results .meals .meal a {
-  background-color: var(--blanco);
+  background-color: var(--color-1);
   color: var(--negro);
-  padding: 0 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 3px var(--negro);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px var(--negro);
   text-align: center;
+}
+
+.results .meals .meal a:hover {
+  background-color: var(--blanco);
+}
+
+.results .meals .meal .source-name {
+  display: inline-block;
 }
 
 /* mi foto */
