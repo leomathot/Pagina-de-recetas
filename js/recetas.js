@@ -134,5 +134,5 @@ function getRecipes() {
 
 function showInfo(i) {
     document.querySelector(`#meal-${i}-info-cont`).classList.toggle("hidden")
-    document.querySelector(`#meal-${i}-h3`).classList.toggle("glass-02")
+    document.querySelector(`#meal-${i}-h3`).classList.toggle("fondo-1")
 }

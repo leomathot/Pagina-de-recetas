@@ -30,8 +30,19 @@
 
   <body>
 
+    <!-- Barra de navegación -->
+    <nav>
+      <div class="nav-enlaces">
+        <a href="#home">Home</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#recipe-search">Search</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    
     <!-- Header -->
-    <header id="inicio">
+    <header id="home">
       <img src="./imagenes/sacando-foto.jpg" alt="persona sacando foto a comida" />
       <div class="marco-texto">
         <div class="nombre animate__animated animate__fadeInDown animate__delay-0.5s animate__slower">
@@ -43,23 +54,9 @@
       </div>
     </header>
 
-    <!-- Barra de navegación -->
-    <nav>
-      <div class="nav-enlaces">
-        <a href="#inicio">Home</a>
-        <a href="#recetas-destacadas">Recetas</a>
-        <a href="#recipe-search">Search</a>
-        <a href="#mi-foto">Mi foto</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-    </nav>
-
     <!-- Main -->
     <main>
 
-      <!-- Esta seccion tiene dos artículo que son los banners -->
-      <!-- Dentro de las secciones hay uno o mas articulos con distinto color -->
-      <!-- Todos los articulos tienen cierto padding. Elegimos el color agregando la clase fondo-1, fondo-2, fondo-3, etc -->
       <div id="banners">
 
         <div class="articulo-banner-inicio-1 fondo-negro">
@@ -82,19 +79,14 @@
 
       </div>
 
-      <!-- Esta es la sección de recetas destacadas de la semana -->
-      <section id="recetas-destacadas" class="fondo-4">
+      <!-- Week selection -->
+      <section id="recipes" class="fondo-4">
 
         <!-- En esta seccion hay un solo artículo -->
         <article class="articulo-destacadas limite-ancho">
-          <h2>Recetas destacadas</h2>
+          <h2>Week selection</h2>
           <p>
-            Esta es nuestra selección semanal. Elegí cualquier receta, buscá los
-            ingredientes, seguí los pasos indicados, y después me contás!
-          </p>
-          <p>
-            Cuando termines de hacer magia podés enviarnos una foto de tu plato en la sección 'Mi foto'. Vamos a publicar las mejores
-            fotos en nuestras redes sociales. No te olvides de seguirnos!
+            This is our weekly selection. Choose any recipe, look for the ingredients, follow the instructions, and then tell me!
           </p>
         </article>
 
@@ -102,6 +94,7 @@
         <div class="destacadas-flex" id="cardsRecetas"></div>
       </section>
 
+      <!-- Recipe search -->
       <section id="recipe-search" class="fondo-3">
 
         <article class="limite-ancho">
@@ -121,25 +114,7 @@
 
       </section>
 
-      <section id="mi-foto" class="fondo-2">
-
-        <!-- Artículo subir foto -->
-        <article class="subir-foto limite-ancho">
-          <h2>
-            Subí tu foto
-          </h2>
-          <p>
-            Subí una foto de un plato que hayas cocinado a partir de una receta de TRANKI. Vamos a publicar las mejores fotos en nuestras redes sociales. No te olvides de seguirnos para ver las fotos y más recetas!
-          </p>
-          <button>
-            Mi foto
-          </button>
-          
-        </article>
-
-      </section>
-
-      <section id="contacto" class="fondo-negro">
+      <section id="contact" class="fondo-negro">
 
         <!-- Artículo subir receta -->
         <article class="subir-receta limite-ancho">
