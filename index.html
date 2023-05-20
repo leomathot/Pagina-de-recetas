@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- css -->
-    <link rel="stylesheet" href="./estilos/estilos.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <!-- animate.css -->
     <link
       rel="stylesheet"
@@ -25,29 +25,29 @@
     ></script>
     <!-- icon -->
     <link rel="icon" type="image/png" href="./iconos/R-icon.png" />
-    <title>Recipe page</title>
+    <title>RECIPage</title>
   </head>
 
   <body>
 
-    <!-- Barra de navegación -->
-    <nav>
+    <!-- Navbar -->
+    <nav id="nav">
       <div class="nav-enlaces">
-        <a href="#home">Home</a>
+        <a href="#header">Home</a>
         <a href="#recipes">Recipes</a>
         <a href="#recipe-search">Search</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
 
-    
     <!-- Header -->
-    <header id="home">
-      <img src="./imagenes/sacando-foto.jpg" alt="persona sacando foto a comida" />
-      <div class="marco-texto">
-        <div class="nombre animate__animated animate__fadeInDown animate__delay-0.5s animate__slower">
+    <header id="header">
+      <img src="./images/person-taking-a-photo.jpg" alt="persona sacando foto a comida" />
+      <div class="text-frame">
+        <div class="name animate__animated animate__fadeInDown animate__delay-0.5s animate__slower">
           RECIPage
-        <div class="frase animate__animated animate__fadeInUp animate__delay-0.5s animate__slower">
+        </div>
+        <div class="text-2 animate__animated animate__fadeInUp animate__delay-0.5s animate__slower">
           Cook easy!
         </div>
       </div>
@@ -57,8 +57,7 @@
     <main>
 
       <div id="banners">
-
-        <div class="articulo-banner-inicio-1 fondo-negro">
+        <div class="home-banner background-black">
           <h2>
             Tenés ganas de comer algo rico?
           </h2>
@@ -67,7 +66,7 @@
           </h3>
         </div>
 
-        <div class="articulo-banner-inicio-2 fondo-3">
+        <div class="home-banner background-3">
           <h2>
             Sale juntada?
           </h2>
@@ -75,28 +74,26 @@
             Sorprendé a tu familia o amigos
           </h3>
         </div>
-
       </div>
 
       <!-- Week selection -->
-      <section id="recipes" class="fondo-4">
+      <section id="recipes" class="background-4">
 
-        <!-- En esta seccion hay un solo artículo -->
-        <article class="articulo-destacadas limite-ancho">
-          <h2>Week selection</h2>
+        <article class="width-limit">
+          <h2>Weekly selection</h2>
           <p>
-            This is our weekly selection. Choose any recipe, look for the ingredients, follow the instructions, and then tell me!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
           </p>
         </article>
 
         <!-- Cards inserted with js -->
-        <div class="destacadas-flex" id="cardsRecetas"></div>
+        <div class="selection-flex" id="recipe-cards"></div>
       </section>
 
       <!-- Recipe search -->
-      <section id="recipe-search" class="fondo-3">
+      <section id="recipe-search" class="background-3">
 
-        <article class="limite-ancho">
+        <article class="width-limit">
 
           <h2>Recipe web search</h2>
           <div class="search" id="search">
@@ -115,22 +112,16 @@
 
       </section>
 
-      <section id="contact" class="fondo-negro">
+      <section id="contact" class="background-black">
 
         <!-- Artículo subir receta -->
-        <article class="subir-receta limite-ancho">
-          <h2>
-            Compartí tu receta
-          </h2>
+        <article class="subir-receta width-limit">
+          <h3>
+            Contact us
+          </h3>
           <p>
-            Envianos tu receta favorita. Llená el siguiente formulario con los ingredientes y preparación de ese plato que tanto te gusta cocinar.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, necessitatibus, laboriosam ratione a totam itaque molestias in mollitia hic dolor iure sed, voluptatem tenetur.
           </p>
-          <p>
-            Puede ser seleccionada y publicada en TRANKI. Si es elegida, tu nombre va a aparecer en la info de la receta cuando la publiquemos.
-          </p>
-          <button>
-            Contacto
-          </button>
 
         </article>
       </section>

@@ -1,12 +1,11 @@
 
 // ***** Week selection cards *****
 
-const recetasDestacadas = [
+const selection = [
     {
-        nombre: "Empanadas",
-        descripcion: "Un clásico, en versiones omnívora y veggie. Para preparar mil y congelar!",
-        rutaPagina: "./recetas/receta-01.html",
-        ingredientes: [
+        name: "Empanadas",
+        description: "Un clásico, en versiones omnívora y veggie. Para preparar mil y congelar!",
+        ingredients: [
             "12 tapas",
             "500 gr Cebolla",
             "500 gr Carne picada o Soja texturizada hidratada",
@@ -15,7 +14,7 @@ const recetasDestacadas = [
             "Pimentón dulce C/N",
             "Sal y pimienta C/N"
         ],
-        pasos: [
+        directions: [
             "Rehogar la cebolla con el ají",
             "Cuando la cebolla se transparente, agregar la carne o soja",
             "Esperar a que la carne cambie toda de color y condimentar",
@@ -23,17 +22,16 @@ const recetasDestacadas = [
             "Rellenar las tapas y hacer el repulgue",
             "Mandar a horno fuerte 10-15 minutos o hasta que se doren"
         ],
-        rutasFotos: [
-            "./imagenes/empanadas-01.jpg",
-            "./imagenes/empanadas-02.jpg",
-            "./imagenes/empanadas-03.jpg"
+        photoPaths: [
+            "./images/empanadas-01.jpg",
+            "./images/empanadas-02.jpg",
+            "./images/empanadas-03.jpg"
         ]
     },
     {
-        nombre: "Milanesas",
-        descripcion: "Sequitas y crocantes. Para disfrutar al plato o en un sánguche completo.",
-        rutaPagina: "./recetas/receta-02.html",
-        ingredientes: [
+        name: "Milanesas",
+        description: "Sequitas y crocantes. Para disfrutar al plato o en un sánguche completo.",
+        ingredients: [
             "500 gr Nalga cortada finamente",
             "25 gr Provenzal",
             "Una cucharada de mostaza",
@@ -42,40 +40,81 @@ const recetasDestacadas = [
             "Aceite C/N",
             "Sal y pimienta C/N"
         ],
-        pasos: [
+        directions: [
             "Limpiar la carne y sacarle el exceso de grasa",
             "Marinarla con el huevo, sal, pimienta, mostaza y provenzal",
             "Ir pasándola por pan rallado, presionando bien para que se pegue",
             "Mandar un rato a la heladera con separadores",
             "Freir o cocinar al horno con un poco de aceite"
         ],
-        rutasFotos: [
-            "./imagenes/milas-01.jpg",
-            "./imagenes/milas-02.jpg",
-            "./imagenes/milas-03.jpg"
+        photoPaths: [
+            "./images/milas-01.jpg",
+            "./images/milas-02.jpg",
+            "./images/milas-03.jpg"
         ]
     }
 ]
 
-let cards = "";
-let recLenght = recetasDestacadas.length
+let recipes = "";
+let recLenght = selection.length
 for (var i = 0; i < recLenght; i++) {
-    cards += `
-        <div class="card-receta">
-            <a href=${recetasDestacadas[i].rutaPagina}>
+    recipes += `
+        <div>
+
+            <div class="recipe-card">
                 <img
-                    src=${recetasDestacadas[i].rutasFotos[0]}
-                    alt=${recetasDestacadas[i].nombre}
+                    src=${selection[i].photoPaths[0]}
+                    alt=${selection[i].name}
                 />
-                <div class="contenedor-texto">
-                    <h4>${recetasDestacadas[i].nombre}</h4>
-                    <p>${recetasDestacadas[i].descripcion}</p>
+                <div class="text-container">
+                    <h4>${selection[i].name}</h4>
+                    <p>${selection[i].description}</p>
                 </div>
-            </a>
+            </div>
+
+            <div class="recipe-display-container hidden">
+            <div class="recipe-display background-black">
+                <header class="rec-disp-header">
+                    <h2>Empanadas</h2>
+                    <i class="fa-solid fa-xmark"></i>
+                </header>
+                <div class="flex-ingredients">
+                    <div>
+                        <h3>Ingredients</h3>
+                        <ul>
+                            <li>12 tapas</li>
+                            <li>500 gr Cebolla</li>
+                            <li>500 gr Carne picada o Soja texturizada hidratada</li>
+                            <li>1 ají rojo o verde</li>
+                            <li>Comino C/N</li>
+                            <li>Pimentón dulce C/N</li>
+                            <li>Sal y pimienta C/N</li>
+                        </ul>
+                    </div>
+                    <img src="../images/empanadas-02.jpg" alt="empanadas">
+                </div>
+
+                <div class="flex-directions">
+                    <img src="../images/empanadas-03.jpg" alt="empanadas">
+                    <div> 
+                        <h3>Directions</h3>
+                        <ul>
+                            <li>Rehogar la cebolla con el ají</li>
+                            <li>Cuando la cebolla se transparente, agregar la carne o soja</li>
+                            <li>Esperar a que la carne cambie toda de color y condimentar</li>
+                            <li>Dejar enfriar el relleno</li>
+                            <li>Rellenar las tapas y hacer el repulgue</li>
+                            <li>Mandar a horno fuerte 10-15 minutos o hasta que se doren</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+
         </div>`
 }
 
-document.querySelector("#cardsRecetas").innerHTML = cards;
+document.querySelector("#recipe-cards").innerHTML = recipes;
 
 
 // ***** Recipe web search *****

@@ -9,15 +9,16 @@ if (navNoIndexTag != null) {
     navNoIndexTag.innerHTML = navNoIndex;
 }
 
-let footer = `<div class="footer-pagina">
+let footer = `
+    <div class="page-footer">
 
-    <div class="footer-texto">
+    <div class="footer-text">
     <p>
         <i class="fa-regular fa-copyright"></i> 2023 RECIPage
     </p>
     </div>
 
-    <div class="footer-enlaces">
+    <div class="footer-links">
     <a href="https://www.instagram.com" target="_blank" title="Instagram">
         <i class="fa-brands fa-instagram"></i >
     </a>
@@ -33,7 +34,7 @@ let footer = `<div class="footer-pagina">
     </div>
     </div>
 
-    <div class="footer-grupo-2">
+    <div class="developer-info">
 
     <div>
     <p>Leonardo Mathot</p>
@@ -47,6 +48,7 @@ let footer = `<div class="footer-pagina">
     </a>
     </div>
 
-    </div>`;
+    </div>
+    `;
 
 document.querySelector("#footer").innerHTML = footer;
