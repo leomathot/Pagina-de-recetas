@@ -5,7 +5,6 @@
   list-style: none;
 }
 
-/* Variables */
 :root {
   --font-1: "Poppins";
   --font-2: "Lobster";
@@ -14,34 +13,29 @@
   --negro: #202020;
   --gris: #505050;
 
-  --color-1: #aefffb;
+  --color-1: #aefcff;
   --color-2: #b1ffa2;
-  --color-3: #2a9adb;
-  --color-4: #25a77b;
+  --color-3: #30a0e0;
+  --color-4: #109888;
 
-  --selection-background: #2d633f;
+  --selection-background: rgba(30, 115, 80, 0.7);
   --selection-color: var(--blanco);
 }
 
-/* Color de texto y fondo cuanso se selecciona texto en la página */
-/* Codigo para Firefox */
 ::-moz-selection {
   background: var(--selection-background);
   color: var(--selection-color);
 }
 
-/* Color de texto y fondo cuanso se selecciona texto en la página */
 ::selection {
   background: var(--selection-background);
   color: var(--selection-color);
 }
 
-/* La propiedad scroll-behavior especifica si animar suavemente la posición de desplazamiento, en lugar de un salto directo, cuando el usuario hace clic en un enlace dentro de un cuadro desplazable */
 html {
   scroll-behavior: smooth;
 }
 
-/* Estilo de la barra de scroll para que no sea la que viene por defecto con el navegador */
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -60,14 +54,13 @@ html {
 
 /* Body */
 body {
-  font-family: var(--font-1), sans-serif; /* fuente 1*/
+  font-family: var(--font-1), sans-serif;
   font-size: 1.1rem;
   background-color: var(--negro);
   color: var(--blanco);
 }
 
-
-/* Barra de navegación */
+/* Navbar */
 nav {
   background-color: var(--color-4);
   display: flex;
@@ -115,29 +108,29 @@ header img {
 
 header .marco-texto {
   z-index: 20;
-  background-color: rgba(11, 114, 173, 0.6);
+  background-color: rgba(20, 104, 104, 0.7);
   padding: 10px 0;
   width: 100%;
   max-width: 330px;
   border-radius: 10px;
 }
 
-/* TRANKI */
+/* name */
 header .nombre {
   color: var(--blanco);
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
 }
 
-/* Hoy cocino yo! */
+/* Cook easy! */
 header .frase {
-  font-family: var(--font-2), var(--font-1), sans-serif; /* fuente 2 */
+  font-family: var(--font-2), var(--font-1), sans-serif;
+  font-weight: 100;
   color: var(--color-1);
   font-size: 3rem;
 }
 
 /* Main */
-/* Estilos generales de secciones (<sectio>), artículos (<article>), tarjetas (.card), etc */
 section {
   display: flex;
   flex-wrap: wrap;
@@ -151,7 +144,7 @@ article {
 h1, h2 {
   font-family: var(--font-2), var(--font-1), sans-serif;
   font-size: 3rem;
-  font-weight: 100; /* los h2 están por defecto en negrita (bold) pero con esta fuente queda mal, con font-weight:100 ya no están en negrita */
+  font-weight: 100;
   margin-bottom: 35px;
 }
 
@@ -214,8 +207,6 @@ p:last-child {
   display: none;
 }
 
-/* Estilos específicos */
-
 #banners {
   display: flex;
   flex-wrap: wrap;
@@ -244,12 +235,12 @@ p:last-child {
   min-height: 400px;
   border-radius: 10px;
   font-size: 1rem;
-  box-shadow: 0 2px 5px var(--negro);
+  box-shadow: 0 2px 10px var(--negro);
 }
 
 .card-receta:hover {
   transform: scale(1.05);
-  box-shadow: 0 2px 10px var(--negro);
+  box-shadow: 0 2px 15px var(--negro);
 }
 
 .card-receta img {
@@ -268,13 +259,13 @@ p:last-child {
   color: var(--color-1);
 }
 
-/* Páginas de recetas */
 .flex-ingredientes {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   margin: 0 0 40px 0;
-  background-color: rgba(0, 100, 255, 0.1);
+  background-color: var(--color-3);
+  color: var(--blanco);
   padding: 20px 10px;
   border-radius: 10px;
 }
@@ -285,23 +276,23 @@ p:last-child {
   gap: 20px;
   text-align: right;
   margin: 0 0 0 0;
-  background-color: rgba(0, 100, 255, 0.1);
+  background-color: var(--color-3);
+  color: var(--blanco);
   padding: 20px 10px;
   border-radius: 10px;
 }
 
 .flex-ingredientes ul, .flex-pasos ul {
   margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .flex-ingredientes li, .flex-pasos li {
-  padding: 5px;
-  border-radius: 5px;
+  padding: 3px 0;
 }
 
-.flex-ingredientes li:nth-child(odd), .flex-pasos li:nth-child(odd) {
-  background-color: var(--color-2);
-}
 
 .flex-ingredientes img, .flex-pasos img {
   width: 100%;

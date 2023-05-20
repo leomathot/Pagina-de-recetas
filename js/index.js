@@ -1,6 +1,6 @@
 let navNoIndex = `
         <div class="nav-enlaces">
-            <a href="../index.html">Inicio</a>
+            <a href="../index.html">Home</a>
         </div>`;
 
 let navNoIndexTag = document.querySelector("#nav-no-index");
@@ -13,7 +13,7 @@ let footer = `<div class="footer-pagina">
 
     <div class="footer-texto">
     <p>
-        <i class="fa-regular fa-copyright"></i> 2023 TRANKI
+        <i class="fa-regular fa-copyright"></i> 2023 RECIPage
     </p>
     </div>
 
@@ -36,25 +36,13 @@ let footer = `<div class="footer-pagina">
     <div class="footer-grupo-2">
 
     <div>
-    <p>Codo a Codo</p>
-    <p>FULL STACK PYTHON</p>
-    <p>2023 - 1er cuat.</p>
-    <p>Comisión 23037</p>
+    <p>Leonardo Mathot</p>
+    <p>leomathot21@gmail.com</p>
     </div>
 
     <div>
-    <p><strong>Grupo 2</strong></p>
-    <ul>
-        <li>Jesica Moure</li>
-        <li>Malena Sencio</li>
-        <li>Manuel Pérez</li>
-        <li>Leonardo Mathot</li>
-    </ul>
-    </div>
-
-    <div>
-    <p>Repositorio del proyecto</p>
-    <a href="" target="_blank" title="GitHub">
+    <p>Github Repository</p>
+    <a href="https://github.com/leomathot/Recipe-page" target="_blank" title="GitHub">
         <i class="fa-brands fa-github"></i>
     </a>
     </div>
