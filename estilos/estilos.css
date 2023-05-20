@@ -409,6 +409,10 @@ p:last-child {
   border-radius: 10px;
 }
 
+.results .meals .meal img:hover {
+  transform: scale(2);
+}
+
 .results .meals .meal .ingredients {
   flex: 400px;
   display: flex;
