@@ -91,11 +91,11 @@ for (var i = 0; i < recLenght; i++) {
                             <li>Sal y pimienta C/N</li>
                         </ul>
                     </div>
-                    <img src="../images/empanadas-02.jpg" alt="empanadas">
+                    <img src="./images/empanadas-02.jpg" alt="empanadas">
                 </div>
 
                 <div class="flex-directions">
-                    <img src="../images/empanadas-03.jpg" alt="empanadas">
+                    <img src="./images/empanadas-03.jpg" alt="empanadas">
                     <div> 
                         <h3>Directions</h3>
                         <ul>
