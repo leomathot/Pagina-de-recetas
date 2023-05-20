@@ -1,3 +1,6 @@
+
+// ***** Week selection cards *****
+
 const recetasDestacadas = [
     {
         nombre: "Empanadas",
@@ -55,7 +58,8 @@ const recetasDestacadas = [
 ]
 
 let cards = "";
-for (var i = 0; i < recetasDestacadas.length; i++) {
+let recLenght = recetasDestacadas.length
+for (var i = 0; i < recLenght; i++) {
     cards += `
         <div class="card-receta">
             <a href=${recetasDestacadas[i].rutaPagina}>
@@ -74,67 +78,91 @@ for (var i = 0; i < recetasDestacadas.length; i++) {
 document.querySelector("#cardsRecetas").innerHTML = cards;
 
 
-// Recipe search
+// ***** Recipe web search *****
 
-function getRecipes() {
+const searchBtn = document.querySelector("#search-btn")
+searchBtn.addEventListener("click", checkInput)
 
-    let ingredient = document.querySelector("#text-input").value
-
-    if (ingredient == "") {
-        alert("Please introduce a word")
-        return
+function checkInput() {
+    document.querySelector("#input-empty-error").classList.add("hidden")
+    document.querySelector("#input-typing-error").classList.add("hidden")
+    document.querySelector("#results").innerHTML = ""
+    const ingredient = document.querySelector("#text-input").value
+    if (ingredient.length == 0) {
+        document.querySelector("#input-empty-error").classList.remove("hidden")
+    } else {
+        getRecipes(ingredient)
     }
-    const appId= "f0066eb3"
-    const appKey = "c0ed70ae7e477a44d37b0033b0aab25c"
-
-    enlaceAPIRecetas = `https://api.edamam.com/api/recipes/v2?type=public&q=${ingredient}&app_id=${appId}&app_key=${appKey}&ingr=4-14&random=false`
-
-    fetch(enlaceAPIRecetas)
-        .then(res => res.json())
-        .then(res => {
-
-            let list = ``;
-
-            for(let i=0; i<10; i++) {
-
-                    const meal = res.hits[i].recipe.label
-                    const imgSrc = res.hits[i].recipe.image
-                    let ingredients = ``
-
-                    res.hits[i].recipe.ingredientLines.map(el => {
-                        ingredients += `<li>${el}</li>`
-                        })
-
-                    list += (`
-                        <div class="meal" id="meal-${i}">
-                            <h3 id="meal-${i}-h3" onclick={showInfo(${i})}>${meal}</h3>
-                            <div class="hidden meal-info-cont" id="meal-${i}-info-cont">
-                                <div class="meal-info">
-                                    <div class="img-ing-flex">
-                                        <img src="${imgSrc}" alt="${meal}" />
-                                        <div class="ingredients">
-                                            <h4>Ingredients</h4>
-                                            <ul>${ingredients}</ul>
-                                        </div>
-                                    </div>
-                                    <a href="${res.hits[i].recipe.url}" target="_blank">View recipe at <span class="source-name"><strong>${res.hits[i].recipe.source}</strong></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    `)
-                }
-
-            const imgSrc = res.hits[0].recipe.image
-            document.querySelector("#results").innerHTML = `
-
-                <div class="meals">${list}</div>`
-            
-            })
 }
 
-function showInfo(i) {
-    document.querySelector(`#meal-${i}`).classList.toggle("glass-02")
-    document.querySelector(`#meal-${i}`).classList.toggle("pad-10")
-    document.querySelector(`#meal-${i}-h3`).classList.toggle("fondo-1")
-    document.querySelector(`#meal-${i}-info-cont`).classList.toggle("hidden")
+function getRecipes(ingredient) {
+    const appId= "f0066eb3"
+    const appKey = "c0ed70ae7e477a44d37b0033b0aab25c"
+    const APIURL = `https://api.edamam.com/api/recipes/v2?type=public&q=${ingredient}&app_id=${appId}&app_key=${appKey}&ingr=4-14&random=false`
+
+    fetch(APIURL)
+        .then(res => res.json())
+        .then(res => {
+            let list = ``;
+            for(let i=0; i<10; i++) {
+                const mealName = res.hits[i].recipe.label
+                const imgSrc = res.hits[i].recipe.image
+                let ingredients = ``
+                res.hits[i].recipe.ingredientLines.map(el => {
+                    ingredients += `<li>${el}</li>`
+                })
+                list += (`
+                    <div class="meal" id="meal-${i}">
+                        <div class="meal-title">
+                            <h3>${mealName}</h3>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="meal-info-cont hidden">
+                            <div class="meal-info">
+                                <div class="img-ing-flex">
+                                    <img src="${imgSrc}" alt="${mealName}" />
+                                    <div class="ingredients">
+                                        <h4>Ingredients</h4>
+                                        <ul>${ingredients}</ul>
+                                    </div>
+                                </div>
+                                <a href="${res.hits[i].recipe.url}" target="_blank">View recipe at <strong>${res.hits[i].recipe.source}</strong></a>
+                            </div>
+                        </div>
+                    </div>
+                `)
+            }
+            document.querySelector("#results").innerHTML = `
+                <div class="meals">${list}</div>
+            `
+            showInfo()
+        }).catch(error => {
+            document.querySelector("#input-typing-error").classList.remove("hidden")
+        })
+}
+
+function showInfo() {
+    const meals = document.querySelectorAll(".meal")
+    meals.forEach((meal, index) => {
+        let title = meal.querySelector(".meal-title")
+        let mealInfoCont = meal.querySelector(".meal-info-cont")
+        title.addEventListener("click", () => {
+
+            // hide others
+            meals.forEach((item, ind) => {
+                if(index !== ind) {
+                    item.querySelector(".meal-info-cont").classList.add("hidden")
+                    item.querySelector("i").classList.replace("fa-minus", "fa-plus")
+                }
+            })
+
+            // show/hide info
+            mealInfoCont.classList.toggle("hidden")
+            if (!mealInfoCont.classList.contains("hidden")) {
+                title.querySelector("i").classList.replace("fa-plus", "fa-minus")
+            } else {
+                title.querySelector("i").classList.replace("fa-minus", "fa-plus")
+            }
+        })
+    })
 }

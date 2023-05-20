@@ -103,10 +103,12 @@
           <div class="search" id="search">
             <div class="search-controls">
               <input type="text" id="text-input"></input>
-              <button onclick={getRecipes()}>
+              <button id="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
+            <p id="input-empty-error" class="hidden">Please type at least one word!</p>
+            <p id="input-typing-error" class="hidden">Search error, try typing something else!</p>
             <div class="results" id="results"></div>
           </div>
 
