@@ -52,15 +52,127 @@ const selection = [
             "./images/milas-02.jpg",
             "./images/milas-03.jpg"
         ]
+    },
+    {
+        name: "Empanadas",
+        description: "Un clásico, en versiones omnívora y veggie. Para preparar mil y congelar!",
+        ingredients: [
+            "12 tapas",
+            "500 gr Cebolla",
+            "500 gr Carne picada o Soja texturizada hidratada",
+            "1 ají rojo o verde",
+            "Comino C/N",
+            "Pimentón dulce C/N",
+            "Sal y pimienta C/N"
+        ],
+        directions: [
+            "Rehogar la cebolla con el ají",
+            "Cuando la cebolla se transparente, agregar la carne o soja",
+            "Esperar a que la carne cambie toda de color y condimentar",
+            "Dejar enfriar el relleno",
+            "Rellenar las tapas y hacer el repulgue",
+            "Mandar a horno fuerte 10-15 minutos o hasta que se doren"
+        ],
+        photoPaths: [
+            "./images/empanadas-01.jpg",
+            "./images/empanadas-02.jpg",
+            "./images/empanadas-03.jpg"
+        ]
+    },
+    {
+        name: "Milanesas",
+        description: "Sequitas y crocantes. Para disfrutar al plato o en un sánguche completo.",
+        ingredients: [
+            "500 gr Nalga cortada finamente",
+            "25 gr Provenzal",
+            "Una cucharada de mostaza",
+            "3 huevos",
+            "Pan rallado C/N",
+            "Aceite C/N",
+            "Sal y pimienta C/N"
+        ],
+        directions: [
+            "Limpiar la carne y sacarle el exceso de grasa",
+            "Marinarla con el huevo, sal, pimienta, mostaza y provenzal",
+            "Ir pasándola por pan rallado, presionando bien para que se pegue",
+            "Mandar un rato a la heladera con separadores",
+            "Freir o cocinar al horno con un poco de aceite"
+        ],
+        photoPaths: [
+            "./images/milas-01.jpg",
+            "./images/milas-02.jpg",
+            "./images/milas-03.jpg"
+        ]
+    },
+    {
+        name: "Empanadas",
+        description: "Un clásico, en versiones omnívora y veggie. Para preparar mil y congelar!",
+        ingredients: [
+            "12 tapas",
+            "500 gr Cebolla",
+            "500 gr Carne picada o Soja texturizada hidratada",
+            "1 ají rojo o verde",
+            "Comino C/N",
+            "Pimentón dulce C/N",
+            "Sal y pimienta C/N"
+        ],
+        directions: [
+            "Rehogar la cebolla con el ají",
+            "Cuando la cebolla se transparente, agregar la carne o soja",
+            "Esperar a que la carne cambie toda de color y condimentar",
+            "Dejar enfriar el relleno",
+            "Rellenar las tapas y hacer el repulgue",
+            "Mandar a horno fuerte 10-15 minutos o hasta que se doren"
+        ],
+        photoPaths: [
+            "./images/empanadas-01.jpg",
+            "./images/empanadas-02.jpg",
+            "./images/empanadas-03.jpg"
+        ]
+    },
+    {
+        name: "Milanesas",
+        description: "Sequitas y crocantes. Para disfrutar al plato o en un sánguche completo.",
+        ingredients: [
+            "500 gr Nalga cortada finamente",
+            "25 gr Provenzal",
+            "Una cucharada de mostaza",
+            "3 huevos",
+            "Pan rallado C/N",
+            "Aceite C/N",
+            "Sal y pimienta C/N"
+        ],
+        directions: [
+            "Limpiar la carne y sacarle el exceso de grasa",
+            "Marinarla con el huevo, sal, pimienta, mostaza y provenzal",
+            "Ir pasándola por pan rallado, presionando bien para que se pegue",
+            "Mandar un rato a la heladera con separadores",
+            "Freir o cocinar al horno con un poco de aceite"
+        ],
+        photoPaths: [
+            "./images/milas-01.jpg",
+            "./images/milas-02.jpg",
+            "./images/milas-03.jpg"
+        ]
     }
 ]
 
-let recipes = "";
+let recipesContent = "";
 let recLenght = selection.length
 for (var i = 0; i < recLenght; i++) {
-    recipes += `
+    // each recipe ingredients
+    let recIngredients = ``
+    selection[i].ingredients.forEach(ing => {
+        recIngredients += `<li>${ing}</li>`
+    })
+    // each recipe directions
+    let recDirections = ``
+    selection[i].directions.forEach(dir => {
+        recDirections += `<li>${dir}</li>`
+    })
+    recipesContent += `
         <div>
-
+        <div class="recipe">
             <div class="recipe-card">
                 <img
                     src=${selection[i].photoPaths[0]}
@@ -73,48 +185,60 @@ for (var i = 0; i < recLenght; i++) {
             </div>
 
             <div class="recipe-display-container hidden">
-            <div class="recipe-display background-black">
+            <div class="recipe-display">
                 <header class="rec-disp-header">
-                    <h2>Empanadas</h2>
-                    <i class="fa-solid fa-xmark"></i>
+                    <h2>${selection[i].name}</h2>
+                    <i class="fa-solid fa-xmark close-rec"></i>
                 </header>
-                <div class="flex-ingredients">
-                    <div>
-                        <h3>Ingredients</h3>
+
+                <div class="rec-ingredients">
+                    <h3>Ingredients</h3>
+                    <div class="ing-img-flex">
                         <ul>
-                            <li>12 tapas</li>
-                            <li>500 gr Cebolla</li>
-                            <li>500 gr Carne picada o Soja texturizada hidratada</li>
-                            <li>1 ají rojo o verde</li>
-                            <li>Comino C/N</li>
-                            <li>Pimentón dulce C/N</li>
-                            <li>Sal y pimienta C/N</li>
+                            ${recIngredients}
                         </ul>
+                        <img
+                            src=${selection[i].photoPaths[1]}
+                            alt=${selection[i].name}
+                        />
                     </div>
-                    <img src="./images/empanadas-02.jpg" alt="empanadas">
                 </div>
 
-                <div class="flex-directions">
-                    <img src="./images/empanadas-03.jpg" alt="empanadas">
-                    <div> 
-                        <h3>Directions</h3>
+                <div class="rec-directions">
+                    <h3>Directions</h3>
+                    <div class="dir-img-flex">
+                        <img
+                            src=${selection[i].photoPaths[2]}
+                            alt=${selection[i].name}
+                        />
                         <ul>
-                            <li>Rehogar la cebolla con el ají</li>
-                            <li>Cuando la cebolla se transparente, agregar la carne o soja</li>
-                            <li>Esperar a que la carne cambie toda de color y condimentar</li>
-                            <li>Dejar enfriar el relleno</li>
-                            <li>Rellenar las tapas y hacer el repulgue</li>
-                            <li>Mandar a horno fuerte 10-15 minutos o hasta que se doren</li>
+                             ${recDirections}
                         </ul>
                     </div>
                 </div>
             </div>
             </div>
-
+        </div>
         </div>`
 }
 
-document.querySelector("#recipe-cards").innerHTML = recipes;
+document.querySelector("#recipe-cards").innerHTML = recipesContent
+
+let recipes = document.querySelectorAll(".recipe")
+recipes.forEach(recipe => recipe.querySelector(".recipe-card").addEventListener("click", () => {
+    let displayCont = recipe.querySelector(".recipe-display-container")
+    displayCont.classList.remove("hidden")
+    let cards = document.querySelectorAll(".recipe-card")
+    cards.forEach(card => card.classList.add("hidden"))
+}))
+
+let closeRecs = document.querySelectorAll(".close-rec")
+closeRecs.forEach(x => x.addEventListener("click", () => {
+    let cards = document.querySelectorAll(".recipe-card")
+    cards.forEach(card => card.classList.remove("hidden"))
+    let displayConts = document.querySelectorAll(".recipe-display-container")
+    displayConts.forEach(cont => cont.classList.add("hidden"))
+}))
 
 
 // ***** Recipe web search *****
@@ -158,9 +282,9 @@ function getRecipes(ingredient) {
                         </div>
                         <div class="meal-info-cont hidden">
                             <div class="meal-info">
-                                <div class="img-ing-flex">
+                                <div class="meal-img-ing-flex">
                                     <img src="${imgSrc}" alt="${mealName}" />
-                                    <div class="ingredients">
+                                    <div class="meal-ingredients">
                                         <h4>Ingredients</h4>
                                         <ul>${ingredients}</ul>
                                     </div>

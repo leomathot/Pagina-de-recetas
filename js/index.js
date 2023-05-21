@@ -1,14 +1,3 @@
-let navNoIndex = `
-        <div class="nav-enlaces">
-            <a href="../index.html">Home</a>
-        </div>`;
-
-let navNoIndexTag = document.querySelector("#nav-no-index");
-
-if (navNoIndexTag != null) {
-    navNoIndexTag.innerHTML = navNoIndex;
-}
-
 let footer = `
     <div class="page-footer">
 
