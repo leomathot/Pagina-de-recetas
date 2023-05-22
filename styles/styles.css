@@ -573,12 +573,14 @@ footer {
 
 .page-footer .footer-links a {
   height: fit-content;
-  padding: 4px;
+  border-radius: 8px;
+  padding: 2px 8px;
   font-size: 1.2rem;
 }
 
 .page-footer .footer-links a:hover {
-  color: var(--color-2);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--color-1);
 }
 
 /* Developer info */
@@ -665,5 +667,8 @@ footer {
 @media screen and (max-width: 480px) {
   .recipe-display {
     padding: 5px;
+  }
+  .results .meals .meal .meal-info-cont {
+    padding: 0 5px 15px 5px;
   }
 }
