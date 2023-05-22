@@ -320,6 +320,8 @@ function showInfo() {
                 if(index !== ind) {
                     item.querySelector(".meal-info-cont").classList.add("hidden")
                     item.querySelector("i").classList.replace("fa-minus", "fa-plus")
+                    item.querySelector("i").style.border = "2px solid transparent"
+                    item.querySelector(".meal-title").style.borderRadius = "10px"
                 }
             })
 
@@ -327,8 +329,12 @@ function showInfo() {
             mealInfoCont.classList.toggle("hidden")
             if (!mealInfoCont.classList.contains("hidden")) {
                 title.querySelector("i").classList.replace("fa-plus", "fa-minus")
+                title.style.borderRadius = "10px 10px 0 0"
+                title.querySelector("i").style.border = "2px solid var(--white)"
             } else {
                 title.querySelector("i").classList.replace("fa-minus", "fa-plus")
+                title.style.borderRadius = "10px"
+                title.querySelector("i").style.border = "2px solid transparent"
             }
         })
     })
