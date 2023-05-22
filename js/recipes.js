@@ -230,6 +230,8 @@ recipes.forEach(recipe => recipe.querySelector(".recipe-card").addEventListener(
     displayCont.classList.remove("hidden")
     let cards = document.querySelectorAll(".recipe-card")
     cards.forEach(card => card.classList.add("hidden"))
+    document.querySelector(".selection-grid").style.gridTemplateColumns = "1fr"
+    document.querySelector(".selection-grid").style.gap = "0"
 }))
 
 let closeRecs = document.querySelectorAll(".close-rec")
@@ -238,6 +240,8 @@ closeRecs.forEach(x => x.addEventListener("click", () => {
     cards.forEach(card => card.classList.remove("hidden"))
     let displayConts = document.querySelectorAll(".recipe-display-container")
     displayConts.forEach(cont => cont.classList.add("hidden"))
+    document.querySelector(".selection-grid").style.gridTemplateColumns = "var(--selection-grid-frs)"
+    document.querySelector(".selection-grid").style.gap = "var(--selection-grid-gap)"
 }))
 
 
