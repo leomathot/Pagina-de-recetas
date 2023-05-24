@@ -31,7 +31,7 @@ let footer = `
     </div>
 
     <div>
-    <p>Github Repository</p>
+    <p>GitHub Repository</p>
     <a href="https://github.com/leomathot/Recipe-page" target="_blank" title="GitHub">
         <i class="fa-brands fa-github"></i>
     </a>

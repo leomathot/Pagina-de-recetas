@@ -18,8 +18,8 @@
 
   --color-1: #aef3ff;
   --color-2: #b1ffa2;
-  --color-3: #3ca6e7;
-  --color-4: #13a888;
+  --color-3: #2585c0;
+  --color-4: #098066;
 
   --selection-background: rgba(58, 133, 102, 0.8);
   --selection-color: var(--white);
@@ -289,7 +289,7 @@ p:last-child {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
 }
 
 .rec-disp-header {
@@ -319,17 +319,23 @@ p:last-child {
   color: var(--color-1);
 }
 
+.rec-ingredients, 
+.rec-directions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .rec-ingredients h3, 
 .rec-directions h3 {
   width: 100%;
-  margin: 0 0 15px 5px;
+  margin-left: 5px;
 }
 
 .ing-img-flex,
 .dir-img-flex {
   display: flex;
-  column-gap: 10px;
-  row-gap: 20px;
+  gap: 10px;
 }
 
 .rec-ingredients ul, 
@@ -390,16 +396,17 @@ p:last-child {
   background-color: var(--white)
 }
 
-#input-empty-error, 
-#input-typing-error {
-  margin: 0;
-}
-
-.results {
+#results {
   width: 100%;
 }
 
-.results .meals {
+#input-empty-error, 
+#search-error {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#results #meals {
   width: 100%;
   display: flex;
   gap: 3px;
@@ -407,7 +414,7 @@ p:last-child {
   align-items: center;
 }
 
-.results .meals .meal {
+#results #meals .meal {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -418,7 +425,7 @@ p:last-child {
   position: relative;
 }
 
-.results .meals .meal .meal-title {
+#results #meals .meal .meal-title {
   width: 100%;
   display: flex;
   align-items: center;
@@ -428,42 +435,42 @@ p:last-child {
   font-size: 1rem;
 }
 
-.results .meals .meal .meal-title:hover {
+#results #meals .meal .meal-title:hover {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
-.results .meals .meal .meal-title h3 {
+#results #meals .meal .meal-title h3 {
   width: 100%;
   text-align: center;
 }
 
-.results .meals .meal .meal-title i {
+#results #meals .meal .meal-title i {
   border: 2px solid transparent;
   padding: 1px 8px;
   border-radius: 5px;
 }
 
-.results .meals .meal .meal-info-cont {
+#results #meals .meal .meal-info-cont {
   width: 100%;
   padding: 0 10px 20px 10px;
 }
 
-.results .meals .meal .meal-info {
+#results #meals .meal .meal-info {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.results .meals .meal .meal-img-ing-flex {
+#results #meals .meal .meal-img-ing-flex {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-.results .meals .meal img {
+#results #meals .meal img {
   background-color: var(--black);
   width: 100%;
   max-width: 400px;
@@ -475,7 +482,7 @@ p:last-child {
   left: 0;
 }
 
-.results .meals .meal .meal-ingredients {
+#results #meals .meal .meal-ingredients {
   background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 100%;
@@ -483,11 +490,11 @@ p:last-child {
   border-radius: 10px;
 }
 
-.results .meals .meal .meal-ingredients li {
+#results #meals .meal .meal-ingredients li {
   font-size: 1rem;
 }
 
-.results .meals .meal a {
+#results #meals .meal a {
   background-color: var(--white);
   color: var(--black);
   padding: 10px;
@@ -498,7 +505,7 @@ p:last-child {
   margin: 0 auto;
 }
 
-.results .meals .meal a:hover {
+#results #meals .meal a:hover {
   background-color: var(--color-1);
 }
 
@@ -655,11 +662,11 @@ footer {
   .dir-img-flex img {
     max-width: 700px;
   }
-  .results .meals .meal .meal-img-ing-flex {
+  #results #meals .meal .meal-img-ing-flex {
     flex-direction: column;
     align-items: center;
   }
-  .results .meals .meal .meal-img-ing-flex img {
+  #results #meals .meal .meal-img-ing-flex img {
     max-height: 300px;
   }
 }
@@ -668,7 +675,7 @@ footer {
   .recipe-display {
     padding: 5px;
   }
-  .results .meals .meal .meal-info-cont {
+  #results #meals .meal .meal-info-cont {
     padding: 0 5px 15px 5px;
   }
 }

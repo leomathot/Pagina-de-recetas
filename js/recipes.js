@@ -251,12 +251,11 @@ const searchBtn = document.querySelector("#search-btn")
 searchBtn.addEventListener("click", checkInput)
 
 function checkInput() {
-    document.querySelector("#input-empty-error").classList.add("hidden")
-    document.querySelector("#input-typing-error").classList.add("hidden")
-    document.querySelector("#results").innerHTML = ""
+    const results = document.querySelector("#results")
     const ingredient = document.querySelector("#text-input").value
     if (ingredient.length == 0) {
-        document.querySelector("#input-empty-error").classList.remove("hidden")
+        results.innerHTML = `
+            <p id="input-empty-error">Please type at least one word!</p>`
     } else {
         getRecipes(ingredient)
     }
@@ -270,16 +269,20 @@ function getRecipes(ingredient) {
     fetch(APIURL)
         .then(res => res.json())
         .then(res => {
-            let list = ``;
-            for(let i=0; i<10; i++) {
+            let mealsLength = res.hits.length
+            let mealsElements = ""
+            let pageSelectors = ""
+            let mealsPerPage = 5;
+            // Generate each meal element and add it to mealsElements
+            for(let i=0; i<mealsLength; i++) {
                 const mealName = res.hits[i].recipe.label
                 const imgSrc = res.hits[i].recipe.image
-                let ingredients = ``
+                let mealIngredients = ""
                 res.hits[i].recipe.ingredientLines.map(el => {
-                    ingredients += `<li>${el}</li>`
+                    mealIngredients += `<li>${el}</li>`
                 })
-                list += (`
-                    <div class="meal" id="meal-${i}">
+                mealsElements += `
+                    <div class="meal" id="meal-${i + 1}">
                         <div class="meal-title">
                             <h3>${mealName}</h3>
                             <i class="fa-solid fa-plus"></i>
@@ -290,32 +293,45 @@ function getRecipes(ingredient) {
                                     <img src="${imgSrc}" alt="${mealName}" />
                                     <div class="meal-ingredients">
                                         <h4>Ingredients</h4>
-                                        <ul>${ingredients}</ul>
+                                        <ul>${mealIngredients}</ul>
                                     </div>
                                 </div>
                                 <a href="${res.hits[i].recipe.url}" target="_blank">View recipe at <strong>${res.hits[i].recipe.source}</strong></a>
                             </div>
                         </div>
-                    </div>
-                `)
+                    </div>`
             }
-            document.querySelector("#results").innerHTML = `
-                <div class="meals">${list}</div>
-            `
-            showInfo()
+            // Generate page selectors and add them to pageSelectors
+
+            //
+
+            // Insert elements or errors to the HTML file
+            let searchErrorPTag = `<p id="search-error">Search error, try typing something else!</p>`
+            if (mealsLength == 0) {
+                console.log("Error getting recipes.")
+                results.innerHTML = searchErrorPTag
+            } else {
+                // Insert elements
+                results.innerHTML = `
+                    <div id="meals">${mealsElements}</div>
+                    <div id="page-selectors">${pageSelectors}</div>`
+                // Call the function to toggle the meal info if selected
+                toggleInfo()
+            }
         }).catch(error => {
-            document.querySelector("#input-typing-error").classList.remove("hidden")
+            console.log("Error getting recipes.", error)
+            results.innerHTML = searchErrorPTag
         })
 }
 
-function showInfo() {
+function toggleInfo() {
     const meals = document.querySelectorAll(".meal")
     meals.forEach((meal, index) => {
         let title = meal.querySelector(".meal-title")
         let mealInfoCont = meal.querySelector(".meal-info-cont")
         title.addEventListener("click", () => {
 
-            // hide others
+            // Hide other meals
             meals.forEach((item, ind) => {
                 if(index !== ind) {
                     item.querySelector(".meal-info-cont").classList.add("hidden")
@@ -325,7 +341,7 @@ function showInfo() {
                 }
             })
 
-            // show/hide info
+            // Toggle info of selected
             mealInfoCont.classList.toggle("hidden")
             if (!mealInfoCont.classList.contains("hidden")) {
                 title.querySelector("i").classList.replace("fa-plus", "fa-minus")
