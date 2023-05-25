@@ -142,36 +142,33 @@ a {
 /* Main */
 section {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 40px;
   padding: 60px 30px;
 }
 
 article {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 auto 0 auto;
+  max-width: 800px;
+}
+
+.width-limit {
+  margin: 0 auto 0 auto;
+  max-width: 800px;
 }
 
 h1, h2 {
   font-family: var(--font-2), var(--font-1), sans-serif;
   font-size: 3rem;
   font-weight: 100;
-  margin-bottom: 35px;
 }
 
 h2 {
   font-size: 2.5rem;
-}
-
-p {
-  margin-bottom: 25px;
-}
-
-p:last-child {
-  margin-bottom: 0;
-}
-
-.width-limit {
-  margin: 0 auto 0 auto;
-  max-width: 800px;
 }
 
 .background-1 {
@@ -229,6 +226,7 @@ p:last-child {
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 30px;
   padding: 20px;
 }
 
@@ -236,7 +234,7 @@ p:last-child {
   display: grid;
   grid-template-columns: var(--selection-grid-frs);
   gap: var(--selection-grid-gap);
-  margin: 40px auto 0 auto;
+  margin: 0 auto;
 }
 
 .recipe-card {
@@ -398,6 +396,10 @@ p:last-child {
 
 #results {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
 }
 
 #input-empty-error, 
@@ -412,6 +414,10 @@ p:last-child {
   gap: 3px;
   flex-direction: column;
   align-items: center;
+}
+
+#results #meals .meal-container {
+  width: 100%;
 }
 
 #results #meals .meal {
@@ -507,6 +513,24 @@ p:last-child {
 
 #results #meals .meal a:hover {
   background-color: var(--color-1);
+}
+
+#page-selectors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+#page-selectors .page-selector {
+  padding: 1px 4px;
+  width: 1.5rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#page-selectors .page-selector:hover {
+  cursor: pointer;
 }
 
 /* mi foto */

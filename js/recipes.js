@@ -272,7 +272,9 @@ function getRecipes(ingredient) {
             let mealsLength = res.hits.length
             let mealsElements = ""
             let pageSelectors = ""
-            let mealsPerPage = 5;
+            let mealsPerPage = 6
+            let numOfPages = Math.ceil(mealsLength / mealsPerPage)
+            let whichPage = 1
             // Generate each meal element and add it to mealsElements
             for(let i=0; i<mealsLength; i++) {
                 const mealName = res.hits[i].recipe.label
@@ -281,7 +283,9 @@ function getRecipes(ingredient) {
                 res.hits[i].recipe.ingredientLines.map(el => {
                     mealIngredients += `<li>${el}</li>`
                 })
+                whichPage = Math.ceil((i + 1) / mealsPerPage)
                 mealsElements += `
+                    <div class="meal-container page-${whichPage}">
                     <div class="meal" id="meal-${i + 1}">
                         <div class="meal-title">
                             <h3>${mealName}</h3>
@@ -299,17 +303,17 @@ function getRecipes(ingredient) {
                                 <a href="${res.hits[i].recipe.url}" target="_blank">View recipe at <strong>${res.hits[i].recipe.source}</strong></a>
                             </div>
                         </div>
+                    </div>
                     </div>`
             }
             // Generate page selectors and add them to pageSelectors
-
-            //
-
+            for(let i=1; i<=numOfPages; i++) {
+                pageSelectors += `<div class="page-selector page-${i}" id="page-${i}">${i}</div>`
+            }
             // Insert elements or errors to the HTML file
-            let searchErrorPTag = `<p id="search-error">Search error, try typing something else!</p>`
             if (mealsLength == 0) {
                 console.log("Error getting recipes.")
-                results.innerHTML = searchErrorPTag
+                results.innerHTML = `<p id="search-error">Search error, try typing something else!</p>`
             } else {
                 // Insert elements
                 results.innerHTML = `
@@ -317,10 +321,12 @@ function getRecipes(ingredient) {
                     <div id="page-selectors">${pageSelectors}</div>`
                 // Call the function to toggle the meal info if selected
                 toggleInfo()
+                // Call the function to select the page
+                selectPage(numOfPages)
             }
         }).catch(error => {
             console.log("Error getting recipes.", error)
-            results.innerHTML = searchErrorPTag
+            results.innerHTML = `<p id="search-error">Search error, try typing something else!</p>`
         })
 }
 
@@ -353,5 +359,36 @@ function toggleInfo() {
                 title.querySelector("i").style.border = "2px solid transparent"
             }
         })
+    })
+}
+
+function selectPage() {
+    const pageSelectors = document.querySelectorAll(".page-selector")
+    // Show just first page
+    showPage(1, pageSelectors)
+    // Select page
+    pageSelectors.forEach((pageSelector, index) => {
+        pageSelector.addEventListener("click", () => {
+            let page = index + 1
+            showPage(page, pageSelectors)
+        })
+    })
+}
+
+function showPage(page, pageSelectors) {
+    const mealConts = document.querySelectorAll(".meal-container")
+    mealConts.forEach(mealCont => {
+        if(!mealCont.classList.contains(`page-${page}`)) {
+            mealCont.classList.add("hidden")
+        } else {
+            mealCont.classList.remove("hidden")
+        }
+    })
+    pageSelectors.forEach((pageSelector, index) => {
+        if(index === (page - 1)) {
+            pageSelector.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
+        } else {
+            pageSelector.style.backgroundColor = "rgba(0, 0, 0, 0.1)"
+        }
     })
 }
