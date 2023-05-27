@@ -19,17 +19,15 @@ const selection = [
             "2 tablespoons paprika",
             "25g of salt",
             "1 kg of flour",
-            "200 g of beef fat",
-            "melted butter for painting"
+            "200 g of beef fat"
         ],
         directions: [
             "1. The filling: Transparente the red onions in a covered pot. Cook the minced meat in the butter. When it changes color, add the cooked onion, the green onion and the seasonings, except the paprika, which will be added at the end of cooking.",
             "2. Cool and place in the fridge until it is time to assemble the empanadas, but keep stirring so that the fat is well distributed throughout the filling.",
-            "3. The dough: Dissolve the salt in the water, gradually add the flour and the melted fat, knead well. There should be a hard dough. Put in the fridge and let rest for an hour.",
-            "4. Roll out the dough 4 mm thick, trying to give it a rectangular shape. Fold it in half and take it back to the fridge. Let it rest for 1 hour. Repeat this step 5 times, letting it rest between each step.",
-            "5. Roll out the dough once more and brush it with melted butter. Sprinkle with cornstarch, fold again and stretch it to a thickness of 2 mm. Cut discs 13 centimeters in diameter to fill.",
-            "6. Place 1 tablespoon of the filling with a little piece of egg in the center of the dough and wet the edge with water. Close and join the edges making a \"repulgue\" (twisting) or pressing with a fork.",
-            "7. Heat the oven (if it is clay one, better) and put the empanadas. In a common, preheated oven, maximum, they take about 10 minutes. (You can also fry them.)"
+            "3. The dough: Dissolve the salt in the water, gradually add the flour and the melted fat, knead well. There should be a hard dough. Let it rest for 30 minutes.",
+            "4. Roll out the dough 2 mm thick, and cut discs 13 centimeters in diameter to fill.",
+            "5. Place 1 tablespoon of the filling with a little piece of egg in the center of the dough and wet the edge with water. Close and join the edges making a \"repulgue\" (twisting) or pressing with a fork.",
+            "6. Heat the oven and put the empanadas. At most it will take about 10 minutes. (You can also fry them.)"
         ],
         photoPaths: [
             "./images/empanadas-01.jpg",
