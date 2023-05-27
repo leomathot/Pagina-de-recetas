@@ -230,6 +230,10 @@ h2 {
   padding: 20px;
 }
 
+.home-banner h3 {
+  font-size: 2rem;
+}
+
 .selection-grid {
   display: grid;
   grid-template-columns: var(--selection-grid-frs);
