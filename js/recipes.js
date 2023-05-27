@@ -32,9 +32,9 @@ const selection = [
             "7. Heat the oven (if it is clay one, better) and put the empanadas. In a common, preheated oven, maximum, they take about 10 minutes. (You can also fry them.)"
         ],
         photoPaths: [
-            "/images/empanadas-01.jpg",
-            "/images/empanadas-02.jpg",
-            "/images/empanadas-03.jpg"
+            "./images/empanadas-01.jpg",
+            "./images/empanadas-02.jpg",
+            "./images/empanadas-03.jpg"
         ]
     },
     {
@@ -58,9 +58,9 @@ const selection = [
             "4. Add remaining 1 tablespoon (15ml) oil to wok and heat over high heat until smoking. Add garlic and scallions and cook, stirring constantly, until lightly browned, about 30 seconds. Add chile flakes or chile sauce to wok and stir-fry until fragrant, a few seconds. Add noodles to wok and stir around with a spatula, adding soy sauce as you mix. Stir-fry until noodles are dry and evenly seasoned, 2 to 3 minutes, then add eggs and vegetables and stir around until everything is blended. Serve immediately, with more chile sauce and soy sauce on the side."
         ],
         photoPaths: [
-            "/images/rice-noodles-01.jpg",
-            "/images/rice-noodles-02.jpg",
-            "/images/rice-noodles-03.jpg"
+            "./images/rice-noodles-01.jpg",
+            "./images/rice-noodles-02.jpg",
+            "./images/rice-noodles-03.jpg"
         ]
     },
     {
@@ -85,9 +85,9 @@ const selection = [
             "3. When the pressure is released, uncover and add the remaining 4 tablespoons of butter. Begin to mash the potatoes in the pot. As you do, drizzle in the buttermilk and cream, then mix in the salt and pepper. Mash to your desired smoothness. Adjust seasoning to taste. To serve, garnish with more butter and chopped herbs if using."
         ],
         photoPaths: [
-            "/images/mashed-potatoes-01.jpg",
-            "/images/mashed-potatoes-02.jpg",
-            "/images/mashed-potatoes-03.jpg"
+            "./images/mashed-potatoes-01.jpg",
+            "./images/mashed-potatoes-02.jpg",
+            "./images/mashed-potatoes-03.jpg"
         ]
     },
     {
@@ -117,9 +117,9 @@ const selection = [
             "6. Fold the tortilla sides in over the filling. Then roll the bottom flap of tortilla up over the filling, holding the sides tight as you roll. Continue rolling until the burrito is sealed. Repeat with remaining tortilla and filling ingredients. Serve right away."
         ],
         photoPaths: [
-            "/images/burrito-01.jpg",
-            "/images/burrito-02.jpg",
-            "/images/burrito-03.jpg"
+            "./images/burrito-01.jpg",
+            "./images/burrito-02.jpg",
+            "./images/burrito-03.jpg"
         ]
     },
     {
@@ -142,9 +142,9 @@ const selection = [
             "2. Tip the roasted vegetables into a blender (or use a stick blender) with the coconut milk, stock, sriracha and maple syrup. Whizz until smooth. Pour back into the pan and heat until piping hot. Check for seasoning, and pour into a flask. Serve with soda bread or toasted sourdough."
         ],
         photoPaths: [
-            "/images/soup-01.jpg",
-            "/images/soup-02.jpg",
-            "/images/soup-03.jpg"
+            "./images/soup-01.jpg",
+            "./images/soup-02.jpg",
+            "./images/soup-03.jpg"
         ]
     },
     {
@@ -168,9 +168,9 @@ const selection = [
             "6. Serve with salad, mashed potatoes, French fries, or in a sandwich with sliced tomato, lettuce, sliced ham and cheese, or fried eggs"
         ],
         photoPaths: [
-            "/images/milas-01.jpg",
-            "/images/milas-02.jpg",
-            "/images/milas-03.jpg"
+            "./images/milas-01.jpg",
+            "./images/milas-02.jpg",
+            "./images/milas-03.jpg"
         ]
     }
 ]
