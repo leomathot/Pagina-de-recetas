@@ -1,3 +1,59 @@
+// ***** Banners carousel *****
+
+let bannerConts = document.querySelectorAll(".home-banner-container")
+
+const carouselTime = 4500
+let position = 0
+let $prev = document.querySelector('#prev')
+let $next = document.querySelector('#next')
+let $carouselItem = document.querySelector('#carouselitem')
+let interval;
+
+function prev() {
+    position--
+    position = position === -1 ? bannerConts.length - 1 : position
+    showBanner(position)
+}
+
+function next() {
+    position++
+    position = position === bannerConts.length ?  0 : position
+    showBanner(position)
+}
+
+function play() {
+    interval = setInterval(next, carouselTime)
+}
+
+function stop() {
+    clearInterval(interval)
+}
+
+showBanner(0)
+
+function showBanner(pos) {
+    bannerConts.forEach((banCont, ind) => {
+        if (ind === pos) {
+            banCont.style.zIndex = "10"
+            banCont.style.left = "0px"
+        } else {
+            if(banCont.style.left == "0px") {
+                banCont.style.zIndex = "5"
+                banCont.style.left = "-100vw"
+            } else {
+                banCont.style.zIndex = "0"
+                banCont.style.left = "100vw"
+            }
+        }
+    })
+}
+
+play()
+
+
+
+// ***** Footer *****
+
 let footer = `
     <div class="page-footer">
 

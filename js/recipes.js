@@ -251,15 +251,16 @@ recipes.forEach(recipe => recipe.querySelector(".recipe-card").addEventListener(
 }))
 
 let closeRecs = document.querySelectorAll(".close-rec")
-closeRecs.forEach(x => x.addEventListener("click", () => {
+closeRecs.forEach(x => x.addEventListener("click", closedisplay))
+
+function closedisplay() {
     let cards = document.querySelectorAll(".recipe-card")
     cards.forEach(card => card.classList.remove("hidden"))
     let displayConts = document.querySelectorAll(".recipe-display-container")
     displayConts.forEach(cont => cont.classList.add("hidden"))
     document.querySelector(".selection-grid").style.gridTemplateColumns = "var(--selection-grid-frs)"
     document.querySelector(".selection-grid").style.gap = "var(--selection-grid-gap)"
-}))
-
+}
 
 // ***** Recipe web search *****
 
