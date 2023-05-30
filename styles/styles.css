@@ -236,7 +236,7 @@ h2 {
   height: 100%;
   position: absolute;
   top: 0;
-  transition: left .5s ease-out;
+  /* transition: left .5s ease-in-out; */
 }
 
 .home-banner {
@@ -254,6 +254,64 @@ h2 {
 .home-banner h3 {
   font-size: 2.2rem;
   font-weight: 100;
+}
+
+.banners-prev-next {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px;
+  color: var(--white);
+  opacity: 0;
+}
+
+.banners-prev-next:hover {
+  opacity: .5;
+}
+
+#banners-prev {
+  left: 0;
+  justify-content: left;
+}
+
+#banners-next {
+  right: 0;
+  justify-content: right;
+}
+
+.banners-stop-play-cont {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  left: 30%;
+  cursor: pointer;
+}
+
+.banners-stop-play {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: var(--white);
+  opacity: 0;
+}
+
+.banners-stop-play:hover {
+  opacity: .5;
+}
+
+#banners-play {
+  z-index: 0;
+}
+
+#banners-stop {
+  z-index: 20;
 }
 
 .selection-grid {
