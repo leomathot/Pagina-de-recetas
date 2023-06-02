@@ -379,7 +379,8 @@ a {
 .rec-disp-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  gap: 10px;
   margin-bottom: 10px;
 }
 
@@ -391,8 +392,7 @@ a {
 .rec-disp-header i {
   padding: 0 10px;
   font-size: 2rem;
-  background-color: var(--color-5);
-  border: 2px solid rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--white);
   border-radius: 8px;
   cursor: pointer;
 }
@@ -664,15 +664,15 @@ footer {
 }
 
 .page-footer .footer-links a:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: var(--color-1);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: var(--color-2);
 }
 
 /* Developer info */
 .developer-info {
-  border: 2px solid var(--color-1);
+  border: 2px solid var(--color-2);
   border-radius: 10px;
-  color: var(--color-1);
+  color: var(--color-2);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -692,7 +692,7 @@ footer {
 }
 
 .developer-info a {
-  color: var(--color-1);
+  color: var(--color-2);
   height: fit-content;
   padding: 0 4px;
   border-radius: 5px;
@@ -700,8 +700,8 @@ footer {
 }
 
 .developer-info a:hover {
-  background-color: var(--color-1);
-  color: var(--black);
+  background-color: var(--color-2);
+  color: var(--gray);
 }
 
 @media screen and (max-width: 800px) {
@@ -772,7 +772,7 @@ footer {
     font-size: 1.8rem;
   }
   .recipe-display {
-    padding: 5px;
+    padding: 10px 5px;
   }
   #results #meals .meal .meal-info-cont {
     padding: 0 5px 15px 5px;
