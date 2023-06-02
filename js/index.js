@@ -150,11 +150,11 @@ let footer = `
     </div>
     </div>
 
-    <div class="developer-info">
+    <div id="developer-info">
 
-    <div>
+    <div id="developer-name-and-email">
     <p>Leonardo Mathot</p>
-    <p>leomathot21@gmail.com</p>
+    <p id="developer-email">leomathot21@gmail.com<i class="fa-solid fa-copy"></i></p>
     </div>
 
     <div>
@@ -168,3 +168,13 @@ let footer = `
     `;
 
 document.querySelector("#footer").innerHTML = footer;
+
+// ***** Copy email *****
+
+document.querySelector("#developer-email").addEventListener("click", copyEmail)
+
+function copyEmail() {
+      
+    navigator.clipboard.writeText
+        ("leomathot21@gmail.com");
+}

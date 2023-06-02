@@ -203,8 +203,8 @@ a {
   z-index: 20;
   background: linear-gradient(
     165deg,
-    rgba(20, 120, 60, 0.7),
-    rgba(10, 50, 130, 0.7));
+    rgba(20, 120, 60, 0.6),
+    rgba(10, 50, 130, 0.6));
   padding: 10px 0;
   width: 100%;
   max-width: 330px;
@@ -672,7 +672,7 @@ footer {
 }
 
 /* Developer info */
-.developer-info {
+#developer-info {
   border: 2px solid var(--color-2);
   border-radius: 10px;
   color: var(--color-2);
@@ -684,17 +684,40 @@ footer {
   font-size: 0.8rem;
 }
 
-.developer-info > div {
+#developer-info > div {
   flex: 150px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.developer-info > div > * {
+#developer-info > div > * {
   margin-top: 0;
   margin-bottom: 8px;
 }
 
-.developer-info a {
+#developer-info #developer-email {
+  display: flex;
+  gap: 10px;
+}
+
+#developer-info #developer-email i {
+  position: relative;
+  top: -3px;
+  padding: 4px 8px;
+  border-radius: 5px;
+  border: 2px solid var(--black);
+  cursor: pointer;
+}
+
+#developer-info #developer-email i:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--white);
+  border: 2px solid transparent;
+}
+
+#developer-info a {
   color: var(--color-2);
   height: fit-content;
   padding: 0 4px;
@@ -702,7 +725,7 @@ footer {
   font-size: 1.2rem;
 }
 
-.developer-info a:hover {
+#developer-info a:hover {
   background-color: var(--color-2);
   color: var(--gray);
 }
