@@ -403,9 +403,9 @@ function showPage(page, pageSelectors) {
     })
     pageSelectors.forEach((pageSelector, index) => {
         if(index === (page - 1)) {
-            pageSelector.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
+            pageSelector.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
         } else {
-            pageSelector.style.backgroundColor = "rgba(0, 0, 0, 0.1)"
+            pageSelector.style.backgroundColor = "rgba(0, 0, 0, 0.2)"
         }
     })
 }

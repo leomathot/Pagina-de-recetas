@@ -65,6 +65,91 @@ body {
   color: var(--white);
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 30px;
+}
+
+article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 auto 0 auto;
+  max-width: 800px;
+}
+
+.width-limit {
+  margin: 0 auto 0 auto;
+  max-width: 800px;
+}
+
+h1 {
+  font-family: var(--font-2), var(--font-1), sans-serif;
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: var(--font-2), var(--font-1), sans-serif;
+  font-weight: 100;
+  font-size: 2.5rem;
+}
+
+.background-1 {
+  background-color: var(--color-1);
+  color: var(--black);
+}
+
+.background-2 {
+  background-color: var(--color-2);
+  color: var(--black);
+}
+
+.background-3 {
+  background-color: var(--color-3);
+  color: var(--white);
+}
+
+.background-4 {
+  background-color: var(--color-4);
+  color: var(--white);
+}
+
+.background-5 {
+  background-color: var(--color-5);
+  color: var(--white);
+}
+
+.background-black-01 {
+  background-color: var(--black);
+  color: var(--color-1);
+}
+
+.background-black-02 {
+  background-color: var(--black);
+  color: var(--color-2);
+}
+
+.background-white {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.glass-02 {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.pad-10 {
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
 /* Navbar */
 #nav {
   background-color: var(--color-5);
@@ -142,113 +227,30 @@ a {
 }
 
 /* Main */
-section {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 60px 30px;
-}
-
-article {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin: 0 auto 0 auto;
-  max-width: 800px;
-}
-
-.width-limit {
-  margin: 0 auto 0 auto;
-  max-width: 800px;
-}
-
-h1, h2 {
-  font-family: var(--font-2), var(--font-1), sans-serif;
-  font-size: 3rem;
-  font-weight: 100;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-.background-1 {
-  background-color: var(--color-1);
-  color: var(--black);
-}
-
-.background-2 {
-  background-color: var(--color-2);
-  color: var(--black);
-}
-
-.background-3 {
-  background-color: var(--color-3);
-  color: var(--white);
-}
-
-.background-4 {
-  background-color: var(--color-4);
-  color: var(--white);
-}
-
-.background-5 {
-  background-color: var(--color-5);
-  color: var(--white);
-}
-
-.background-black-01 {
-  background-color: var(--black);
-  color: var(--color-1);
-}
-
-.background-black-02 {
-  background-color: var(--black);
-  color: var(--color-2);
-}
-
-.background-white {
-  background-color: var(--white);
-  color: var(--black);
-}
-
-.glass-02 {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.pad-10 {
-  padding: 10px;
-}
-
-.hidden {
-  display: none;
-}
-
 #home-banners {
   position: relative;
+  width: 100%;
   height: 40vh;
   overflow: hidden;
 }
 
 .home-banner-container {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
-  /* transition: left .5s ease-in-out; */
 }
 
 .home-banner {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 30px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .home-banner h3 {
@@ -324,7 +326,7 @@ h2 {
 .recipe-card {
   background: linear-gradient(
     130deg,
-    rgba(20, 110, 60, 0.5),
+    rgba(5, 120, 50, 0.4),
     rgba(10, 50, 100, 0.4));
   padding: 5px;
   max-width: 270px;
@@ -337,7 +339,7 @@ h2 {
   transform: scale(1.05);
   background: linear-gradient(
     130deg,
-    rgba(20, 110, 60, 0.6),
+    rgba(5, 120, 50, 0.6),
     rgba(10, 50, 100, 0.6));
 }
 
@@ -366,7 +368,7 @@ h2 {
 }
 
 .recipe-display {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 15px 10px;
   border-radius: 10px;
   display: flex;
@@ -405,7 +407,7 @@ h2 {
 .rec-directions {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 .rec-ingredients h3, 
@@ -417,23 +419,23 @@ h2 {
 .ing-img-flex,
 .dir-img-flex {
   display: flex;
-  gap: 10px;
+  column-gap: 10px;
+  row-gap: 20px;
 }
 
 .rec-ingredients ul, 
 .rec-directions ul {
-  background-color: rgba(0, 0, 30, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 10px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 
 .rec-ingredients li, 
 .rec-directions li {
-  padding: 0;
   font-size: 1rem;
 }
 
@@ -514,7 +516,7 @@ h2 {
   align-items: center;
   gap: 10px;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
@@ -529,7 +531,7 @@ h2 {
 }
 
 #results #meals .meal .meal-title:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
@@ -576,7 +578,7 @@ h2 {
 }
 
 #results #meals .meal .meal-ingredients {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
   padding: 10px;
@@ -721,6 +723,12 @@ footer {
   .banners-prev-next {
     padding: 40px;
   }
+  .home-banner h2 {
+    font-size: 2.2rem;
+  }
+  .home-banner h3 {
+    font-size: 2rem;
+  }
   .selection-grid {
     display: grid;
   }
@@ -753,6 +761,15 @@ footer {
 @media screen and (max-width: 480px) {
   .banners-prev-next {
     padding: 20px;
+  }
+  .home.banner {
+    gap: 10px;
+  }
+  .home-banner h2 {
+    font-size: 2rem;
+  }
+  .home-banner h3 {
+    font-size: 1.8rem;
   }
   .recipe-display {
     padding: 5px;
