@@ -704,30 +704,28 @@ footer {
 
 #developer-info #developer-email i {
   position: relative;
-  top: -3px;
-  padding: 4px 8px;
+  top: -2px;
+  padding: 6px 10px;
   border-radius: 5px;
-  border: 2px solid var(--black);
   cursor: pointer;
 }
 
 #developer-info #developer-email i:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   color: var(--white);
-  border: 2px solid transparent;
 }
 
 #developer-info a {
   color: var(--color-2);
   height: fit-content;
-  padding: 0 4px;
+  padding: 0 8px;
   border-radius: 5px;
   font-size: 1.2rem;
 }
 
 #developer-info a:hover {
-  background-color: var(--color-2);
-  color: var(--gray);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--white);
 }
 
 @media screen and (max-width: 800px) {

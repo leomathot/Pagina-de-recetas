@@ -18,8 +18,8 @@ let timeOut
 function prev() {
     // set prev as current
     currentBanner--
-    currentBanner = currentBanner === -1 
-        ? bannerConts.length - 1 
+    currentBanner = currentBanner === -1
+        ? bannerConts.length - 1
         : currentBanner
     // show it
     showBanner(currentBanner)
@@ -28,8 +28,8 @@ function prev() {
 function next() {
     // set next as current
     currentBanner++
-    currentBanner = currentBanner === bannerConts.length 
-        ?  0 
+    currentBanner = currentBanner === bannerConts.length
+        ? 0
         : currentBanner
     // show it
     showBanner(currentBanner)
@@ -37,18 +37,18 @@ function next() {
 
 function getLeft() {
     // prev banner position/index
-    leftBanner = currentBanner -1
-    leftBanner = leftBanner === -1 
-        ? bannerConts.length - 1 
+    leftBanner = currentBanner - 1
+    leftBanner = leftBanner === -1
+        ? bannerConts.length - 1
         : leftBanner
     return leftBanner
 }
-    
+
 function getRight() {
     // next banner position/index
     rightBanner = currentBanner + 1
-    rightBanner = rightBanner === bannerConts.length 
-        ?  0 
+    rightBanner = rightBanner === bannerConts.length
+        ? 0
         : rightBanner
     return rightBanner
 }
@@ -61,11 +61,11 @@ function showBanner(currentBann) {
             banCont.style.transition = "left .5s ease-in-out"
             banCont.style.left = "0px"
         } else {
-            if(ind === getLeft()) {
+            if (ind === getLeft()) {
                 // set the left one
                 banCont.style.zIndex = "5"
                 banCont.style.left = "-100vw"
-            } else if(ind === getRight()) {
+            } else if (ind === getRight()) {
                 // set the right one
                 banCont.style.zIndex = "5"
                 banCont.style.left = "100vw"
@@ -128,41 +128,44 @@ play()
 let footer = `
     <div class="page-footer">
 
-    <div class="footer-text">
-    <p>
-        <i class="fa-regular fa-copyright"></i> 2023 RECIPage
-    </p>
-    </div>
+        <div class="footer-text">
+            <p>
+                <i class="fa-regular fa-copyright"></i> 2023 RECIPage
+            </p>
+        </div>
 
-    <div class="footer-links">
-    <a href="https://www.instagram.com" target="_blank" title="Instagram">
-        <i class="fa-brands fa-instagram"></i>
-    </a>
-    <a href="https://www.facebook.com" target="_blank" title="Facebook">
-        <i class="fa-brands fa-facebook"></i>
-    </a>
-    <a href="https://www.twitter.com" target="_blank" title="Twitter">
-        <i class="fa-brands fa-twitter"></i>
-    </a>
-    <a href="https://www.YouTube.com" target="_blank" title="YouTube">
-        <i class="fa-brands fa-youtube"></i>
-    </a>
-    </div>
+        <div class="footer-links">
+            <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" title="X">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.YouTube.com" target="_blank" title="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
     </div>
 
     <div id="developer-info">
 
-    <div id="developer-name-and-email">
-    <p>Leonardo Mathot</p>
-    <p id="developer-email">leomathot21@gmail.com<i class="fa-solid fa-copy"></i></p>
-    </div>
+        <div id="developer-name-and-email">
+            <p>Leonardo Mathot</p>
+            <p id="developer-email">
+                leomathot21@gmail.com
+                <i class="fa-solid fa-copy" title="Copy e-mail"></i>
+            </p>
+        </div>
 
-    <div>
-    <p>GitHub Repository</p>
-    <a href="https://github.com/leomathot/Recipe-page" target="_blank" title="GitHub">
-        <i class="fa-brands fa-github"></i>
-    </a>
-    </div>
+        <div>
+            <p>GitHub Repository</p>
+            <a href="https://github.com/leomathot/Recipe-page" target="_blank" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
 
     </div>
     `;
@@ -174,7 +177,7 @@ document.querySelector("#footer").innerHTML = footer;
 document.querySelector("#developer-email").addEventListener("click", copyEmail)
 
 function copyEmail() {
-      
+
     navigator.clipboard.writeText
         ("leomathot21@gmail.com");
 }
