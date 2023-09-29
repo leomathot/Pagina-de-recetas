@@ -193,7 +193,7 @@ for (var i = 0; i < recLenght; i++) {
                 <img
                     src=${selection[i].photoPaths[0]}
                     alt=${selection[i].name}
-                />
+                >
                 <div class="text-container">
                     <h4>${selection[i].name}</h4>
                     <p>${selection[i].description}</p>
@@ -216,7 +216,7 @@ for (var i = 0; i < recLenght; i++) {
                         <img
                             src=${selection[i].photoPaths[1]}
                             alt=${selection[i].name}
-                        />
+                        >
                     </div>
                 </div>
 
@@ -226,7 +226,7 @@ for (var i = 0; i < recLenght; i++) {
                         <img
                             src=${selection[i].photoPaths[2]}
                             alt=${selection[i].name}
-                        />
+                        >
                         <ul>
                              ${recDirections}
                         </ul>
