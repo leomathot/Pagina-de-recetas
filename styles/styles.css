@@ -16,7 +16,6 @@
   --black: #202020;
   --gray: #404040;
 
-
   --color-1: #cfffa3;
   --color-2: #aef3ff;
   --color-3: #29a748;
@@ -800,5 +799,28 @@ footer {
   }
   #results #meals .meal .meal-info-cont {
     padding: 0 5px 15px 5px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --white: #fcfcfc;
+    --black: #202020;
+    --gray: #404040;
+  
+    /* --color-1: #cfffa3;
+    --color-2: #aef3ff;
+    --color-3: #29a748;
+    --color-4: #2585c0;
+    --color-5: #14745f; */
+  
+    --color-1: #c2a3ff;
+    --color-2: #ae66a7;
+    --color-3: #aa6b6b;
+    --color-4: #976da5;
+    --color-5: #bc789b;
+  
+    --selection-background: rgba(58, 133, 102, 0.8);
+    --selection-color: var(--white);
   }
 }
