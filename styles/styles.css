@@ -26,7 +26,7 @@
   --selection-color: var(--white);
 }
 
-html[color-scheme="dark"] {
+html[prefers-color-scheme="dark"] {
   
     --white: #fcfcfc;
     --black: #202020;
@@ -43,7 +43,7 @@ html[color-scheme="dark"] {
   
 }
 
-html[color-scheme="light"] {
+html[prefers-color-scheme="light"] {
   
     --white: #fcfcfc;
     --black: #202020;

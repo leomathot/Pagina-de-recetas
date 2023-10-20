@@ -4,9 +4,9 @@ let themeSwitch = document.querySelector('#theme-switch');
 
 themeSwitch.addEventListener('change', () => {
     if(themeSwitch.checked) {
-        document.documentElement.setAttribute('color-scheme', 'dark');
+        document.documentElement.setAttribute('prefers-color-scheme', 'dark');
     } else {
-        document.documentElement.setAttribute('color-scheme', 'light');
+        document.documentElement.setAttribute('prefers-color-scheme', 'light');
     }
 });
 
