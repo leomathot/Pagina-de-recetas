@@ -16,14 +16,48 @@
   --black: #202020;
   --gray: #404040;
 
-  --color-1: #cfffa3;
+  /* --color-1: #cfffa3;
   --color-2: #aef3ff;
   --color-3: #29a748;
   --color-4: #2585c0;
-  --color-5: #14745f;
+  --color-5: #14745f; */
 
   --selection-background: rgba(58, 133, 102, 0.8);
   --selection-color: var(--white);
+}
+
+html[color-scheme="dark"] {
+  
+    --white: #fcfcfc;
+    --black: #202020;
+    --gray: #404040;
+  
+    --color-1: #cfffa3;
+    --color-2: #aef3ff;
+    --color-3: #134f22;
+    --color-4: #154462;
+    --color-5: #0d3c32;
+  
+    --selection-background: rgba(58, 133, 102, 0.8);
+    --selection-color: var(--white);
+  
+}
+
+html[color-scheme="light"] {
+  
+    --white: #fcfcfc;
+    --black: #202020;
+    --gray: #404040;
+  
+    --color-1: #cab3f7;
+    --color-2: #e3a8de;
+    --color-3: #d58d8d;
+    --color-4: #c08dd1;
+    --color-5: #dca7c2;
+  
+    --selection-background: rgba(131, 212, 178, 0.8);
+    --selection-color: var(--black);
+  
 }
 
 ::-moz-selection {
@@ -799,28 +833,5 @@ footer {
   }
   #results #meals .meal .meal-info-cont {
     padding: 0 5px 15px 5px;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --white: #fcfcfc;
-    --black: #202020;
-    --gray: #404040;
-  
-    /* --color-1: #cfffa3;
-    --color-2: #aef3ff;
-    --color-3: #29a748;
-    --color-4: #2585c0;
-    --color-5: #14745f; */
-  
-    --color-1: #c2a3ff;
-    --color-2: #ae66a7;
-    --color-3: #aa6b6b;
-    --color-4: #976da5;
-    --color-5: #bc789b;
-  
-    --selection-background: rgba(58, 133, 102, 0.8);
-    --selection-color: var(--white);
   }
 }

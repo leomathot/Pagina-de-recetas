@@ -1,3 +1,16 @@
+// ***** Theme *****
+
+let themeSwitch = document.querySelector('#theme-switch');
+
+themeSwitch.addEventListener('change', () => {
+    if(themeSwitch.checked) {
+        document.documentElement.setAttribute('color-scheme', 'dark');
+    } else {
+        document.documentElement.setAttribute('color-scheme', 'light');
+    }
+});
+
+
 // ***** Banners carousel *****
 
 let bannerConts = document.querySelectorAll(".home-banner-container")
