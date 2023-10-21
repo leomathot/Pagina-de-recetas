@@ -366,9 +366,18 @@ a {
 }
 
 .recipe-card:hover {
-  background-color: var(--bg-main);
   transform: scale(1.05);
   box-shadow: 0 0 6px 0 var(--black);
+}
+
+.selection-grid > * {
+  visibility: visible;
+  transition: opacity 0.1s;
+}
+
+.selection-grid:hover >:not(:hover) .recipe-card {
+  background-color: transparent;
+  /* opacity: 0.8; */
 }
 
 .recipe-card img {
