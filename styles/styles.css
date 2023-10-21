@@ -12,52 +12,66 @@
   --selection-grid-frs: 1fr 1fr 1fr;
   --selection-grid-gap: 15px;
 
-  --white: #fcfcfc;
+  --white: #fafafa;
   --black: #202020;
-  --gray: #404040;
+  --dark-gray: #384048;
+  --mid-gray: #707890;
+  --light-gray: #c0c8e0;
 
-  /* --color-1: #cfffa3;
-  --color-2: #aef3ff;
-  --color-3: #29a748;
-  --color-4: #2585c0;
-  --color-5: #14745f; */
+  --yellow-1: #FBFFDC;
+  --ligh-green-1: #D0F5BE;
+  --light-blue-1: #79E0EE;
+  --ligh-bluish-green-1: #98EECC;
+  --light-green-2: #d0ffa0;
+  --light-blue-2: #a0d0ff;
+  --mid-green: #30a070;
+  --mid-blue: #3080c0;
+  --dark-green: #209060;
+  --dark-blue: #207090;
+  --dark-bluish-green: #107070;
 
-  --selection-background: rgba(58, 133, 102, 0.8);
-  --selection-color: var(--white);
+  --glass-light: rgba(255, 255, 255, 0.4);
+  --glass-dark: rgba(0, 0, 0, 0.3);
 }
 
 html[prefers-color-scheme="dark"] {
-  
-    --white: #fcfcfc;
-    --black: #202020;
-    --gray: #404040;
-  
-    --color-1: #cfffa3;
-    --color-2: #aef3ff;
-    --color-3: #134f22;
-    --color-4: #154462;
-    --color-5: #0d3c32;
-  
-    --selection-background: rgba(58, 133, 102, 0.8);
-    --selection-color: var(--white);
-  
+
+  --bg-main: var(--black);
+  --text-main: var(--white);
+  --gray-main: var(--dark-gray);
+  --gray-alt: var(--light-gray);
+
+  --text-1: var(--light-green-2);
+  --text-2: var(--light-blue-1);
+  --bg-1: var(--mid-green);
+  --bg-2: var(--mid-blue);
+  --bg-3: var(--dark-bluish-green);
+
+  --glass-main: var(--glass-dark);
+  --glass-alt: var(--glass-light);
+
+  --selection-background: var(--white);
+  --selection-color: var(--dark-bluish-green);
 }
 
 html[prefers-color-scheme="light"] {
-  
-    --white: #fcfcfc;
-    --black: #202020;
-    --gray: #404040;
-  
-    --color-1: #cab3f7;
-    --color-2: #e3a8de;
-    --color-3: #d58d8d;
-    --color-4: #c08dd1;
-    --color-5: #dca7c2;
-  
-    --selection-background: rgba(131, 212, 178, 0.8);
-    --selection-color: var(--black);
-  
+
+  --bg-main: var(--yellow-1);
+  --text-main: var(--black);
+  --gray-main: var(--light-gray);
+  --gray-alt: var(--dark-gray);
+
+  --text-1: var(--dark-green);
+  --text-2: var(--dark-blue);
+  --bg-1: var(--ligh-green-1);
+  --bg-2: var(--light-blue-1);
+  --bg-3: var(--ligh-bluish-green-1);
+
+  --glass-main: var(--glass-light);
+  --glass-alt: var(--glass-dark);
+
+  --selection-background: var(--black);
+  --selection-color: var(--light-green-1);
 }
 
 ::-moz-selection {
@@ -94,8 +108,8 @@ html {
 body {
   font-family: var(--font-1), sans-serif;
   font-size: 1.1rem;
-  background-color: var(--black);
-  color: var(--white);
+  background-color: var(--bg-main);
+  color: var(--text-main);
 }
 
 section {
@@ -132,44 +146,30 @@ h2 {
 }
 
 .background-1 {
-  background-color: var(--color-1);
-  color: var(--black);
+  background-color: var(--bg-1);
+  color: var(--text-main);
 }
 
 .background-2 {
-  background-color: var(--color-2);
-  color: var(--black);
+  background-color: var(--bg-2);
+  color: var(--text-main);
 }
 
 .background-3 {
-  background-color: var(--color-3);
-  color: var(--white);
+  background-color: var(--bg-3);
+  color: var(--text-main);
 }
 
-.background-4 {
-  background-color: var(--color-4);
-  color: var(--white);
+.background-base-1 {
+  background-color: var(--bg-main);
+  color: var(--text-1);
 }
 
-.background-5 {
-  background-color: var(--color-5);
-  color: var(--white);
+.background-base-2 {
+  background-color: var(--bg-main);
+  color: var(--text-2);
 }
 
-.background-black-01 {
-  background-color: var(--black);
-  color: var(--color-1);
-}
-
-.background-black-02 {
-  background-color: var(--black);
-  color: var(--color-2);
-}
-
-.background-white {
-  background-color: var(--white);
-  color: var(--black);
-}
 
 .glass-02 {
   background-color: rgba(0, 0, 0, 0.2);
@@ -185,7 +185,7 @@ h2 {
 
 /* Navbar */
 #nav {
-  background-color: var(--color-5);
+  background-color: var(--bg-3);
   display: flex;
   justify-content: flex-end;
   padding: 3px 10px;
@@ -198,7 +198,7 @@ h2 {
 
 a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--text-main);
 }
 
 #nav .nav-enlaces a {
@@ -208,13 +208,13 @@ a {
 }
 
 #nav .nav-enlaces a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--glass-main);
 }
 
 /* Header */
 #header {
   position: relative;
-  border-top: 25px solid var(--black);
+  border-top: 1px solid var(--black);
   min-height: 60vh;
   padding: 60px 5px;
   display: flex;
@@ -234,10 +234,9 @@ a {
 
 #header .text-frame {
   z-index: 20;
-  background: linear-gradient(
-    165deg,
-    rgba(20, 120, 60, 0.6),
-    rgba(10, 50, 130, 0.6));
+  background: linear-gradient(165deg,
+      rgba(20, 120, 60, 0.6),
+      rgba(10, 50, 130, 0.6));
   padding: 10px 0;
   width: 100%;
   max-width: 330px;
@@ -255,7 +254,7 @@ a {
 #header .text-2 {
   font-family: var(--font-2), var(--font-1), sans-serif;
   font-weight: 100;
-  color: var(--color-1);
+  color: var(--light-green-2);
   font-size: 3rem;
 }
 
@@ -300,7 +299,7 @@ a {
   align-items: center;
   cursor: pointer;
   padding: 60px;
-  color: var(--white);
+  color: var(--text-main);
   opacity: 0;
 }
 
@@ -333,7 +332,7 @@ a {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  color: var(--white);
+  color: var(--text-main);
   opacity: 0;
 }
 
@@ -357,10 +356,8 @@ a {
 }
 
 .recipe-card {
-  background: linear-gradient(
-    130deg,
-    rgba(5, 120, 50, 0.4),
-    rgba(10, 50, 100, 0.4));
+  background-color: var(--glass-main);
+  box-shadow: 0 0 6px -3px var(--black);
   padding: 5px;
   max-width: 270px;
   border-radius: 10px;
@@ -369,11 +366,9 @@ a {
 }
 
 .recipe-card:hover {
+  background-color: var(--bg-main);
   transform: scale(1.05);
-  background: linear-gradient(
-    130deg,
-    rgba(5, 120, 50, 0.6),
-    rgba(10, 50, 100, 0.6));
+  box-shadow: 0 0 6px 0 var(--black);
 }
 
 .recipe-card img {
@@ -393,7 +388,7 @@ a {
 }
 
 .recipe-card .text-container h4 {
-  color: var(--color-1);
+  color: var(--text-1);
 }
 
 .recipe-display-container {
@@ -401,7 +396,7 @@ a {
 }
 
 .recipe-display {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--glass-main);
   padding: 15px 10px;
   border-radius: 10px;
   display: flex;
@@ -425,25 +420,25 @@ a {
 .rec-disp-header i {
   padding: 0 10px;
   font-size: 2rem;
-  border: 2px solid var(--white);
+  border: 2px solid var(--text-main);
   border-radius: 8px;
   cursor: pointer;
 }
 
 .rec-disp-header i:hover {
-  background-color: var(--black);
-  border: 2px solid var(--color-1);
-  color: var(--color-1);
+  background-color: var(--bg-main);
+  border: 2px solid var(--text-1);
+  color: var(--text-1);
 }
 
-.rec-ingredients, 
+.rec-ingredients,
 .rec-directions {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.rec-ingredients h3, 
+.rec-ingredients h3,
 .rec-directions h3 {
   width: 100%;
   margin-left: 5px;
@@ -456,9 +451,9 @@ a {
   row-gap: 20px;
 }
 
-.rec-ingredients ul, 
+.rec-ingredients ul,
 .rec-directions ul {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--glass-main);
   border-radius: 10px;
   padding: 10px;
   width: 100%;
@@ -467,17 +462,17 @@ a {
   gap: 6px;
 }
 
-.rec-ingredients li, 
+.rec-ingredients li,
 .rec-directions li {
   font-size: 1rem;
 }
 
-.rec-ingredients img, 
+.rec-ingredients img,
 .rec-directions img {
   width: 100%;
   max-width: 40%;
   max-height: 300px;
-  background-color: var(--color-5);
+  background-color: var(--bg-main);
   border-radius: 10px;
   object-fit: cover;
 }
@@ -509,11 +504,13 @@ a {
   padding: 5px 20px;
   border: none;
   border-radius: 5px;
-  background-color: var(--color-2);
+  background-color: var(--text-2);
+  color: var(--bg-main);
 }
 
 .search-controls button:hover {
-  background-color: var(--white)
+  cursor: pointer;
+  box-shadow: 0 0 0 2px var(--black);
 }
 
 #results {
@@ -524,7 +521,7 @@ a {
   align-items: center;
 }
 
-#input-empty-error, 
+#input-empty-error,
 #search-error {
   margin: 0 auto;
   text-align: center;
@@ -549,7 +546,7 @@ a {
   align-items: center;
   gap: 10px;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--glass-main);
   position: relative;
 }
 
@@ -564,7 +561,7 @@ a {
 }
 
 #results #meals .meal .meal-title:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--glass-main);
   border-radius: 10px;
 }
 
@@ -611,7 +608,7 @@ a {
 }
 
 #results #meals .meal .meal-ingredients {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--glass-main);
   width: 100%;
   height: 100%;
   padding: 10px;
@@ -626,8 +623,9 @@ a {
 }
 
 #results #meals .meal a {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--bg-2);
+  border: 2px solid var(--text-main);
+  color: var(--text-main);
   padding: 10px;
   border-radius: 10px;
   text-align: center;
@@ -637,7 +635,7 @@ a {
 }
 
 #results #meals .meal a:hover {
-  background-color: var(--color-2);
+  background-color: var(--bg-main);
 }
 
 #page-selectors {
@@ -660,8 +658,8 @@ a {
 
 /* Footer */
 footer {
-  background-color: var(--gray);
-  color: var(--white);
+  background-color: var(--gray-main);
+  color: var(--text-main);
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -700,15 +698,15 @@ footer {
 }
 
 .page-footer .footer-links a:hover {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: var(--color-2);
+  background-color: var(--glass-alt);
+  color: var(--text-2);
 }
 
 /* Developer info */
 #developer-info {
-  border: 2px solid var(--color-2);
+  border: 2px solid var(--glass-alt);
   border-radius: 10px;
-  color: var(--color-2);
+  color: var(--gray-alt);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -717,7 +715,7 @@ footer {
   font-size: 0.8rem;
 }
 
-#developer-info > div {
+#developer-info>div {
   flex: 150px;
   text-align: center;
   display: flex;
@@ -725,7 +723,7 @@ footer {
   align-items: center;
 }
 
-#developer-info > div > * {
+#developer-info>div>* {
   margin-top: 0;
   margin-bottom: 8px;
 }
@@ -744,12 +742,12 @@ footer {
 }
 
 #developer-info #developer-email i:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--glass-dark);
   color: var(--white);
 }
 
 #developer-info a {
-  color: var(--color-2);
+  color: var(--gray-alt);
   height: fit-content;
   padding: 0 8px;
   border-radius: 5px;
@@ -765,6 +763,7 @@ footer {
   :root {
     --selection-grid-gap: 5px;
   }
+
   .recipe-card .text-container p {
     font-size: 0.9rem;
   }
@@ -774,42 +773,54 @@ footer {
   :root {
     --selection-grid-frs: 1fr 1fr;
   }
+
   section {
     padding: 60px 10px;
   }
+
   .banners-prev-next {
     padding: 40px;
   }
+
   .home-banner h2 {
     font-size: 2.2rem;
   }
+
   .home-banner h3 {
     font-size: 2rem;
   }
+
   .selection-grid {
     display: grid;
   }
+
   .recipe-card {
     padding: 5px 3px;
   }
+
   .recipe-card:hover {
     transform: scale(1);
   }
+
   .recipe-card .text-container {
     padding: 5px;
   }
-  .ing-img-flex, 
+
+  .ing-img-flex,
   .dir-img-flex {
     flex-direction: column-reverse;
   }
-  .ing-img-flex img, 
+
+  .ing-img-flex img,
   .dir-img-flex img {
     max-width: 700px;
   }
+
   #results #meals .meal .meal-img-ing-flex {
     flex-direction: column;
     align-items: center;
   }
+
   #results #meals .meal .meal-img-ing-flex img {
     max-height: 300px;
   }
@@ -819,18 +830,23 @@ footer {
   .banners-prev-next {
     padding: 20px;
   }
+
   .home.banner {
     gap: 10px;
   }
+
   .home-banner h2 {
     font-size: 2rem;
   }
+
   .home-banner h3 {
     font-size: 1.8rem;
   }
+
   .recipe-display {
     padding: 10px 5px;
   }
+
   #results #meals .meal .meal-info-cont {
     padding: 0 5px 15px 5px;
   }

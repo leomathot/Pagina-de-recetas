@@ -369,7 +369,7 @@ function toggleInfo() {
             if (!mealInfoCont.classList.contains("hidden")) {
                 title.querySelector("i").classList.replace("fa-plus", "fa-minus")
                 title.style.borderRadius = "10px 10px 0 0"
-                title.querySelector("i").style.border = "2px solid var(--white)"
+                title.querySelector("i").style.border = "2px solid var(--text-main)"
             } else {
                 title.querySelector("i").classList.replace("fa-minus", "fa-plus")
                 title.style.borderRadius = "10px"
@@ -403,9 +403,9 @@ function showPage(page, pageSelectors) {
     })
     pageSelectors.forEach((pageSelector, index) => {
         if(index === (page - 1)) {
-            pageSelector.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
+            pageSelector.style.backgroundColor = "var(--glass-main)"
         } else {
-            pageSelector.style.backgroundColor = "rgba(0, 0, 0, 0.2)"
+            pageSelector.style.backgroundColor = "transparent"
         }
     })
 }
