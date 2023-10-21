@@ -713,9 +713,9 @@ footer {
 
 /* Developer info */
 #developer-info {
-  border: 2px solid var(--glass-alt);
+  border: 2px solid var(--mid-gray);
   border-radius: 10px;
-  color: var(--gray-alt);
+  color: var(--mid-gray);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -750,21 +750,17 @@ footer {
   cursor: pointer;
 }
 
-#developer-info #developer-email i:hover {
-  background-color: var(--glass-dark);
-  color: var(--white);
-}
-
 #developer-info a {
-  color: var(--gray-alt);
+  color: var(--mid-gray);
   height: fit-content;
   padding: 0 8px;
   border-radius: 5px;
   font-size: 1.2rem;
 }
 
+#developer-info #developer-email i:hover,
 #developer-info a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--glass-dark);
   color: var(--white);
 }
 
