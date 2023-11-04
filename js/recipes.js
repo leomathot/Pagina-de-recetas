@@ -187,7 +187,7 @@ for (var i = 0; i < recLenght; i++) {
         recDirections += `<li>${dir}</li>`
     })
     recipesContent += `
-        <div>
+        <div><a href="#recipe-cards">
         <div class="recipe">
             <div class="recipe-card">
                 <img
@@ -204,7 +204,7 @@ for (var i = 0; i < recLenght; i++) {
             <div class="recipe-display">
                 <header class="rec-disp-header">
                     <h2>${selection[i].name}</h2>
-                    <i class="fa-solid fa-xmark close-rec"></i>
+                    <a href="#recipes-p"><i class="fa-solid fa-xmark close-rec"></i></a>
                 </header>
 
                 <div class="rec-ingredients">
@@ -235,7 +235,7 @@ for (var i = 0; i < recLenght; i++) {
             </div>
             </div>
         </div>
-        </div>`
+        </a></div>`
 }
 
 document.querySelector("#recipe-cards").innerHTML = recipesContent
