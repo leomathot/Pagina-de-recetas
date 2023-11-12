@@ -1,12 +1,12 @@
 // ***** Theme *****
 
-let themeSwitch = document.querySelector('#theme-switch');
+let themeSwitch = document.querySelector('#theme-switch')
 
 themeSwitch.addEventListener('click', () => {
-    if(true) {
-        document.documentElement.setAttribute('prefers-color-scheme', 'dark');
+    if(document.querySelector("html").getAttribute('prefers-color-scheme') == 'dark') {
+        document.documentElement.setAttribute('prefers-color-scheme', 'light')
     } else {
-        document.documentElement.setAttribute('prefers-color-scheme', 'light');
+        document.documentElement.setAttribute('prefers-color-scheme', 'dark')
     }
 });
 

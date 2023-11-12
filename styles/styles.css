@@ -14,20 +14,16 @@
 
   --white: #fafafa;
   --black: #202020;
-  --dark-gray: #384048;
-  --mid-gray: #707880;
-  --light-gray: #c0c8d0;
+  --dark-gray: #384040;
+  --mid-gray: #707878;
+  --light-gray: #f0f0f0;
 
   --yellow-1: #FBFFDC;
   --ligh-green-1: #e5ffd8;
-  --light-blue-1: #d3f9ff;
-  --ligh-bluish-green-1: #c7f8e4;
-  --light-green-2: #d0ffa0;
-  --light-blue-2: #a0d0ff;
+  --ligh-bluish-green: #baefda;
+  --bright-green: #d0ffa0;
   --mid-green: #30a070;
-  --mid-blue: #3080c0;
-  --dark-green: #209060;
-  --dark-blue: #207090;
+  --dark-green: #207060;
   --dark-bluish-green: #107070;
 
   --glass-light: rgba(255, 255, 255, 0.4);
@@ -41,14 +37,15 @@ html[prefers-color-scheme="dark"] {
   --gray-main: var(--dark-gray);
   --gray-alt: var(--light-gray);
 
-  --text-1: var(--light-green-2);
-  --text-2: var(--light-blue-1);
+  --text-color: var(--bright-green);
   --bg-1: var(--mid-green);
-  --bg-2: var(--mid-blue);
-  --bg-3: var(--dark-bluish-green);
+  --bg-2: var(--dark-bluish-green);
 
   --glass-main: var(--glass-dark);
   --glass-alt: var(--glass-light);
+
+  --back-level-1: var(--glass-main);
+  --back-level-2: var(--glass-main);
 
   --selection-background: var(--white);
   --selection-color: var(--dark-bluish-green);
@@ -61,14 +58,15 @@ html[prefers-color-scheme="light"] {
   --gray-main: var(--light-gray);
   --gray-alt: var(--dark-gray);
 
-  --text-1: var(--dark-green);
-  --text-2: var(--dark-blue);
+  --text-color: var(--dark-green);
   --bg-1: var(--ligh-green-1);
-  --bg-2: var(--light-blue-1);
-  --bg-3: var(--ligh-bluish-green-1);
+  --bg-2: var(--ligh-bluish-green);
 
   --glass-main: var(--glass-light);
   --glass-alt: var(--glass-dark);
+
+  --back-level-1: var(--bg-1);
+  --back-level-2: var(--bg-2);
 
   --selection-background: var(--black);
   --selection-color: var(--light-green-1);
@@ -155,21 +153,10 @@ h2 {
   color: var(--text-main);
 }
 
-.background-3 {
-  background-color: var(--bg-3);
-  color: var(--text-main);
-}
-
-.background-base-1 {
+.background-base {
   background-color: var(--bg-main);
-  color: var(--text-1);
+  color: var(--text-color);
 }
-
-.background-base-2 {
-  background-color: var(--bg-main);
-  color: var(--text-2);
-}
-
 
 .glass-02 {
   background-color: rgba(0, 0, 0, 0.2);
@@ -185,7 +172,7 @@ h2 {
 
 /* Navbar */
 #nav {
-  background-color: var(--bg-3);
+  background-color: var(--bg-2);
   display: flex;
   justify-content: flex-end;
   padding: 3px 10px;
@@ -201,21 +188,20 @@ a {
   color: var(--text-main);
 }
 
-#nav .nav-enlaces a {
+#nav .nav-links a {
   display: inline-block;
   padding: 4px 4px 0 4px;
   border-radius: 6px;
 }
 
-#nav .nav-enlaces i {
+#nav .nav-links i {
   font-size: 0.8em;
-  padding: 0 3px;
   position: relative;
   top: -1px;
 }
 
-#nav .nav-enlaces a:hover {
-  background-color: var(--glass-main);
+#nav .nav-links a:hover {
+  background-color: var(--back-level-1);
   cursor: pointer;
 }
 
@@ -259,10 +245,10 @@ a {
 }
 
 /* Cook easy! */
-#header .text-2 {
+#header .text-sub {
   font-family: var(--font-2), var(--font-1), sans-serif;
   font-weight: 100;
-  color: var(--light-green-2);
+  color: var(--bright-green);
   font-size: 3rem;
 }
 
@@ -364,7 +350,7 @@ a {
 }
 
 .recipe-card {
-  background-color: var(--glass-main);
+  background-color: var(--back-level-1);
   box-shadow: 0 0 6px -3px var(--black);
   padding: 5px;
   max-width: 270px;
@@ -405,7 +391,7 @@ a {
 }
 
 .recipe-card .text-container h4 {
-  color: var(--text-1);
+  color: var(--text-color);
 }
 
 .recipe-display-container {
@@ -413,7 +399,7 @@ a {
 }
 
 .recipe-display {
-  background-color: var(--glass-main);
+  background-color: var(--back-level-1);
   padding: 15px 10px;
   border-radius: 10px;
   display: flex;
@@ -444,8 +430,8 @@ a {
 
 .rec-disp-header i:hover {
   background-color: var(--bg-main);
-  border: 2px solid var(--text-1);
-  color: var(--text-1);
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
 }
 
 .rec-ingredients,
@@ -470,7 +456,7 @@ a {
 
 .rec-ingredients ul,
 .rec-directions ul {
-  background-color: var(--glass-main);
+  background-color: var(--back-level-2);
   border-radius: 10px;
   padding: 10px;
   width: 100%;
@@ -521,7 +507,7 @@ a {
   padding: 5px 20px;
   border: none;
   border-radius: 5px;
-  background-color: var(--text-2);
+  background-color: var(--text-color);
   color: var(--bg-main);
 }
 
@@ -716,7 +702,7 @@ footer {
 
 .page-footer .footer-links a:hover {
   background-color: var(--glass-alt);
-  color: var(--text-2);
+  color: var(--text-color);
 }
 
 /* Developer info */
