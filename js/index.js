@@ -2,8 +2,8 @@
 
 let themeSwitch = document.querySelector('#theme-switch');
 
-themeSwitch.addEventListener('change', () => {
-    if(themeSwitch.checked) {
+themeSwitch.addEventListener('click', () => {
+    if(true) {
         document.documentElement.setAttribute('prefers-color-scheme', 'dark');
     } else {
         document.documentElement.setAttribute('prefers-color-scheme', 'light');

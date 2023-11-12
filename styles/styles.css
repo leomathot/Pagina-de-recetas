@@ -21,7 +21,7 @@
   --yellow-1: #FBFFDC;
   --ligh-green-1: #e5ffd8;
   --light-blue-1: #d3f9ff;
-  --ligh-bluish-green-1: #c1eddc;
+  --ligh-bluish-green-1: #c7f8e4;
   --light-green-2: #d0ffa0;
   --light-blue-2: #a0d0ff;
   --mid-green: #30a070;
@@ -207,8 +207,16 @@ a {
   border-radius: 6px;
 }
 
+#nav .nav-enlaces i {
+  font-size: 0.8em;
+  padding: 0 3px;
+  position: relative;
+  top: -1px;
+}
+
 #nav .nav-enlaces a:hover {
   background-color: var(--glass-main);
+  cursor: pointer;
 }
 
 /* Header */
