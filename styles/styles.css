@@ -14,17 +14,17 @@
 
   --white: #fafafa;
   --black: #202020;
-  --dark-gray: #404040;
-  --mid-gray: #787878;
+  --dark-gray: #303030;
+  --mid-gray: #909090;
   --light-gray: #f0f0f0;
 
-  --yellow-1: #FBFFDC;
-  --ligh-green-1: #e5ffd8;
+  --yellow-1: #e5ffd8;
+  --ligh-green-1: #9fe9e0;
   --ligh-bluish-green: #baefda;
   --bright-green: #d0ffa0;
   --mid-green: #30a088;
-  --dark-green: #207060;
-  --dark-bluish-green: #107070;
+  --dark-green: #306070;
+  --dark-bluish-green: #206060;
 
   --glass-light: rgba(255, 255, 255, 0.4);
   --glass-dark: rgba(0, 0, 0, 0.3);
@@ -661,7 +661,7 @@ a {
 
 /* Footer */
 footer {
-  background-color: var(--gray-main);
+  background-color: var(--bg-2);
   color: var(--text-main);
   display: flex;
   flex-direction: column;
@@ -701,15 +701,14 @@ footer {
 }
 
 .page-footer .footer-links a:hover {
-  background-color: var(--glass-alt);
+  background-color: var(--glass-main);
   color: var(--text-color);
 }
 
 /* Developer info */
 #developer-info {
-  border: 2px solid var(--mid-gray);
+  border: 2px solid var(--text-main);
   border-radius: 10px;
-  color: var(--mid-gray);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -745,7 +744,6 @@ footer {
 }
 
 #developer-info a {
-  color: var(--mid-gray);
   height: fit-content;
   padding: 0 8px;
   border-radius: 5px;
