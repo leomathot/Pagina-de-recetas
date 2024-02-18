@@ -21,8 +21,8 @@
   --bright-green: #d0ffa0;
   --dark-green: #306070;
 
-  --glass-light: rgba(255, 255, 255, 0.4);
-  --glass-dark: rgba(0, 0, 0, 0.2);
+  --glass-light: rgba(255, 255, 255, 0.2);
+  --glass-dark: rgba(0, 0, 0, 0.1);
 }
 
 html[prefers-color-scheme="dark"] {
@@ -37,6 +37,14 @@ html[prefers-color-scheme="dark"] {
     linear-gradient(
       rgb(0, 20, 40),
       rgb(0, 90, 110)
+    );
+
+  --nav-bg: 
+    linear-gradient(
+      135deg,
+      rgb(45, 0, 87),
+      rgb(0, 34, 66),
+      rgba(0, 64, 64, 0.95)
     );
 
   --bg-main: rgba(0,10,20,0.2);
@@ -64,12 +72,14 @@ html[prefers-color-scheme="dark"] {
   --selection-color: var(--dark-bluish-green);
 
   --card-bg: rgba(0, 0, 0, 0.1);
-  --card-bg-hover: linear-gradient(
-    165deg,
-    rgb(0, 0, 0),
-    rgba(0, 0, 0, 0.8),
-    rgba(70, 0, 70, 0.5)
-  );
+  --card-bg-hover: 
+    linear-gradient(
+      165deg,
+      rgb(0, 0, 0),
+      rgba(0, 0, 0, 0.8),
+      rgba(70, 0, 70, 0.5)
+    );
+
   --footer-bg: rgba(0, 0, 0, 0.2);
 }
 
@@ -86,6 +96,14 @@ html[prefers-color-scheme="light"] {
     linear-gradient(
       rgb(130, 180, 230),
       rgb(150, 240, 230)
+    );
+
+  --nav-bg:
+    linear-gradient(
+      135deg,
+      rgb(238, 200, 255),
+      rgb(200, 234, 255),
+      rgba(255, 255, 255, 0.9)
     );
 
   --bg-main: rgba(255, 255, 255, 0.2);
@@ -202,16 +220,6 @@ h2 {
   font-size: 2.5rem;
 }
 
-.background-1 {
-  background: var(--bg-1);
-  color: var(--text-main);
-}
-
-.background-2 {
-  background: var(--bg-2);
-  color: var(--text-main);
-}
-
 .bg-banner-1 {
   background:
     linear-gradient(
@@ -246,7 +254,6 @@ h2 {
 
 /* Navbar */
 #nav {
-  background: var(--bg-2);
   display: flex;
   justify-content: flex-end;
   padding: 3px 10px;
@@ -255,6 +262,12 @@ h2 {
   width: 100%;
   min-height: 25px;
   z-index: 100;
+}
+
+#nav .nav-links{
+  background: var(--nav-bg);
+  border-radius: 8px;
+  padding: 4px 10px;
 }
 
 a {
@@ -302,7 +315,7 @@ a {
 
 #header .text-frame {
   z-index: 20;
-  background: rgba(24, 133, 184, 0.5);
+  background: rgba(8, 105, 170, 0.7);
   padding: 10px 0;
   width: 100%;
   max-width: 330px;
@@ -313,15 +326,8 @@ a {
 #header .name {
   color: var(--white);
   font-size: 3.5rem;
-  font-weight: bold;
-}
-
-/* Cook easy! */
-#header .text-sub {
   font-family: var(--font-2), var(--font-1), sans-serif;
   font-weight: 100;
-  color: var(--bright-green);
-  font-size: 3rem;
 }
 
 /* Main */
