@@ -14,17 +14,12 @@
 
   --white: #fafafa;
   --black: #202020;
-  --dark-gray: #303030;
-  --mid-gray: #909090;
   --light-gray: #f0f0f0;
 
   --yellow-1: #e5ffd8;
   --ligh-green-1: #9fe9e0;
-  --ligh-bluish-green: #baefda;
   --bright-green: #d0ffa0;
-  --mid-green: #30a088;
   --dark-green: #306070;
-  --dark-bluish-green: #206060;
 
   --glass-light: rgba(255, 255, 255, 0.4);
   --glass-dark: rgba(0, 0, 0, 0.2);
@@ -34,9 +29,10 @@ html[prefers-color-scheme="dark"] {
 
   --page-bg: 
     linear-gradient(
-      135deg,
-      rgba(0, 20, 40, 0) 50%,
-      rgba(80, 0, 100, 0.3)
+      130deg,
+      rgba(0, 20, 40, 0.85),
+      transparent,
+      rgba(101, 0, 126, 0.6)
     ),
     linear-gradient(
       rgb(0, 20, 40),
@@ -67,9 +63,10 @@ html[prefers-color-scheme="dark"] {
   --selection-background: var(--white);
   --selection-color: var(--dark-bluish-green);
 
-  --card-bg: linear-gradient(
-    140deg,
-    transparent,
+  --card-bg: rgba(0, 0, 0, 0.1);
+  --card-bg-hover: linear-gradient(
+    165deg,
+    rgb(0, 0, 0),
     rgba(0, 0, 0, 0.8),
     rgba(70, 0, 70, 0.5)
   );
@@ -82,7 +79,8 @@ html[prefers-color-scheme="light"] {
     linear-gradient(
       135deg,
       rgba(130, 180, 230, 0.9),
-      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0.5) 40%,
+      rgba(255, 255, 255, 0.5) 60%,
       rgba(200, 170, 250, 0.8)
     ),
     linear-gradient(
@@ -113,11 +111,13 @@ html[prefers-color-scheme="light"] {
 
   --selection-background: var(--black);
   --selection-color: var(--light-green-1);
-  --card-bg: linear-gradient(
-    160deg,
-    transparent,
-    rgb(238, 211, 255),
-    rgb(255, 255, 255) 90%
+  
+  --card-bg: rgba(255, 255, 255, 0.2);
+  --card-bg-hover: linear-gradient(
+    170deg,
+    rgb(255, 255, 255) 20%,
+    rgb(236, 224, 255),
+    rgb(255, 255, 255) 80%
   );
   --footer-bg: rgba(0, 0, 0, 0.05);
 }
@@ -212,9 +212,24 @@ h2 {
   color: var(--text-main);
 }
 
-.background-base {
-  background: var(--bg-main);
-  color: var(--text-color);
+.bg-banner-1 {
+  background:
+    linear-gradient(
+      160deg,
+      rgba(255, 53, 181, 0.9),
+      rgba(0, 170, 255, 0.9)
+    );
+    color: var(--white);
+}
+
+.bg-banner-2 {
+  background:
+    linear-gradient(
+      160deg,
+      rgba(0, 197, 154, 0.9),
+      rgba(204, 0, 255, 0.9)
+    );
+    color: var(--white);
 }
 
 .glass-02 {
@@ -407,6 +422,7 @@ a {
 }
 
 .recipe-card {
+  background: var(--card-bg);
   box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.9);
   padding: 5px;
   border-radius: 10px;
@@ -418,7 +434,7 @@ a {
 .recipe-card:hover {
   transform: scale(1.03);
   box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.9);
-  background: var(--card-bg);
+  background: var(--card-bg-hover);
 }
 
 .recipe-card img {
