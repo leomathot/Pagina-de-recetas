@@ -13,13 +13,22 @@
   --selection-grid-gap: 25px;
 
   --white: #fafafa;
-  --black: #202020;
-  --light-gray: #f0f0f0;
+  --black: #101010;
 
-  --yellow-1: #e5ffd8;
-  --ligh-green-1: #9fe9e0;
-  --bright-green: #d0ffa0;
-  --dark-green: #306070;
+  --grad-dark: 
+    linear-gradient(
+      140deg,
+      rgb(0, 18, 34),
+      rgba(0, 0, 0, 0.7),
+      rgb(47, 0, 47)
+  );
+
+  --grad-light: linear-gradient(
+    140deg,
+    rgb(246, 224, 255),
+    rgb(255, 255, 255),
+    rgb(194, 255, 251)
+  );
 }
 
 html[prefers-color-scheme="dark"] {
@@ -36,42 +45,26 @@ html[prefers-color-scheme="dark"] {
       rgb(0, 90, 110)
     );
 
-  --nav-bg: 
-    linear-gradient(
-      135deg,
-      rgb(20, 0, 67),
-      rgb(0, 0, 0),
-      rgb(0, 25, 44)
-    );
+  --text-main: var(--white);
+  --bg-main: var(--black);
+
+  --nav-bg: var(--grad-dark);
 
   --card-bg: rgba(0, 0, 0, 0.1);
-  --card-bg-hover: 
-    linear-gradient(
-      165deg,
-      rgb(0, 0, 0),
-      rgba(0, 0, 0, 0.8),
-      rgba(70, 0, 70, 0.5)
-    );
+  --card-bg-hover: var(--grad-dark);
 
   --rec-bg-outer: rgba(0, 0, 0, 0.1);
-  --rec-bg-inner: 
-    linear-gradient(
-      140deg,
-      rgb(0, 0, 0),
-      rgba(0, 0, 0, 0.7),
-      rgba(70, 0, 70, 0.5)
-  );
+  --rec-bg-inner: var(--grad-dark);
 
   --footer-bg: rgba(0, 0, 0, 0.2);
 
-  --text-main: var(--white);
-
-  --text-color: var(--bright-green);
+  --contrast-high: rgb(27, 219, 233);
+  --contrast-mid: rgb(56, 144, 159);
 
   --glass-main: rgba(0,0,0,0.1);
 
-  --selection-background: var(--white);
-  --selection-color: var(--dark-bluish-green);
+  --selection-background: var(--bg-main);
+  --selection-color: var(--contrast-high);
 }
 
 html[prefers-color-scheme="light"] {
@@ -89,42 +82,26 @@ html[prefers-color-scheme="light"] {
       rgb(150, 240, 230)
     );
 
-  --nav-bg:
-    linear-gradient(
-      135deg,
-      rgb(238, 200, 255),
-      rgb(200, 234, 255),
-      rgba(255, 255, 255, 0.9)
-    );
+  --text-main: var(--black);
+  --bg-main: var(--white);
+
+  --nav-bg: var(--grad-light);
 
   --card-bg: rgba(255, 255, 255, 0.2);
-  --card-bg-hover: linear-gradient(
-    170deg,
-    rgb(255, 255, 255) 20%,
-    rgb(236, 224, 255),
-    rgb(255, 255, 255) 80%
-  );
+  --card-bg-hover: var(--grad-light);
 
   --rec-bg-outer: rgba(255,255,255,0.2);
-  --rec-bg-inner: linear-gradient(
-    140deg,
-    rgb(236, 224, 255),
-    rgb(230, 255, 253),
-    rgb(255, 255, 255)
-  );
+  --rec-bg-inner: var(--grad-light);
 
   --footer-bg: rgba(0, 0, 0, 0.05);
-
-  --text-main: var(--black);
-  --gray-main: var(--light-gray);
-  --gray-alt: var(--dark-gray);
-
-  --text-color: var(--dark-green);
+  
+  --contrast-high: rgb(127, 0, 178);
+  --contrast-mid: rgb(90, 221, 230);
   
   --glass-main: rgba(255, 255, 255, 0.2);
 
-  --selection-background: var(--black);
-  --selection-color: var(--light-green-1);
+  --selection-background: var(--bg-main);
+  --selection-color: var(--contrast-high);
 }
 
 ::-moz-selection {
@@ -243,16 +220,18 @@ h2 {
 #nav {
   display: flex;
   justify-content: flex-end;
-  padding: 3px 10px;
+  padding: 4px 10px 0 0;
   position: fixed;
   top: 0px;
-  width: 100%;
+  right: 0;
+  width: fit-content;
   min-height: 25px;
   z-index: 100;
 }
 
 #nav .nav-links{
   background: var(--nav-bg);
+  box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.9);
   border-radius: 8px;
   padding: 4px 10px;
 }
@@ -275,7 +254,7 @@ a {
 }
 
 #nav .nav-links a:hover {
-  background: var(--back-level-1);
+  background: var(--glass-main);
   cursor: pointer;
 }
 
@@ -314,7 +293,8 @@ a {
 
 #header .text-frame {
   z-index: 20;
-  background: rgba(8, 105, 170, 0.7);
+  background: var(--rec-bg-inner);
+  color: var(--text-main);
   padding: 10px 0;
   width: 100%;
   max-width: 330px;
@@ -323,7 +303,6 @@ a {
 
 /* name */
 #header .name {
-  color: var(--white);
   font-size: 3.5rem;
   font-family: var(--font-2), var(--font-1), sans-serif;
   font-weight: 100;
@@ -459,7 +438,7 @@ a {
 }
 
 .recipe-card .text-container h4 {
-  color: var(--text-color);
+  color: var(--contrast-high);
 }
 
 .recipe-display-container {
@@ -468,6 +447,7 @@ a {
 
 .recipe-display {
   background: var(--rec-bg-outer);
+  box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.9);
   padding: 15px 10px;
   border-radius: 10px;
   display: flex;
@@ -497,9 +477,8 @@ a {
 }
 
 .rec-disp-header i:hover {
-  background: var(--bg-main);
-  border: 2px solid var(--text-color);
-  color: var(--text-color);
+  border: 2px solid var(--contrast-high);
+  color: var(--contrast-high);
 }
 
 .rec-ingredients,
@@ -575,13 +554,17 @@ a {
   padding: 5px 20px;
   border: none;
   border-radius: 5px;
-  background: var(--text-color);
-  color: var(--bg-main);
+  background: transparent;
+  border: 2px solid var(--text-main);
+  color: var(--text-main);
+  transition: 0.1s;
 }
 
 .search-controls button:hover {
   cursor: pointer;
-  box-shadow: 0 0 0 2px var(--black);
+  background: var(--bg-main);
+  color: var(--contrast-high);
+  border: 2px solid var(--contrast-high);
 }
 
 #results {
@@ -618,6 +601,7 @@ a {
   gap: 10px;
   border-radius: 10px;
   background: var(--glass-main);
+  box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.9);
   position: relative;
 }
 
@@ -656,7 +640,7 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 25px;
 }
 
 #results #meals .meal .meal-img-ing-flex {
@@ -694,7 +678,6 @@ a {
 }
 
 #results #meals .meal a {
-  background: var(--bg-2);
   border: 2px solid var(--text-main);
   color: var(--text-main);
   padding: 10px;
@@ -703,10 +686,13 @@ a {
   width: fit-content;
   max-width: 100%;
   margin: 0 auto;
+  transition: 0.1s;
 }
 
 #results #meals .meal a:hover {
   background: var(--bg-main);
+  color: var(--contrast-high);
+  border: 2px solid var(--contrast-high);
 }
 
 #page-selectors {
@@ -770,7 +756,7 @@ footer {
 
 .page-footer .footer-links a:hover {
   background: var(--glass-main);
-  color: var(--text-color);
+  color: var(--contrast-high);
 }
 
 /* Developer info */
