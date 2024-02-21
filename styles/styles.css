@@ -20,9 +20,6 @@
   --ligh-green-1: #9fe9e0;
   --bright-green: #d0ffa0;
   --dark-green: #306070;
-
-  --glass-light: rgba(255, 255, 255, 0.2);
-  --glass-dark: rgba(0, 0, 0, 0.1);
 }
 
 html[prefers-color-scheme="dark"] {
@@ -44,32 +41,8 @@ html[prefers-color-scheme="dark"] {
       135deg,
       rgb(20, 0, 67),
       rgb(0, 0, 0),
-      rgb(0, 36, 64)
+      rgb(0, 25, 44)
     );
-
-  --bg-main: rgba(0,10,20,0.2);
-  --text-main: var(--white);
-  --gray-main: var(--dark-gray);
-  --gray-alt: var(--light-gray);
-
-  --text-color: var(--bright-green);
-  --bg-1: linear-gradient(
-      rgba(0,0,0,0.1), 
-      transparent 100px
-      );
-  --bg-2: linear-gradient(
-      rgba(0,0,0,0.1), 
-      transparent 100px
-    );
-
-  --glass-main: var(--glass-dark);
-  --glass-alt: var(--glass-light);
-
-  --back-level-1: var(--glass-main);
-  --back-level-2: var(--glass-main);
-
-  --selection-background: var(--white);
-  --selection-color: var(--dark-bluish-green);
 
   --card-bg: rgba(0, 0, 0, 0.1);
   --card-bg-hover: 
@@ -80,7 +53,25 @@ html[prefers-color-scheme="dark"] {
       rgba(70, 0, 70, 0.5)
     );
 
+  --rec-bg-outer: rgba(0, 0, 0, 0.1);
+  --rec-bg-inner: 
+    linear-gradient(
+      140deg,
+      rgb(0, 0, 0),
+      rgba(0, 0, 0, 0.7),
+      rgba(70, 0, 70, 0.5)
+  );
+
   --footer-bg: rgba(0, 0, 0, 0.2);
+
+  --text-main: var(--white);
+
+  --text-color: var(--bright-green);
+
+  --glass-main: rgba(0,0,0,0.1);
+
+  --selection-background: var(--white);
+  --selection-color: var(--dark-bluish-green);
 }
 
 html[prefers-color-scheme="light"] {
@@ -106,30 +97,6 @@ html[prefers-color-scheme="light"] {
       rgba(255, 255, 255, 0.9)
     );
 
-  --bg-main: rgba(255, 255, 255, 0.2);
-  --text-main: var(--black);
-  --gray-main: var(--light-gray);
-  --gray-alt: var(--dark-gray);
-
-  --text-color: var(--dark-green);
-  --bg-1: linear-gradient(
-      rgba(0,0,0,0.05), 
-      transparent 100px
-      );
-  --bg-2: linear-gradient(
-      rgba(0,0,0,0.05), 
-      transparent 100px
-    );
-
-  --glass-main: var(--glass-light);
-  --glass-alt: var(--glass-dark);
-
-  --back-level-1: var(--bg-1);
-  --back-level-2: var(--bg-2);
-
-  --selection-background: var(--black);
-  --selection-color: var(--light-green-1);
-  
   --card-bg: rgba(255, 255, 255, 0.2);
   --card-bg-hover: linear-gradient(
     170deg,
@@ -137,7 +104,27 @@ html[prefers-color-scheme="light"] {
     rgb(236, 224, 255),
     rgb(255, 255, 255) 80%
   );
+
+  --rec-bg-outer: rgba(255,255,255,0.2);
+  --rec-bg-inner: linear-gradient(
+    140deg,
+    rgb(236, 224, 255),
+    rgb(230, 255, 253),
+    rgb(255, 255, 255)
+  );
+
   --footer-bg: rgba(0, 0, 0, 0.05);
+
+  --text-main: var(--black);
+  --gray-main: var(--light-gray);
+  --gray-alt: var(--dark-gray);
+
+  --text-color: var(--dark-green);
+  
+  --glass-main: rgba(255, 255, 255, 0.2);
+
+  --selection-background: var(--black);
+  --selection-color: var(--light-green-1);
 }
 
 ::-moz-selection {
@@ -480,7 +467,7 @@ a {
 }
 
 .recipe-display {
-  background: var(--back-level-1);
+  background: var(--rec-bg-outer);
   padding: 15px 10px;
   border-radius: 10px;
   display: flex;
@@ -537,7 +524,7 @@ a {
 
 .rec-ingredients ul,
 .rec-directions ul {
-  background: var(--back-level-2);
+  background: var(--rec-bg-inner);
   border-radius: 10px;
   padding: 10px;
   width: 100%;
@@ -568,7 +555,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .search-controls {
@@ -601,7 +588,7 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -614,7 +601,7 @@ a {
 #results #meals {
   width: 100%;
   display: flex;
-  gap: 3px;
+  gap: 10px;
   flex-direction: column;
   align-items: center;
 }
@@ -639,13 +626,13 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 5px 5px 3px 5px;
+  padding: 15px 5px;
   cursor: pointer;
   font-size: 1rem;
 }
 
 #results #meals .meal .meal-title:hover {
-  background: var(--glass-main);
+  background: var(--rec-bg-inner);
   border-radius: 10px;
 }
 
@@ -692,7 +679,7 @@ a {
 }
 
 #results #meals .meal .meal-ingredients {
-  background: var(--glass-main);
+  background: var(--rec-bg-inner);
   width: 100%;
   height: 100%;
   padding: 10px;
