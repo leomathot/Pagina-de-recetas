@@ -42,9 +42,9 @@ html[prefers-color-scheme="dark"] {
   --nav-bg: 
     linear-gradient(
       135deg,
-      rgb(45, 0, 87),
-      rgb(0, 34, 66),
-      rgba(0, 64, 64, 0.95)
+      rgb(20, 0, 67),
+      rgb(0, 0, 0),
+      rgb(0, 36, 64)
     );
 
   --bg-main: rgba(0,10,20,0.2);
@@ -275,13 +275,13 @@ a {
   color: var(--text-main);
 }
 
-#nav .nav-links a {
+#nav .nav-links a, #nav .nav-links #menu i {
   display: inline-block;
   padding: 4px 4px 0 4px;
   border-radius: 6px;
 }
 
-#nav .nav-links i {
+#nav .nav-links #menu i {
   font-size: 0.8em;
   position: relative;
   top: -1px;
@@ -290,6 +290,18 @@ a {
 #nav .nav-links a:hover {
   background: var(--back-level-1);
   cursor: pointer;
+}
+
+#nav #menu {
+  display: none;
+}
+
+#nav:hover #menu {
+  display: flex;
+  flex-direction: column;
+}
+#nav:hover #burger {
+  display: none;
 }
 
 /* Header */
@@ -915,5 +927,17 @@ footer {
 
   #results #meals .meal .meal-info-cont {
     padding: 0 5px 15px 5px;
+  }
+}
+
+@media screen and (min-width: 670px) {
+  #nav #burger {
+    display: none;
+  }
+  #nav #menu {
+    display: block;
+  }
+  #nav:hover #menu {
+    display: block;
   }
 }
