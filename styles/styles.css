@@ -634,11 +634,13 @@ a {
   width: 150px;
   object-position: top;
   padding-bottom: 10px;
+  margin: 0 45px 0 0;
 }
 
 #results #meals .meal .meal-title h3 {
   width: 100%;
   text-align: center;
+  margin: 0 45px 0 5px;
 }
 
 #results #meals .meal .meal-title i {
@@ -932,5 +934,9 @@ footer {
   }
   #nav:hover #menu {
     display: block;
+  }
+  #results #meals .meal .meal-title h3,
+  #results #meals .meal .meal-img-preview {
+    margin: 0 50px;
   }
 }

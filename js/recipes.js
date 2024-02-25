@@ -371,7 +371,7 @@ function toggleInfo() {
     meals.forEach((meal, index) => {
         let title = meal.querySelector(".meal-title")
         let mealInfoCont = meal.querySelector(".meal-info-cont")
-        title.addEventListener("click", () => {
+        meal.addEventListener("click", () => {
 
             // Hide other meals
             meals.forEach((item, ind) => {
@@ -379,7 +379,6 @@ function toggleInfo() {
                     item.querySelector(".meal-info-cont").classList.add("hidden")
                     item.querySelector("i").classList.replace("fa-minus", "fa-plus")
                     item.querySelector("i").style.border = "2px solid transparent"
-                    item.querySelector(".meal-title").style.borderRadius = "10px"
                 }
             })
 
