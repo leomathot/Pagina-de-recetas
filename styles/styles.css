@@ -71,16 +71,24 @@ html[prefers-color-scheme="light"] {
 
   --page-bg: 
     linear-gradient(
-      135deg,
-      rgba(130, 180, 230, 0.9),
-      rgba(255, 255, 255, 0.5) 40%,
-      rgba(255, 255, 255, 0.5) 60%,
-      rgba(200, 170, 250, 0.8)
-    ),
+      rgb(200, 228, 255) 40%,
+      transparent
+    )
+    ,
     linear-gradient(
-      rgb(130, 180, 230),
-      rgb(150, 240, 230)
-    );
+      135deg,
+      transparent,
+      transparent,
+      rgb(254, 219, 255) 95%
+    )
+    ,
+    linear-gradient(
+      45deg,
+      rgb(211, 255, 241) 5%,
+      transparent,
+      transparent
+    )
+    ;
 
   --text-main: var(--black);
   --bg-main: var(--white);
@@ -93,7 +101,10 @@ html[prefers-color-scheme="light"] {
   --rec-bg-outer: rgba(255,255,255,0.2);
   --rec-bg-inner: var(--grad-light);
 
-  --footer-bg: rgba(0, 0, 0, 0.05);
+  --footer-bg: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.1) 6px,
+      transparent 6px);
   
   --contrast-high: rgb(127, 0, 178);
   --contrast-mid: rgb(90, 221, 230);
@@ -407,17 +418,17 @@ a {
 
 .recipe-card {
   background: var(--card-bg);
-  box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.9);
-  padding: 5px;
+  box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
   transition: 0.1s;
+  overflow: hidden;
 }
 
 .recipe-card:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.4);
   background: var(--card-bg-hover);
 }
 
@@ -425,7 +436,6 @@ a {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 8px;
 }
 
 .recipe-card .text-container {
@@ -843,10 +853,6 @@ footer {
 
   .selection-grid {
     display: grid;
-  }
-
-  .recipe-card {
-    padding: 5px 3px;
   }
 
   .recipe-card:hover {

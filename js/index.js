@@ -143,7 +143,7 @@ let footer = `
 
         <div class="footer-text">
             <p>
-                <i class="fa-regular fa-copyright"></i> 2023 RECIPage
+                2024 Reci Page
             </p>
         </div>
 
