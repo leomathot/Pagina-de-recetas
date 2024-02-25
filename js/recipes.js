@@ -203,10 +203,13 @@ for (var i = 0; i < recLenght; i++) {
         <div><a href="#recipe-cards">
         <div class="recipe">
             <div class="recipe-card">
+                <div class="img-container">
                 <img
                     src=${selection[i].photoPaths[0]}
                     alt=${selection[i].name}
                 >
+                </div>
+                <div class="sep"></div>
                 <div class="text-container">
                     <h4>${selection[i].name}</h4>
                     <p>${selection[i].description}</p>
@@ -302,7 +305,7 @@ function getRecipes(ingredient) {
             let mealsLength = res.hits.length
             let mealsElements = ""
             let pageSelectors = ""
-            let mealsPerPage = 6
+            let mealsPerPage = 4
             let numOfPages = Math.ceil(mealsLength / mealsPerPage)
             let whichPage = 1
             // Generate each meal element and add it to mealsElements
@@ -320,6 +323,9 @@ function getRecipes(ingredient) {
                         <div class="meal-title">
                             <h3>${mealName}</h3>
                             <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="meal-img-preview">
+                            <img src="${imgSrc}" alt="${mealName}" />
                         </div>
                         <div class="meal-info-cont hidden">
                             <div class="meal-info">
@@ -380,12 +386,12 @@ function toggleInfo() {
             // Toggle info of selected
             mealInfoCont.classList.toggle("hidden")
             if (!mealInfoCont.classList.contains("hidden")) {
+                meal.querySelector(".meal-img-preview").style.display = "none"
                 title.querySelector("i").classList.replace("fa-plus", "fa-minus")
-                title.style.borderRadius = "10px 10px 0 0"
                 title.querySelector("i").style.border = "2px solid var(--text-main)"
             } else {
+                meal.querySelector(".meal-img-preview").style.display = "inline-block"
                 title.querySelector("i").classList.replace("fa-minus", "fa-plus")
-                title.style.borderRadius = "10px"
                 title.querySelector("i").style.border = "2px solid transparent"
             }
         })
@@ -416,9 +422,9 @@ function showPage(page, pageSelectors) {
     })
     pageSelectors.forEach((pageSelector, index) => {
         if(index === (page - 1)) {
-            pageSelector.style.backgroundColor = "var(--glass-main)"
+            pageSelector.classList.add("page-selected")
         } else {
-            pageSelector.style.backgroundColor = "transparent"
+            pageSelector.classList.remove("page-selected")
         }
     })
 }
