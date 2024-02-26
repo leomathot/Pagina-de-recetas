@@ -263,8 +263,8 @@ a {
   display: flex;
   flex-direction: column;
 }
-#nav:hover #burger {
-  display: none;
+#nav:hover #burger i {
+  color: transparent;
 }
 
 /* Header */
@@ -640,9 +640,10 @@ a {
 }
 
 #results #meals .meal .meal-title i {
-  border: 2px solid transparent;
-  padding: 1px 8px;
+  border: 2px solid var(--text-main);
+  padding: 3px 8px;
   border-radius: 5px;
+  align-self: flex-start;
 }
 
 #results #meals .meal .meal-info-cont {

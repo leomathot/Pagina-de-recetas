@@ -370,14 +370,13 @@ function toggleInfo() {
     meals.forEach((meal, index) => {
         let title = meal.querySelector(".meal-title")
         let mealInfoCont = meal.querySelector(".meal-info-cont")
-        meal.addEventListener("click", () => {
+        title.addEventListener("click", () => {
 
             // Hide other meals
             meals.forEach((item, ind) => {
                 if(index !== ind) {
                     item.querySelector(".meal-info-cont").classList.add("hidden")
                     item.querySelector("i").classList.replace("fa-minus", "fa-plus")
-                    item.querySelector("i").style.border = "2px solid transparent"
                     item.querySelector("img").style.display = "inline-block"
                 }
             })
@@ -387,11 +386,9 @@ function toggleInfo() {
             if (!mealInfoCont.classList.contains("hidden")) {
                 title.querySelector("img").style.display = "none"
                 title.querySelector("i").classList.replace("fa-plus", "fa-minus")
-                title.querySelector("i").style.border = "2px solid var(--text-main)"
             } else {
                 title.querySelector("img").style.display = "inline-block"
                 title.querySelector("i").classList.replace("fa-minus", "fa-plus")
-                title.querySelector("i").style.border = "2px solid transparent"
             }
         })
     })
