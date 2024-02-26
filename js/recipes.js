@@ -319,15 +319,12 @@ function getRecipes(ingredient) {
                 })
                 whichPage = Math.ceil((i + 1) / mealsPerPage)
                 mealsElements += `
-                    <div class="search-meal">
                     <div class="meal-container page-${whichPage}">
                     <div class="meal" id="meal-${i + 1}">
                         <div class="meal-title">
+                            <img src="${imgSrc}" alt="${mealName}" />
                             <h3>${mealName}</h3>
                             <i class="fa-solid fa-plus"></i>
-                        </div>
-                        <div class="meal-img-preview">
-                            <img src="${imgSrc}" alt="${mealName}" />
                         </div>
                         <div class="meal-info-cont hidden">
                             <div class="meal-info">
@@ -341,7 +338,6 @@ function getRecipes(ingredient) {
                                 <a href="${res.hits[i].recipe.url}" target="_blank">View recipe at <strong>${res.hits[i].recipe.source}</strong></a>
                             </div>
                         </div>
-                    </div>
                     </div>
                     </div>`
             }
@@ -382,17 +378,18 @@ function toggleInfo() {
                     item.querySelector(".meal-info-cont").classList.add("hidden")
                     item.querySelector("i").classList.replace("fa-minus", "fa-plus")
                     item.querySelector("i").style.border = "2px solid transparent"
+                    item.querySelector("img").style.display = "inline-block"
                 }
             })
 
             // Toggle info of selected
             mealInfoCont.classList.toggle("hidden")
             if (!mealInfoCont.classList.contains("hidden")) {
-                meal.querySelector(".meal-img-preview").style.display = "none"
+                title.querySelector("img").style.display = "none"
                 title.querySelector("i").classList.replace("fa-plus", "fa-minus")
                 title.querySelector("i").style.border = "2px solid var(--text-main)"
             } else {
-                meal.querySelector(".meal-img-preview").style.display = "inline-block"
+                title.querySelector("img").style.display = "inline-block"
                 title.querySelector("i").classList.replace("fa-minus", "fa-plus")
                 title.querySelector("i").style.border = "2px solid transparent"
             }

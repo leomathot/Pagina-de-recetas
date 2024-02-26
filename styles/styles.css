@@ -587,8 +587,9 @@ a {
 
 #results #meals {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
   align-items: center;
 }
@@ -616,13 +617,20 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 15px 5px 5px 5px;
+  padding: 10px 5px;
   cursor: pointer;
   font-size: 1rem;
 }
 
-#results #meals .meal:hover .meal-title {
+#results #meals .meal .meal-title:hover {
   background: var(--card-grad);
+}
+
+#results #meals .meal .meal-title img {
+  height: 100px;
+  width: 250px;
+  object-fit: cover;
+  object-position: top;
 }
 
 #results #meals .meal .meal-title h3 {
@@ -635,16 +643,6 @@ a {
   border: 2px solid transparent;
   padding: 1px 8px;
   border-radius: 5px;
-}
-
-#results #meals .meal .meal-img-preview {
-  height: 100px;
-  width: 150px;
-  padding-bottom: 10px;
-}
-
-#results #meals .meal .meal-img-preview img {
-  object-position: top;
 }
 
 #results #meals .meal .meal-info-cont {
