@@ -287,6 +287,8 @@ searchBtn.addEventListener("click", checkInput)
 function checkInput() {
     const results = document.querySelector("#results")
     const ingredient = document.querySelector("#text-input").value
+    document.querySelector("#text-input").value = ""
+    document.querySelector("#search").style.gap = "30px"
     if (ingredient.length == 0) {
         results.innerHTML = `
             <p id="input-empty-error">Please type at least one word!</p>`
