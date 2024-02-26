@@ -188,7 +188,8 @@ const selection = [
 
 let recipesContent = "";
 let recLenght = selection.length
-for (var i = 0; i < recLenght; i++) {
+// for (var i = 0; i < recLenght; i++) {
+selection.forEach((e, i) => {
     // each recipe ingredients
     let recIngredients = ``
     selection[i].ingredients.forEach(ing => {
@@ -252,7 +253,7 @@ for (var i = 0; i < recLenght; i++) {
             </div>
         </div>
         </a></div>`
-}
+})
 
 document.querySelector("#recipe-cards").innerHTML = recipesContent
 
@@ -318,6 +319,7 @@ function getRecipes(ingredient) {
                 })
                 whichPage = Math.ceil((i + 1) / mealsPerPage)
                 mealsElements += `
+                    <div class="search-meal">
                     <div class="meal-container page-${whichPage}">
                     <div class="meal" id="meal-${i + 1}">
                         <div class="meal-title">
@@ -339,6 +341,7 @@ function getRecipes(ingredient) {
                                 <a href="${res.hits[i].recipe.url}" target="_blank">View recipe at <strong>${res.hits[i].recipe.source}</strong></a>
                             </div>
                         </div>
+                    </div>
                     </div>
                     </div>`
             }

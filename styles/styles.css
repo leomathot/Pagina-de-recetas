@@ -35,21 +35,21 @@ html[prefers-color-scheme="dark"] {
 
   --page-bg: 
     linear-gradient(
-      rgb(0, 20, 40),
+      rgb(0, 30, 60),
       transparent
     )
     ,
     linear-gradient(
       90deg,
-      rgb(0, 52, 63),
-      rgb(61, 0, 99)
+      rgb(0, 78, 88),
+      rgb(78, 0, 138)
     )
     ;
 
   --text-main: var(--white);
   --bg-main: var(--black);
 
-  --nav-bg: var(--grad-dark);
+  --nav-bg: rgb(0, 78, 88);
 
   --card-bg: rgba(30, 147, 205, 0.1);
   --card-sub-bg: rgba(0,0,0,0.3);
@@ -62,8 +62,8 @@ html[prefers-color-scheme="dark"] {
 
   --glass-main: rgba(47, 252, 255, 0.2);
 
-  --selection-background: var(--bg-main);
-  --selection-color: var(--contrast-high);
+  --selection-background: var(--text-main);
+  --selection-color: var(--bg-main);
 }
 
 html[prefers-color-scheme="light"] {
@@ -101,8 +101,8 @@ html[prefers-color-scheme="light"] {
   
   --glass-main: rgba(255, 255, 255, 0.2);
 
-  --selection-background: var(--bg-main);
-  --selection-color: var(--contrast-high);
+  --selection-background: var(--text-main);
+  --selection-color: var(--bg-main);
 }
 
 ::-moz-selection {
@@ -156,7 +156,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding: 60px 30px;
+  padding: 50px 30px;
 }
 
 article {
@@ -203,10 +203,6 @@ h2 {
       rgba(204, 0, 255, 0.9)
     );
     color: var(--white);
-}
-
-.glass-02 {
-  background: rgba(0, 0, 0, 0.2);
 }
 
 .pad-10 {
@@ -591,9 +587,9 @@ a {
 
 #results #meals {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -629,27 +625,26 @@ a {
   background: var(--card-grad);
 }
 
-#results #meals .meal .meal-img-preview {
-  height: 100px;
-  width: 150px;
-  object-position: top;
-  padding-bottom: 10px;
-  margin: 0 45px 0 0;
-}
-
 #results #meals .meal .meal-title h3 {
   width: 100%;
   text-align: center;
-  margin: 0 45px 0 5px;
+  font-size: 1rem;
 }
 
 #results #meals .meal .meal-title i {
-  position: absolute;
-  right: 10px;
-  top: 15px;
   border: 2px solid transparent;
   padding: 1px 8px;
   border-radius: 5px;
+}
+
+#results #meals .meal .meal-img-preview {
+  height: 100px;
+  width: 150px;
+  padding-bottom: 10px;
+}
+
+#results #meals .meal .meal-img-preview img {
+  object-position: top;
 }
 
 #results #meals .meal .meal-info-cont {
@@ -934,9 +929,5 @@ footer {
   }
   #nav:hover #menu {
     display: block;
-  }
-  #results #meals .meal .meal-title h3,
-  #results #meals .meal .meal-img-preview {
-    margin: 0 50px;
   }
 }
