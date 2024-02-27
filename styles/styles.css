@@ -46,10 +46,22 @@ html[prefers-color-scheme="dark"] {
     )
     ;
 
+  --grad-2: 
+    linear-gradient(
+      135deg,
+      rgb(0, 78, 88),
+      rgb(78, 0, 138)
+    );
+
   --text-main: var(--white);
   --bg-main: var(--black);
 
-  --nav-bg: rgb(0, 78, 88);
+  --nav-bg: 
+    linear-gradient(
+      135deg,
+      rgb(0, 78, 88),
+      rgb(78, 0, 138)
+    );
 
   --card-bg: rgba(30, 147, 205, 0.1);
   --card-sub-bg: rgba(0,0,0,0.3);
@@ -82,10 +94,22 @@ html[prefers-color-scheme="light"] {
     )
     ;
 
+    --grad-2: 
+    linear-gradient(
+      135deg,
+      rgb(175, 255, 230),
+      rgb(253, 207, 255)
+    );
+
   --text-main: var(--black);
   --bg-main: var(--white);
 
-  --nav-bg: var(--grad-light);
+  --nav-bg: 
+    linear-gradient(
+      135deg,
+      rgb(175, 255, 230),
+      rgb(253, 207, 255)
+    );
 
   --card-bg: rgba(255, 255, 255, 0.2);
   --card-sub-bg: rgba(38, 110, 180, 0.1);
@@ -251,7 +275,7 @@ a {
 }
 
 #nav .nav-links a:hover {
-  background: var(--glass-main);
+  background: var(--bg-main);
   cursor: pointer;
 }
 
@@ -290,7 +314,7 @@ a {
 
 #header .text-frame {
   z-index: 20;
-  background: var(--card-grad);
+  background: var(--grad-2);
   color: var(--text-main);
   padding: 10px 0;
   width: 100%;
