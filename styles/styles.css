@@ -86,13 +86,14 @@ html[prefers-color-scheme="light"] {
 
   --page-bg: 
     linear-gradient(
-      var(--blue-1),
+      rgb(140, 200, 255),
+      rgb(200, 230, 255),
       transparent
     ),
     linear-gradient(
       90deg,
-      var(--green-1),
-      var(--purple-1)
+      rgb(160, 255, 230),
+      rgb(255, 200, 255)
     );
 
   --grad-alt:
@@ -350,11 +351,13 @@ a {
   height: 100%;
   position: absolute;
   top: 0;
+  padding: 20px;
 }
 
 .home-banner {
   width: 100%;
   height: 100%;
+  margin:auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -362,6 +365,7 @@ a {
   align-items: center;
   text-align: center;
   padding: 10px;
+  border-radius: 20px;
 }
 
 .home-banner h3 {
