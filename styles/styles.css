@@ -56,10 +56,10 @@ html[prefers-color-scheme="dark"] {
 
   --nav-bg: 
     linear-gradient(
-      135deg,
-      rgb(0, 78, 88),
-      rgb(78, 0, 138)
-    );
+      120deg,
+      rgb(0, 63, 71),
+      rgb(49, 0, 87))
+    ;
 
   --card-bg: rgba(0, 100, 160, 0.1);
   --card-sub-bg: rgba(0,0,0,0.3);
@@ -116,7 +116,7 @@ html[prefers-color-scheme="light"] {
 
   --nav-bg: 
     linear-gradient(
-      135deg,
+      120deg,
       rgb(175, 255, 230),
       rgb(253, 207, 255)
     );
@@ -124,10 +124,7 @@ html[prefers-color-scheme="light"] {
   --card-bg: rgba(255, 255, 255, 0.2);
   --card-sub-bg: rgba(255, 255, 255, 0.4);
 
-  --footer-bg: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.1) 6px,
-      transparent 6px);
+  --footer-bg: rgba(16, 170, 230, 0.1);
   
   --contrast-high: rgb(127, 0, 178);
   --contrast-mid: rgb(84, 178, 185);
@@ -250,7 +247,7 @@ h2 {
 #nav {
   display: flex;
   justify-content: flex-end;
-  padding: 4px 10px 0 0;
+  padding: 5px 10px 0 0;
   position: fixed;
   top: 0px;
   right: 0;
@@ -261,7 +258,7 @@ h2 {
 
 #nav .nav-links{
   background: var(--nav-bg);
-  box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   padding: 4px 10px;
 }
@@ -310,32 +307,48 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 #header img {
   position: absolute;
   z-index: 10;
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 40px);
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.5);
+  height: 95%;
+  border-radius: 20px;
   object-fit: cover;
 }
 
 #header .text-frame {
+  position: absolute;
   z-index: 20;
-  background: var(--grad-bottom);
-  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 0;
-  width: 100%;
-  max-width: 330px;
-  border-radius: 10px;
+  width: calc(100% - 40px);
+  height: 95%;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(47, 213, 194, 0),
+    rgba(0, 0, 0, 0.1),
+    rgba(47, 213, 194, 0)
+  );
 }
 
 /* name */
 #header .name {
-  font-size: 3.5rem;
-  font-family: var(--font-2), var(--font-1), sans-serif;
-  font-weight: 100;
+  font-size: 15vw;
+  text-align: center;
+  font-weight: 600;
+  color: var(--white);
+  background: -webkit-linear-gradient(
+    135deg,
+    #036668,
+    #560452);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Main */
@@ -366,11 +379,12 @@ a {
   text-align: center;
   padding: 10px;
   border-radius: 20px;
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.5);
 }
 
 .home-banner h3 {
   font-size: 2.2rem;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .banners-prev-next {
@@ -440,7 +454,7 @@ a {
 
 .recipe-card {
   background: var(--card-bg);
-  box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
@@ -450,7 +464,7 @@ a {
 
 .recipe-card:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.3);
 }
 
 .recipe-card .img-container {
@@ -776,7 +790,11 @@ a {
 /* Footer */
 footer {
   background: var(--footer-bg);
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.5);
   color: var(--text-main);
+  width: calc(100% - 40px);
+  margin: 20px auto;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   gap: 60px;
