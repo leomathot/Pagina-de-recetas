@@ -54,7 +54,7 @@ html[prefers-color-scheme="dark"] {
   --text-main: var(--white);
   --bg-main: var(--black);
 
-  --nav-bg: rgb(49, 0, 87);
+  --nav-bg: var(--green-1);
 
   --card-bg: rgba(0, 100, 160, 0.1);
   --card-sub-bg: rgba(0,0,0,0.3);
