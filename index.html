@@ -12,7 +12,9 @@
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <!-- font awesome -->
   <script src="https://kit.fontawesome.com/4fbc6e35ac.js" crossorigin="anonymous"></script>
   <!-- icon -->
@@ -26,7 +28,7 @@
 
   <!-- Navbar -->
   <nav id="nav">
-    
+
     <div class="nav-links">
       <span id="burger">
         <a><i class="fa-solid fa-bars"></i></a>
@@ -43,85 +45,90 @@
 
   <!-- Header -->
   <header id="header">
-    <img src="./images/lukas-blazek-EWDvHNNfUmQ-unsplash.jpg" alt="a table and some green leaves">
-    <div class="text-frame">
-      <div class="name animate__animated animate__fadeInDown animate__delay-0.5s animate__slower">
-        ReciPage
+
+      <!-- Page Name -->
+      <div class="text-frame">
+        <div class="name animate__animated animate__fadeInDown animate__delay-0.5s animate__slower">
+          <div>reci</div>
+          <div>page</div>
+        </div>
       </div>
-    </div>
+
+      <!-- Banners -->
+      <div id="home-banners">
+
+        <div class="banners-prev-next" id="banners-prev">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+
+        <div class="banners-stop-play-cont" id="banners-play">
+          <div class="banners-stop-play">
+            <i class="fa-solid fa-play"></i>
+          </div>
+        </div>
+
+        <div class="banners-stop-play-cont" id="banners-stop">
+          <div class="banners-stop-play">
+            <i class="fa-solid fa-stop"></i>
+          </div>
+        </div>
+
+        <div class="banners-prev-next" id="banners-next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+
+        <div class="home-banner-container">
+          <div class="home-banner bg-banner-1">
+            <h2>
+              Wanna eat something delicious?
+            </h2>
+            <h3>
+              cook easy too
+            </h3>
+          </div>
+        </div>
+
+        <div class="home-banner-container">
+          <div class="home-banner bg-banner-2">
+            <h2>
+              Amazing and enjoyable
+            </h2>
+            <h3>
+              homemade food
+            </h3>
+          </div>
+        </div>
+
+        <div class="home-banner-container">
+          <div class="home-banner bg-banner-1">
+            <h2>
+              Food the way you love it
+            </h2>
+            <h3>
+              we love it too
+            </h3>
+          </div>
+        </div>
+
+        <div class="home-banner-container">
+          <div class="home-banner bg-banner-2">
+            <h2>
+              Don't know what to cook?
+            </h2>
+            <h3>
+              we take care
+            </h3>
+          </div>
+        </div>
+
+      </div>
+
   </header>
 
   <!-- Main -->
   <main>
 
-    <!-- Banners -->
-    <div id="home-banners">
 
-      <div class="banners-prev-next" id="banners-prev">
-        <i class="fa-solid fa-chevron-left"></i>
-      </div>
-
-      <div class="banners-stop-play-cont" id="banners-play">
-        <div class="banners-stop-play">
-          <i class="fa-solid fa-play"></i>
-        </div>
-      </div>
-
-      <div class="banners-stop-play-cont" id="banners-stop">
-        <div class="banners-stop-play">
-          <i class="fa-solid fa-stop"></i>
-        </div>
-      </div>
-
-      <div class="banners-prev-next" id="banners-next">
-        <i class="fa-solid fa-chevron-right"></i>
-      </div>
-
-      <div class="home-banner-container">
-        <div class="home-banner bg-banner-1">
-          <h2>
-            Wanna eat something delicious?
-          </h2>
-          <h3>
-            cook easy too
-          </h3>
-        </div>
-      </div>
-
-      <div class="home-banner-container">
-        <div class="home-banner bg-banner-2">
-          <h2>
-            Amazing and enjoyable
-          </h2>
-          <h3>
-            homemade food
-          </h3>
-        </div>
-      </div>
-
-      <div class="home-banner-container">
-        <div class="home-banner bg-banner-1">
-          <h2>
-            Food the way you love it
-          </h2>
-          <h3>
-            we love it too
-          </h3>
-        </div>
-      </div>
-
-      <div class="home-banner-container">
-        <div class="home-banner bg-banner-2">
-          <h2>
-            Don't know what to cook?
-          </h2>
-          <h3>
-            we take care
-          </h3>
-        </div>
-      </div>
-
-    </div>
 
     <!-- Week selection -->
     <section id="recipes">
@@ -137,7 +144,7 @@
       <article>
         <div class="selection-grid" id="recipe-cards"></div>
       </article>
-      
+
     </section>
 
     <!-- Recipe web search -->
@@ -150,7 +157,7 @@
 
       <article>
         <div class="search" id="search">
-          
+
           <div class="search-controls">
             <input type="text" id="text-input">
             <button id="search-btn">
