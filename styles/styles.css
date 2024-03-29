@@ -54,12 +54,7 @@ html[prefers-color-scheme="dark"] {
   --text-main: var(--white);
   --bg-main: var(--black);
 
-  --nav-bg: 
-    linear-gradient(
-      120deg,
-      rgb(0, 63, 71),
-      rgb(49, 0, 87))
-    ;
+  --nav-bg: rgb(49, 0, 87);
 
   --card-bg: rgba(0, 100, 160, 0.1);
   --card-sub-bg: rgba(0,0,0,0.3);
@@ -114,12 +109,7 @@ html[prefers-color-scheme="light"] {
   --text-main: var(--black);
   --bg-main: var(--white);
 
-  --nav-bg: 
-    linear-gradient(
-      120deg,
-      rgb(175, 255, 230),
-      rgb(253, 207, 255)
-    );
+    --nav-bg: rgb(175, 255, 230);
 
   --card-bg: rgba(255, 255, 255, 0.2);
   --card-sub-bg: rgba(255, 255, 255, 0.4);
@@ -317,13 +307,10 @@ a {
   margin-top: 5vh;
   border-radius: 50%;
   border: 5px solid var(--white);
-  /* background: radial-gradient(
-    transparent,
-    transparent, 
-    rgba(0, 0, 0, 0.3)); */
-    box-shadow: 
-      inset 0 0 10px 0 rgba(0, 0, 0, 0.5), 
-      0 0 10px 0 rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    inset 0 0 10px 0 rgba(0, 0, 0, 0.5), 
+    0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 /* name */
