@@ -180,15 +180,16 @@ article {
   max-width: 950px;
 }
 
-h1 {
+h1, h2 {
   font-family: var(--font-2), var(--font-1), sans-serif;
   font-weight: 100;
+}
+
+h1 {
   font-size: 3rem;
 }
 
 h2 {
-  font-family: var(--font-2), var(--font-1), sans-serif;
-  font-weight: 100;
   font-size: 2.5rem;
 }
 
@@ -279,6 +280,7 @@ a {
   border-top: 1px solid var(--black);
   position: relative;
   min-height: 40vh;
+  display: flex;
 }
 
 #header .text-frame {
@@ -289,15 +291,14 @@ a {
   align-items: center;
   justify-content: center;
   padding: 10px 0;
-  width: 30vh;
-  height: 30vh;
+  width: 190px;
+  height: 190px;
   margin-top: 5vh;
   border-radius: 50%;
-  /* border: 5px solid var(--white); */
-  background: rgba(16, 170, 230, 0.1);
-  box-shadow: 
-    inset 0 0 10px 0 rgba(255, 255, 255, 0.2), 
-    0 0 20px 0 rgba(0, 0, 0, 0.5);
+  background: 
+  linear-gradient(rgba(16, 170, 230, 0.1), rgba(16, 170, 230, 0.1)),
+  var(--page-bg);
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.6);
 }
 
 /* name */
@@ -305,9 +306,8 @@ a {
   font-family: var(--font-2);
   font-size: 5rem;
   text-align: center;
-  font-weight: 600;
-  color: rgb(70, 6, 119);
-  text-shadow: -4px 3px var(--white);
+  color: var(--white);
+  text-shadow: -6px 5px var(--black);
 }
 
 #header .name>div:nth-child(1) {
@@ -346,6 +346,10 @@ a {
   padding: 10px;
   border-radius: 20px;
   box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+.home-banner h2, .home-banner h3 {
+  margin-left: 200px;
 }
 
 .home-banner h3 {
@@ -859,11 +863,23 @@ footer {
 
 @media screen and (max-width: 800px) {
   :root {
-    --selection-grid-gap: 5px;
+    --selection-grid-gap: 15px;
   }
 
   .recipe-card .text-container p {
     font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 670px) {
+  #nav #burger {
+    display: none;
+  }
+  #nav #menu {
+    display: block;
+  }
+  #nav:hover #menu {
+    display: block;
   }
 }
 
@@ -881,11 +897,11 @@ footer {
   }
 
   .home-banner h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .home-banner h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .selection-grid {
@@ -921,6 +937,19 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+  #header .text-frame {
+    left: calc(50% - 95px);
+  }
+
+  #home-banners {
+    margin-top: 230px;
+  }
+
+  #header .home-banner h2, #header .home-banner h3 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .banners-prev-next {
     padding: 20px;
   }
@@ -943,17 +972,5 @@ footer {
 
   #results #meals .meal .meal-info-cont {
     padding: 0 5px 15px 5px;
-  }
-}
-
-@media screen and (min-width: 670px) {
-  #nav #burger {
-    display: none;
-  }
-  #nav #menu {
-    display: block;
-  }
-  #nav:hover #menu {
-    display: block;
   }
 }
