@@ -861,16 +861,9 @@ footer {
   background: var(--bg-main);
 }
 
-@media screen and (max-width: 800px) {
-  :root {
-    --selection-grid-gap: 15px;
-  }
+/* Media queries */
 
-  .recipe-card .text-container p {
-    font-size: 0.9rem;
-  }
-}
-
+/* //////////////////// */
 @media screen and (min-width: 670px) {
   #nav #burger {
     display: none;
@@ -882,6 +875,25 @@ footer {
     display: block;
   }
 }
+/* //////////////////// */
+
+@media screen and (max-width: 800px) {
+  :root {
+    --selection-grid-gap: 15px;
+  }
+
+  .recipe-card .text-container p {
+    font-size: 0.9rem;
+  }
+
+  .home-banner h2 {
+    font-size: 2rem;
+  }
+
+  .home-banner h3 {
+    font-size: 1.8rem;
+  }
+}
 
 @media screen and (max-width: 600px) {
   :root {
@@ -891,17 +903,29 @@ footer {
   section {
     padding: 60px 10px;
   }
+  #header .text-frame {
+    left: calc(50% - 95px);
+  }
 
-  .banners-prev-next {
-    padding: 40px;
+  #home-banners {
+    margin-top: 230px;
+  }
+
+  #header .home-banner h2, #header .home-banner h3 {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .home-banner h2 {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 
   .home-banner h3 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
+  }
+
+  .banners-prev-next {
+    padding: 40px;
   }
 
   .selection-grid {
@@ -937,33 +961,12 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-  #header .text-frame {
-    left: calc(50% - 95px);
-  }
-
-  #home-banners {
-    margin-top: 230px;
-  }
-
-  #header .home-banner h2, #header .home-banner h3 {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .banners-prev-next {
     padding: 20px;
   }
 
   .home.banner {
     gap: 10px;
-  }
-
-  .home-banner h2 {
-    font-size: 2rem;
-  }
-
-  .home-banner h3 {
-    font-size: 1.8rem;
   }
 
   .recipe-display {
