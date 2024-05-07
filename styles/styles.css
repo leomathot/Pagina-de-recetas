@@ -44,25 +44,20 @@ html[prefers-color-scheme="dark"] {
       var(--bg-main) 90%
   );
 
-  --grad-bottom: 
-    linear-gradient(
-      135deg,
-      var(--green-1),
-      var(--purple-1)
-    );
-
   --text-main: var(--white);
   --bg-main: var(--black);
 
-  --nav-bg: var(--green-1);
+  --nav-bg: rgb(27, 46, 93);
 
-  --card-bg: rgba(0, 100, 160, 0.1);
-  --card-sub-bg: rgba(70, 200, 235, 0.1);
+  --inner-bg: linear-gradient(
+    120deg,
+    var(--green-1),
+    var(--purple-1));
 
-  --glass-bg: rgba(6, 3, 70, 0.5);
+  --glass-bg: rgba(5, 0, 45, 0.5);
+  --glass-bg-alt: rgb(0, 0, 47);
 
   --contrast-high: rgb(27, 219, 233);
-  --contrast-mid: rgb(112, 59, 131);
 
   --selection-background: var(--text-main);
   --selection-color: var(--bg-main);
@@ -75,7 +70,7 @@ html[prefers-color-scheme="light"] {
   --purple-1: rgb(253, 207, 255);
   --blue-2: rgb(198, 228, 255);
   --green-2: rgb(194, 255, 251);
-  --purple-2: rgb(246, 224, 255);
+  --purple-2: rgb(249, 215, 255);
 
   --page-bg: 
     linear-gradient(
@@ -97,25 +92,21 @@ html[prefers-color-scheme="light"] {
       var(--green-2) 80%
     );
 
-  --grad-bottom: 
-    linear-gradient(
-      135deg,
-      var(--green-1),
-      var(--purple-1)
-    );
-
   --text-main: var(--black);
   --bg-main: var(--white);
 
-    --nav-bg: rgb(175, 255, 230);
+  --nav-bg: rgb(175, 231, 255);
 
-  --card-bg: rgba(255, 255, 255, 0.2);
-  --card-sub-bg: rgba(255, 255, 255, 0.4);
+  --inner-bg: linear-gradient(
+    120deg,
+    var(--green-2),
+    var(--purple-2)
+  );
 
   --glass-bg: rgba(16, 170, 230, 0.1);
+  --glass-bg-alt: rgb(190, 237, 255);
   
-  --contrast-high: rgb(127, 0, 178);
-  --contrast-mid: rgb(84, 178, 185);
+  --contrast-high: rgb(113, 0, 178);
 
   --selection-background: var(--text-main);
   --selection-color: var(--bg-main);
@@ -244,7 +235,7 @@ h2 {
 
 #nav .nav-links{
   background: var(--nav-bg);
-  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   padding: 4px 10px;
 }
@@ -441,7 +432,7 @@ a {
 .recipe-card:hover {
   transform: scale(1.03);
   box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.3);
-  background: var(--grad-alt);
+  background: var(--glass-bg-alt);
 }
 
 .recipe-card .img-container {
@@ -512,8 +503,7 @@ a {
 }
 
 .rec-disp-header i:hover {
-  border: 2px solid var(--contrast-high);
-  color: var(--contrast-high);
+  background: var(--bg-main);
 }
 
 .rec-ingredients,
@@ -539,7 +529,7 @@ a {
 .rec-ingredients ul,
 .rec-directions ul {
   width: 100%;
-  background: var(--card-sub-bg);
+  background: var(--inner-bg);
   border-radius: 10px;
   padding: 20px 10px;
   display: flex;
@@ -596,7 +586,6 @@ a {
 .search-controls button:hover {
   cursor: pointer;
   background: var(--bg-main);
-  transform: translateY(1px);
 }
 
 #results {
@@ -651,7 +640,11 @@ a {
 }
 
 #results #meals .meal .meal-title:hover {
-  background: var(--grad-alt);
+  background: var(--glass-bg-alt);
+}
+
+#results #meals .meal .meal-title:hover i {
+  background: var(--bg-main);
 }
 
 #results #meals .meal .meal-title img {
@@ -706,7 +699,7 @@ a {
 }
 
 #results #meals .meal .meal-ingredients {
-  background: var(--card-sub-bg);
+  background: var(--inner-bg);
   width: 100%;
   height: 100%;
   padding: 20px 10px;
@@ -739,7 +732,6 @@ a {
 
 #results #meals .meal a:hover {
   background: var(--bg-main);
-  transform: translateY(1px);
 }
 
 #page-selectors {
