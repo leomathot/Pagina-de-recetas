@@ -19,11 +19,8 @@
 html[prefers-color-scheme="dark"] {
 
   --blue-1: rgb(0, 30, 60);
-  --green-1: rgb(0, 78, 88);
-  --purple-1: rgb(78, 0, 138);
-  --blue-2: rgb(0, 30, 60);
-  --green-2: rgb(0, 38, 40);
-  --purple-2: rgb(48, 0, 48);
+  --green-1: rgb(0, 75, 85);
+  --purple-1: rgb(80, 0, 140);
 
   --page-bg: 
     linear-gradient(
@@ -39,12 +36,13 @@ html[prefers-color-scheme="dark"] {
   --text-main: var(--white);
   --bg-main: var(--black);
 
-  --nav-bg: var(--blue-1);
+  --nav-bg: var(--green-1);
 
   --alt-grad-bg: linear-gradient(
     120deg,
-    var(--green-1),
-    var(--purple-1));
+    rgb(0, 65, 85),
+    rgb(50, 0, 110)
+    );
 
   --glass-bg: linear-gradient(
     135deg,
@@ -63,45 +61,52 @@ html[prefers-color-scheme="dark"] {
 
 html[prefers-color-scheme="light"] {
 
-  --blue-1: rgb(164, 211, 255);
-  --green-1: rgb(175, 255, 230);
-  --purple-1: rgb(253, 207, 255);
-  --blue-2: rgb(198, 228, 255);
-  --green-2: rgb(194, 255, 251);
-  --purple-2: rgb(249, 215, 255);
+  --blue-1: rgb(170, 220, 255);
+  --green-1: rgb(220, 255, 250);
+  --purple-1: rgb(255, 230, 255);
 
   --page-bg: 
-    linear-gradient(
-      rgb(140, 200, 255),
-      rgb(200, 230, 255),
-      transparent
-    ),
-    linear-gradient(
-      90deg,
-      rgb(160, 255, 230),
-      rgb(255, 200, 255)
-    );
+  radial-gradient(
+    rgb(250, 250, 250)30%,
+    transparent
+  ),
+  linear-gradient(
+    rgb(170, 220, 255),
+    rgb(250, 250, 250) 40%,
+    rgb(250, 250, 250) 60%,
+    transparent
+  ),
+  linear-gradient(
+    90deg,
+    rgb(190, 255, 240),
+    rgb(250, 250, 250),
+    rgb(255, 210, 255)
+  );
 
   --text-main: var(--black);
   --bg-main: var(--white);
 
-  --nav-bg: rgb(175, 231, 255);
-  --nav-bg: var(--blue-1);
+  --nav-bg: linear-gradient(
+    90deg,
+    rgb(210, 240, 255),
+    rgb(190, 230, 255)
+  );
 
   --alt-grad-bg: linear-gradient(
     120deg,
-    var(--green-2),
-    var(--purple-2)
+    var(--green-1),
+    var(--purple-1)
   );
 
   --glass-bg: linear-gradient(
     135deg,
-    rgba(242, 253, 255, 0.2),
-    rgba(16, 170, 230, 0.1),
-    rgba(242, 253, 255, 0.1),
-    rgba(16, 170, 230, 0.1)
+    rgba(170, 220, 255, 0.1),
+    rgba(220, 230, 255, 0.1),
+    rgba(170, 220, 255, 0.1),
+    rgba(220, 230, 255, 0.1)
     );
-  --glass-bg-alt: rgb(190, 237, 255);
+    
+  --glass-bg-alt: rgba(190, 230, 255, 0.3);
   
   --contrast-high: rgb(113, 0, 178);
 
@@ -553,6 +558,7 @@ a {
 .rec-directions ul {
   width: 100%;
   background: var(--alt-grad-bg);
+  box-shadow: 0 0 5px 0 rgb(0,0,0,0.2);
   border-radius: 10px;
   padding: 20px 10px;
   display: flex;
@@ -571,6 +577,7 @@ a {
   max-width: 700px;
   max-height: 300px;
   background: var(--bg-main);
+  box-shadow: 0 0 5px 0 rgb(0,0,0,0.2);
   border-radius: 10px;
   object-fit: cover;
 }
@@ -593,6 +600,7 @@ a {
   padding: 5px;
   border-radius: 5px;
   border: none;
+  box-shadow: 0 0 5px 0 rgb(0,0,0,0.2);
   font-size: 1rem;
   outline: none;
 }
@@ -711,6 +719,7 @@ a {
 
 #results #meals .meal img {
   background: var(--black);
+  box-shadow: 0 0 5px 0 rgb(0,0,0,0.2);
   width: 100%;
   max-width: 400px;
   height: 100%;
@@ -723,6 +732,7 @@ a {
 
 #results #meals .meal .meal-ingredients {
   background: var(--alt-grad-bg);
+  box-shadow: 0 0 5px 0 rgb(0,0,0,0.2);
   width: 100%;
   height: 100%;
   padding: 20px 10px;
